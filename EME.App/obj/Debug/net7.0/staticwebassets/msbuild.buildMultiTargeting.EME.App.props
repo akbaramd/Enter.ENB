@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\EME.App.props" />
+</Project>
