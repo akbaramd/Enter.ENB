@@ -16,46 +16,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e56d52f9-ea25-40c7-bfe7-e8642d209795" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Class1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Enter.ENB.DDD.Application.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/obj/Debug/net7.0/Enter.ENB.DDD.Application.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/obj/Debug/net7.0/Enter.ENB.DDD.Application.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/obj/Debug/net7.0/Enter.ENB.DDD.Application.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/obj/Debug/net7.0/Enter.ENB.DDD.Application.GlobalUsings.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/obj/Debug/net7.0/Enter.ENB.DDD.Application.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/obj/Enter.ENB.DDD.Application.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/obj/Enter.ENB.DDD.Application.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/obj/Enter.ENB.DDD.Application.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/obj/rider.project.restore.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/obj/Debug/net7.0/Enter.ENB.DDD.Domain.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/obj/Debug/net7.0/Enter.ENB.DDD.Domain.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/obj/Debug/net7.0/Enter.ENB.DDD.Domain.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/obj/Debug/net7.0/Enter.ENB.DDD.Domain.GlobalUsings.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/obj/Debug/net7.0/Enter.ENB.DDD.Domain.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/obj/Debug/net7.0/Enter.ENB.DDD.Domain.csproj.AssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/obj/Enter.ENB.DDD.Domain.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/obj/Enter.ENB.DDD.Domain.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/obj/Enter.ENB.DDD.Domain.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DependencyInjection/Enter.ENB.DependencyInjection.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DependencyInjection/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DependencyInjection/obj/Debug/net7.0/Enter.ENB.DependencyInjection.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DependencyInjection/obj/Debug/net7.0/Enter.ENB.DependencyInjection.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DependencyInjection/obj/Debug/net7.0/Enter.ENB.DependencyInjection.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DependencyInjection/obj/Debug/net7.0/Enter.ENB.DependencyInjection.GlobalUsings.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DependencyInjection/obj/Debug/net7.0/Enter.ENB.DependencyInjection.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DependencyInjection/obj/Enter.ENB.DependencyInjection.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DependencyInjection/obj/Enter.ENB.DependencyInjection.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DependencyInjection/obj/Enter.ENB.DependencyInjection.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DependencyInjection/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DependencyInjection/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DependencyInjection/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DependencyInjection/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Enter.Modularity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Enter.Modularity/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +178,7 @@
       <option name="presentableId" value="Default" />
       <updated>1699556135433</updated>
       <workItem from="1699556136551" duration="6515000" />
-      <workItem from="1699626417237" duration="14548000" />
+      <workItem from="1699626417237" duration="14572000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -227,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699650400045</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=".">
+      <option name="closed" value="true" />
+      <created>1699650564594</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699650564594</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

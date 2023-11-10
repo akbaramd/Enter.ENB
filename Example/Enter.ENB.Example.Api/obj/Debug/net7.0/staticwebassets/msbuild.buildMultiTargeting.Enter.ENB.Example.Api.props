@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Enter.ENB.Example.Api.props" />
-</Project>
