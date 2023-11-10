@@ -25,3 +25,5 @@ LICENSE
 README.md
 *.obj
 *.bin
+.idea
+*.idea
