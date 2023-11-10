@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace Enter.ENB.Domain;
 
 [DependsOnModules(typeof(EnterEnbUowModule))]
-public class EnterEnbDomainModule : EntModule
+public class EnterEnbDddDomainModule : EntModule
 {
     public override void ConfigureServices(IServiceCollection services)
     {

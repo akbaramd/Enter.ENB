@@ -27,3 +27,10 @@ README.md
 *.bin
 .idea
 *.idea
+
+*/obj
+*/bin
+
+**/node_modules/
+**/bin/
+**/obj/

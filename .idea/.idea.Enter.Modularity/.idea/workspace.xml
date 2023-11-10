@@ -16,22 +16,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e56d52f9-ea25-40c7-bfe7-e8642d209795" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Dtos/IHasTotalCount.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Dtos/ILimitedResultRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Dtos/IListResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Dtos/IPagedAndSortedResultRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Dtos/IPagedResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Dtos/IPagedResultRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Dtos/ISortedResultRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Dtos/LimitedResultRequestDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Dtos/ListResultDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Dtos/PagedAndSortedResultRequestDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Dtos/PagedResultDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Dtos/PagedResultRequestDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/EnterEnbDddApplicationModule.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Services/ICreateAppService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Services/ICreateUpdateAppService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Services/ICrudAppService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Services/IDeleteAppService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Services/IReadOnlyAppService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Services/IUpdateAppService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Enter.Modularity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Enter.Modularity/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example/Enter.ENB.Example.Application/Enter.ENB.Example.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Example/Enter.ENB.Example.Application/Enter.ENB.Example.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example/Enter.ENB.Example.Application/EnterEnbExampleApplicationModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Example/Enter.ENB.Example.Application/EnterEnbExampleApplicationModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example/Enter.ENB.Example.Domain/Enter.ENB.Example.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Example/Enter.ENB.Example.Domain/Enter.ENB.Example.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example/Enter.ENB.Example.Domain/EnterEnbExampleDomainModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Example/Enter.ENB.Example.Domain/EnterEnbExampleDomainModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Enter.ENB.DDD.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Enter.ENB.DDD.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/IApplicationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Services/IApplicationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/IRemoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Services/IRemoteService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/EnterEnbDomainModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/EnterEnbDomainModule.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="64f9a296-24a5-405b-8814-9c3008a6b34e" />
+        <option name="url" value="https://github.com/akbaramd/Enter.Modularity.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f57797d2fd1f4e1db6531f233f94f664b1d910/f9/f35e95d0/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8117311a26df4c9deb49cd675215b26b91167f8fc9620c2b6209ef76d43733d/ValidationException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/Class1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/IApplicationService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Src/Enter.ENB.DDD.Application/IRemoteService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/Entities/EntDomainEventRecord.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/Repository/IBasicRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/Repository/IReadOnlyBasicRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/Repository/IReadOnlyRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/Repository/IRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Src/Enter.ENB.DDD.Domain/Values/EntValueObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Src/Enter.ENB.DependencyInjection/IServiceProviderAccessor.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -178,7 +223,7 @@
       <option name="presentableId" value="Default" />
       <updated>1699556135433</updated>
       <workItem from="1699556136551" duration="6515000" />
-      <workItem from="1699626417237" duration="14572000" />
+      <workItem from="1699626417237" duration="15854000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -196,7 +241,31 @@
       <option name="project" value="LOCAL" />
       <updated>1699650564594</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=".">
+      <option name="closed" value="true" />
+      <created>1699650605416</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699650605416</updated>
+    </task>
+    <task id="LOCAL-00004" summary=".">
+      <option name="closed" value="true" />
+      <created>1699650673262</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699650673262</updated>
+    </task>
+    <task id="LOCAL-00005" summary=".">
+      <option name="closed" value="true" />
+      <created>1699650809598</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699650809598</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
