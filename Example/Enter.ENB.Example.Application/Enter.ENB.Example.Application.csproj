@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\Src\Enter.ENB.Modularity\Enter.ENB.Modularity.csproj" />
+        <ProjectReference Include="..\Enter.ENB.Example.Domain\Enter.ENB.Example.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

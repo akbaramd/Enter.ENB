@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "kX3xchvw1lJUrReFMcvGHhaMM67tf2xMJvQIHB2shq7ZcE/Ly4HH6+teLaYqvYnL+vC8y6Q1QSKQflZP5f2wbg==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Enter.Modularity\\Src\\Enter.ENB.Validation\\Enter.ENB.Validation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\akbar\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0-rc.2.23479.6\\microsoft.extensions.dependencyinjection.8.0.0-rc.2.23479.6.nupkg.sha512",
+    "C:\\Users\\akbar\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0-rc.2.23479.6\\microsoft.extensions.dependencyinjection.abstractions.8.0.0-rc.2.23479.6.nupkg.sha512",
+    "C:\\Users\\akbar\\.nuget\\packages\\microsoft.extensions.logging\\8.0.0-rc.2.23479.6\\microsoft.extensions.logging.8.0.0-rc.2.23479.6.nupkg.sha512",
+    "C:\\Users\\akbar\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0-rc.2.23479.6\\microsoft.extensions.logging.abstractions.8.0.0-rc.2.23479.6.nupkg.sha512",
+    "C:\\Users\\akbar\\.nuget\\packages\\microsoft.extensions.options\\8.0.0-rc.2.23479.6\\microsoft.extensions.options.8.0.0-rc.2.23479.6.nupkg.sha512",
+    "C:\\Users\\akbar\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0-rc.2.23479.6\\microsoft.extensions.primitives.8.0.0-rc.2.23479.6.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://20.22.1.9/DefaultCollection/328b2032-5d94-485b-b9ab-3753dc45b145/_packaging/project-nugets/nuget/v3/index.json'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

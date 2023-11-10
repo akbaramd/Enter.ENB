@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Enter.ENB.Example.Api.props" />
+</Project>

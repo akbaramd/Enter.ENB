@@ -1,0 +1,17 @@
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\bin\Debug\net7.0\Enter.ENB.Example.Application.deps.json
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\bin\Debug\net7.0\Enter.ENB.Example.Application.dll
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\bin\Debug\net7.0\Enter.ENB.Example.Application.pdb
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\bin\Debug\net7.0\Enter.ENB.Modularity.dll
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\bin\Debug\net7.0\Enter.ENB.Modularity.pdb
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\obj\Debug\net7.0\Enter.ENB.Example.Application.csproj.AssemblyReference.cache
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\obj\Debug\net7.0\Enter.ENB.Example.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\obj\Debug\net7.0\Enter.ENB.Example.Application.AssemblyInfoInputs.cache
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\obj\Debug\net7.0\Enter.ENB.Example.Application.AssemblyInfo.cs
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\obj\Debug\net7.0\Enter.ENB.Example.Application.csproj.CoreCompileInputs.cache
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\obj\Debug\net7.0\Enter.ENB.Example.Application.csproj.CopyComplete
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\obj\Debug\net7.0\Enter.ENB.Example.Application.dll
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\obj\Debug\net7.0\refint\Enter.ENB.Example.Application.dll
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\obj\Debug\net7.0\Enter.ENB.Example.Application.pdb
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\obj\Debug\net7.0\ref\Enter.ENB.Example.Application.dll
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\bin\Debug\net7.0\Enter.ENB.Example.Domain.dll
+D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Example\Enter.ENB.Example.Application\bin\Debug\net7.0\Enter.ENB.Example.Domain.pdb

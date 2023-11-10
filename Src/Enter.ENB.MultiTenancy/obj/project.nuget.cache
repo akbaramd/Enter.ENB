@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "6R08J6DT7V1y6BGYvguIgsQ2jsidXwQSRsAWR5qxCzee5wDdWRW4mbNuldnMUm2GW8KH5pKdrvAA6O3iH8R1jA==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\Company\\AkbarAhmadiSaray\\Enter.Modularity\\Src\\Enter.ENB.MultiTenancy\\Enter.ENB.MultiTenancy.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://20.22.1.9/DefaultCollection/328b2032-5d94-485b-b9ab-3753dc45b145/_packaging/project-nugets/nuget/v3/index.json'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}
