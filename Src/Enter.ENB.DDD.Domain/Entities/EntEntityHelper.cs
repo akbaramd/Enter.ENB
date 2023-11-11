@@ -5,6 +5,7 @@ using Enter.ENB.Core.Exceptions;
 using Enter.ENB.Domain.Values;
 using Enter.ENB.MultiTenancy;
 using Enter.ENB.Reflections;
+using Enter.ENB.Statics;
 
 namespace Enter.ENB.Domain.Entities;
 

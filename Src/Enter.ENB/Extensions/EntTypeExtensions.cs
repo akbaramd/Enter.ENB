@@ -1,4 +1,6 @@
-namespace Enter.ENB;
+using Enter.ENB.Statics;
+
+namespace Enter.ENB.Extensions;
 
 public static class EntTypeExtensions
   {

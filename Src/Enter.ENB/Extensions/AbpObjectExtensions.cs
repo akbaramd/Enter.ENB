@@ -2,7 +2,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Runtime.CompilerServices;
 
-namespace Enter.ENB;
+namespace Enter.ENB.Extensions;
 
 public static class AbpObjectExtensions
 {

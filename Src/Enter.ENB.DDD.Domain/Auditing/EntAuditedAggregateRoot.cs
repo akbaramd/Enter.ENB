@@ -1,7 +1,6 @@
 using Enter.ENB.Auditing;
-using Enter.ENB.Domain.Auditing;
 
-namespace Enter.ENB.Domain.Entities;
+namespace Enter.ENB.Domain.Auditing;
 
 /// <summary>
 /// This class can be used to simplify implementing <see cref="IAuditedObject"/> for aggregate roots.

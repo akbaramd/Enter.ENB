@@ -2,8 +2,9 @@ using System.Globalization;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using Enter.ENB.Statics;
 
-namespace Enter.ENB;
+namespace Enter.ENB.Extensions;
 
 public static class EntStringExtensions
   {

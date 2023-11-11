@@ -1,4 +1,4 @@
-namespace Enter.ENB;
+namespace Enter.ENB.Extensions;
 
 public static class AbpEnumerableExtensions
 {

@@ -2,7 +2,7 @@ using Enter.ENB.Modularity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Enter.ENB.Uow;
+namespace Enter.ENB.Data;
 
 public class EnterEnbDataModule : EntModule
 {

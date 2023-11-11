@@ -1,6 +1,6 @@
 using Enter.ENB.Auditing;
 
-namespace Enter.ENB.Domain.Entities;
+namespace Enter.ENB.Domain.Auditing;
 
 
 /// <summary>

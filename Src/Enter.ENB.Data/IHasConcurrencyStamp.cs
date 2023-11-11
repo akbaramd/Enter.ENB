@@ -1,4 +1,4 @@
-namespace Enter.ENB.Uow;
+namespace Enter.ENB.Data;
 
 public interface IHasConcurrencyStamp
 {

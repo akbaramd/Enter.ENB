@@ -1,6 +1,6 @@
 using Enter.ENB.DDD.Application.Dtos;
 
-namespace Enter.ENB.DDD.Application;
+namespace Enter.ENB.DDD.Application.Services;
 
 public interface ICrudAppService<TEntityDto, in TKey>
     : ICrudAppService<TEntityDto, TKey, PagedAndSortedResultRequestDto>

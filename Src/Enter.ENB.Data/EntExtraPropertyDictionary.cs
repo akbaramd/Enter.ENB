@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-
-namespace Enter.ENB.Uow;
+namespace Enter.ENB.Data;
 
 [Serializable]
 public class EntExtraPropertyDictionary : Dictionary<string, object?>

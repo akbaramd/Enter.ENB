@@ -1,4 +1,4 @@
-namespace Enter.ENB.DDD.Application;
+namespace Enter.ENB.DDD.Application.Services;
 
 public interface IDeleteAppService<in TKey> : IApplicationService
 {

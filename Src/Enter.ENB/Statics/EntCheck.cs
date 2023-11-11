@@ -1,7 +1,8 @@
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Enter.ENB.Extensions;
 
-namespace Enter.ENB;
+namespace Enter.ENB.Statics;
 
 [DebuggerStepThrough]
   public static class EntCheck

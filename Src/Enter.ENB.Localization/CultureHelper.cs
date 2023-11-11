@@ -1,5 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
+using Enter.ENB.Extensions;
+using Enter.ENB.Statics;
 
 namespace Enter.ENB.Localization;
 

@@ -1,3 +1,5 @@
+using Enter.ENB.Statics;
+
 namespace Enter.ENB;
 
 public static class EntCollectionExtensions
