@@ -10,7 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddModularity<EnterEnbExampleApiModule>();
+ builder.Services.AddModularity<EnterEnbExampleApiModule>();
+
 
 var app = builder.Build();
 

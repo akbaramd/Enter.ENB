@@ -1,7 +1,5 @@
-using System.ComponentModel.DataAnnotations;
 using Enter.ENB.Auditing;
 using Enter.ENB.Data;
-using Enter.ENB.Uow;
 
 namespace Enter.ENB.Domain.Entities;
 

@@ -8,7 +8,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Enter.ENB.Core\Enter.ENB.Core.csproj" />
-      <ProjectReference Include="..\Enter.ENB.Logging\Enter.ENB.Logging.csproj" />
     </ItemGroup>
 
 </Project>

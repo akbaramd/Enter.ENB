@@ -19,7 +19,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Src\Enter.ENB.Modularity\Enter.ENB.Modularity.csproj" />
       <ProjectReference Include="..\Enter.ENB.Example.Application\Enter.ENB.Example.Application.csproj" />
     </ItemGroup>
 

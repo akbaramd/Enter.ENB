@@ -7,7 +7,7 @@ public interface ICreateAppService<TEntityDto>
 }
 
 public interface ICreateAppService<TGetOutputDto, in TCreateInput>
-    : IApplicationService
+    : IAppService
 {
     Task<TGetOutputDto> CreateAsync(TCreateInput input);
 }

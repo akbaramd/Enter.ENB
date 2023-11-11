@@ -1,6 +1,6 @@
 namespace Enter.ENB.DDD.Application.Services;
 
-public interface IDeleteAppService<in TKey> : IApplicationService
+public interface IDeleteAppService<in TKey> : IAppService
 {
     Task DeleteAsync(TKey id);
 }

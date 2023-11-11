@@ -7,7 +7,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0-rc.2.23479.6" />
+      <PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.13" />
+      <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+      <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Enter.ENB.DependencyInjection\Enter.ENB.DependencyInjection.csproj" />
+      <ProjectReference Include="..\Enter.ENB\Enter.ENB.csproj" />
     </ItemGroup>
 
 </Project>

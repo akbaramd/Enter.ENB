@@ -7,7 +7,7 @@ public interface IUpdateAppService<TEntityDto, in TKey>
 }
 
 public interface IUpdateAppService<TGetOutputDto, in TKey, in TUpdateInput>
-    : IApplicationService
+    : IAppService
 {
     Task<TGetOutputDto> UpdateAsync(TKey id, TUpdateInput input);
 }

@@ -15,7 +15,7 @@ public interface IReadOnlyAppService<TEntityDto, in TKey, in TGetListInput>
 }
 
 public interface IReadOnlyAppService<TGetOutputDto, TGetListOutputDto, in TKey, in TGetListInput>
-    : IApplicationService
+    : IAppService
 {
     Task<TGetOutputDto> GetAsync(TKey id);
 

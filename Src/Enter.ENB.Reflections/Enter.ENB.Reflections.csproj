@@ -8,7 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Enter.ENB.Localization\Enter.ENB.Localization.csproj" />
-      <ProjectReference Include="..\Enter.ENB\Enter.ENB.csproj" />
+      <ProjectReference Include="..\Enter.ENB.Core\Enter.ENB.Core.csproj" />
     </ItemGroup>
 
 </Project>

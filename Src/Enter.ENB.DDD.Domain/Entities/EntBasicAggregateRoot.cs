@@ -1,5 +1,4 @@
 using System.Collections.ObjectModel;
-using Enter.ENB.Uow;
 
 namespace Enter.ENB.Domain.Entities;
 
@@ -33,12 +32,12 @@ public abstract class BasicAggregateRoot : EntEntity,
 
     protected virtual void AddLocalEvent(object eventData)
     {
-        _localEvents.Add(new DomainEventRecord(eventData, EventOrderGenerator.GetNext()));
+        // _localEvents.Add(new DomainEventRecord(eventData, EventOrderGenerator.GetNext()));
     }
 
     protected virtual void AddDistributedEvent(object eventData)
     {
-        _distributedEvents.Add(new DomainEventRecord(eventData, EventOrderGenerator.GetNext()));
+        // _distributedEvents.Add(new DomainEventRecord(eventData, EventOrderGenerator.GetNext()));
     }
 }
 
@@ -71,7 +70,7 @@ public abstract class BasicAggregateRoot<TKey> :
 
     public virtual void ClearDistributedEvents() => this._distributedEvents.Clear();
 
-    protected virtual void AddLocalEvent(object eventData) => this._localEvents.Add(new DomainEventRecord(eventData, EventOrderGenerator.GetNext()));
+    // protected virtual void AddLocalEvent(object eventData) => this._localEvents.Add(new DomainEventRecord(eventData, EventOrderGenerator.GetNext()));
 
-    protected virtual void AddDistributedEvent(object eventData) => this._distributedEvents.Add(new DomainEventRecord(eventData, EventOrderGenerator.GetNext()));
+    // protected virtual void AddDistributedEvent(object eventData) => this._distributedEvents.Add(new DomainEventRecord(eventData, EventOrderGenerator.GetNext()));
 }

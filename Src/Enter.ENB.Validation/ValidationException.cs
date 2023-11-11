@@ -1,9 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using System.Text;
-using Enter.ENB.Core;
 using Enter.ENB.Core.Exceptions;
-using Enter.ENB.Logging;
 using Microsoft.Extensions.Logging;
 
 namespace Enter.ENB.Validation;

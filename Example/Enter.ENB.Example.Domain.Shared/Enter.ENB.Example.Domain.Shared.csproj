@@ -8,7 +8,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Src\Enter.ENB.DDD.Domain\Enter.ENB.DDD.Domain.csproj" />
-      <ProjectReference Include="..\..\Src\Enter.ENB.Modularity\Enter.ENB.Modularity.csproj" />
     </ItemGroup>
 
 </Project>
