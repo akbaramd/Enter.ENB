@@ -1,3 +1,4 @@
+using Enter.ENB.Modularity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -7,6 +8,8 @@ public class DefaultConventionalRegistrar : ConventionalRegistrarBase
 {
     public override void AddType(IServiceCollection services, Type type)
     {
+
+   
         if (IsConventionalRegistrationDisabled(type))
         {
             return;

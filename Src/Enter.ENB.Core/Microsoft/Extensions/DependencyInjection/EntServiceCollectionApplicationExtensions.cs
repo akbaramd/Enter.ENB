@@ -17,12 +17,6 @@ public static class EntServiceCollectionApplicationExtensions
         this IServiceCollection services,
         Type startupModuleType)
     {
-        services.AddSingleton<IModuleManager, ModuleManager>();
-        services.AddTransient< OnApplicationShutdownModuleLifecycleContributor>();
-        services.AddTransient< OnPostApplicationInitializationModuleLifecycleContributor>();
-        services.AddTransient< OnPreApplicationInitializationModuleLifecycleContributor>();
-        services.AddTransient< OnApplicationInitializationModuleLifecycleContributor>();
-
         return EntApplicationFactory.CreateAsync(startupModuleType, services);
     }
 

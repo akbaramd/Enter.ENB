@@ -1,3 +1,4 @@
+using Enter.ENB.DependencyInjection;
 using Enter.ENB.Exceptions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -5,7 +6,7 @@ using Microsoft.Extensions.Options;
 
 namespace Enter.ENB.Modularity;
 
-public class ModuleManager : IModuleManager
+public class ModuleManager : IModuleManager 
 {
     private readonly IModuleContainer _moduleContainer;
     private readonly IEnumerable<IModuleLifecycleContributor> _lifecycleContributors;

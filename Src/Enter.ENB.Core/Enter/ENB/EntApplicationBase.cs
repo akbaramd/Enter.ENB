@@ -249,6 +249,8 @@ public class EntApplicationBase : IEntApplication
         services.TryAddSingleton<IAssemblyFinder>(assemblyFinder);
         services.TryAddSingleton<ITypeFinder>(typeFinder);
 
+        services.AddAssemblyOf<IEntApplication>();
+        
         services.Configure<EntModuleLifecycleOptions>(options =>
         {
             options.Contributors.Add<OnPreApplicationInitializationModuleLifecycleContributor>();

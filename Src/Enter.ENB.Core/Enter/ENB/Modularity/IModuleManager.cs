@@ -1,6 +1,8 @@
+using Enter.ENB.DependencyInjection;
+
 namespace Enter.ENB.Modularity;
 
-public interface IModuleManager
+public interface IModuleManager : ISingletonDependency
 {
     Task InitializeModulesAsync( ApplicationInitializationContext context);
 

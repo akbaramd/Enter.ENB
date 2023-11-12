@@ -1,6 +1,8 @@
-﻿namespace Enter.ENB.Modularity;
+﻿using Enter.ENB.DependencyInjection;
 
-public interface IModuleLifecycleContributor
+namespace Enter.ENB.Modularity;
+
+public interface IModuleLifecycleContributor : ITransientDependency
 {
     Task InitializeAsync(ApplicationInitializationContext context, IEntModule module);
 
