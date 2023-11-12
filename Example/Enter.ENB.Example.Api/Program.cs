@@ -1,5 +1,4 @@
 using Enter.ENB.Example.Api;
-using Enter.ENB.Modularity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,10 +9,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
- builder.Services.AddModularity<EnterEnbExampleApiModule>();
-
+await builder.AddApplicationAsync<EnterEnbExampleApiModule>();
 
 var app = builder.Build();
+
+await app.InitializeApplicationAsync();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

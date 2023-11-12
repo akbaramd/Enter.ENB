@@ -19,6 +19,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Src\Enter.ENB.AspNetCore\Enter.ENB.AspNetCore.csproj" />
       <ProjectReference Include="..\Enter.ENB.Example.Application\Enter.ENB.Example.Application.csproj" />
     </ItemGroup>
 

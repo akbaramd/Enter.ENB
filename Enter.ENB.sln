@@ -42,6 +42,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter.ENB.Identity.Applicat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter.ENB.Identity.Application.Contracts", "Src\Modules\Identity\Enter.ENB.Identity.Application.Contracts\Enter.ENB.Identity.Application.Contracts.csproj", "{0FC401C8-DAF6-410F-A825-985E9F81943C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter.ENB.AspNetCore", "Src\Enter.ENB.AspNetCore\Enter.ENB.AspNetCore.csproj", "{A9C20DC1-DB8B-4D61-9C6D-3A3106EB3BB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -116,6 +118,10 @@ Global
 		{0FC401C8-DAF6-410F-A825-985E9F81943C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FC401C8-DAF6-410F-A825-985E9F81943C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FC401C8-DAF6-410F-A825-985E9F81943C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9C20DC1-DB8B-4D61-9C6D-3A3106EB3BB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9C20DC1-DB8B-4D61-9C6D-3A3106EB3BB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9C20DC1-DB8B-4D61-9C6D-3A3106EB3BB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9C20DC1-DB8B-4D61-9C6D-3A3106EB3BB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8C5A08C6-57A8-4E61-B91A-52F6F3D03538} = {A583C082-0FFC-42C8-8796-2F21FF03534C}
@@ -137,5 +143,6 @@ Global
 		{10D529DE-18F1-4956-A28A-6BD50F6B183B} = {2BC9CB04-160A-48EA-8D0A-E0B71D4219F0}
 		{62C119C4-3548-4D95-BE57-46C311AA2B9D} = {2BC9CB04-160A-48EA-8D0A-E0B71D4219F0}
 		{0FC401C8-DAF6-410F-A825-985E9F81943C} = {2BC9CB04-160A-48EA-8D0A-E0B71D4219F0}
+		{A9C20DC1-DB8B-4D61-9C6D-3A3106EB3BB4} = {D6306A2D-EE69-4CAC-AD29-8E100629C8C2}
 	EndGlobalSection
 EndGlobal
