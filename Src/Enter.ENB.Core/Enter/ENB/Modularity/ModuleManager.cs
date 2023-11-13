@@ -1,4 +1,3 @@
-using Enter.ENB.DependencyInjection;
 using Enter.ENB.Exceptions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;

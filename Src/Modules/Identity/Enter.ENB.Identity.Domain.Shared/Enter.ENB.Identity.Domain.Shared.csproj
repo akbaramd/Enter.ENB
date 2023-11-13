@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Enter.ENB.Core\Enter.ENB.Core.csproj" />
+    </ItemGroup>
+
 </Project>

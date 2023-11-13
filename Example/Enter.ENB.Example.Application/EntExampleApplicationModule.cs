@@ -6,10 +6,10 @@ using Microsoft.Extensions.DependencyInjection;
 namespace Enter.ENB.Example.Application;
 
 [DependsOnModules(
-    typeof(EnterEnbExampleDomainModule),
+    typeof(EntExampleDomainModule),
     typeof(EnterEnbDddApplicationModule)
     )]
-public class EnterEnbExampleApplicationModule :EntModule 
+public class EntExampleApplicationModule :EntModule 
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {

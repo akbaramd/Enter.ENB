@@ -1,4 +1,5 @@
 ﻿using Enter.ENB.DependencyInjection;
+using Enter.ENB.Modularity;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
 

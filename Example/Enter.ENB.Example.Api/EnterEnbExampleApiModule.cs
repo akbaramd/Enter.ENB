@@ -1,18 +1,19 @@
 using Enter.ENB.Example.Application;
+using Enter.ENB.Example.Domain;
 using Enter.ENB.Modularity;
 
 namespace Enter.ENB.Example.Api;
 
-[DependsOnModules(typeof(EnterEnbExampleApplicationModule))]
+[DependsOnModules(
+    typeof(EntExampleApplicationModule),
+    typeof(EntExampleEntityFrameworkCoreModule)
+)]
 public class EnterEnbExampleApiModule : EntModule
 {
-    
-   
-    
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {
         Console.WriteLine($"{nameof(EnterEnbExampleApiModule)} :PreConfigureServices");
-    }
+    }   
     
     public override Task PreConfigureServicesAsync(ServiceConfigurationContext context)
     {
@@ -20,12 +21,10 @@ public class EnterEnbExampleApiModule : EntModule
         return base.PreConfigureServicesAsync(context);
     }
     
-    
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
         Console.WriteLine($"{nameof(EnterEnbExampleApiModule)} :ConfigureServices");
     }
-
 
     public override Task ConfigureServicesAsync(ServiceConfigurationContext context)
     {
@@ -91,7 +90,6 @@ public class EnterEnbExampleApiModule : EntModule
     public override Task OnApplicationShutdownAsync(ApplicationShutdownContext context)
     {
         Console.WriteLine($"{nameof(EnterEnbExampleApiModule)} :OnApplicationShutdownAsync");
-       
         return base.OnApplicationShutdownAsync(context);
     }
 }

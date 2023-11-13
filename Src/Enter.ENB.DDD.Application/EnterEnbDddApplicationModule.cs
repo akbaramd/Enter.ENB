@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Enter.ENB.DDD.Application;
 
-[DependsOnModules(typeof(EnterEnbDddDomainModule))]
+[DependsOnModules(typeof(EntDddDomainModule))]
 public class EnterEnbDddApplicationModule : EntModule
 {
 }

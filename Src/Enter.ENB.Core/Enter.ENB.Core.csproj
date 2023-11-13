@@ -13,11 +13,11 @@
       <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
       <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
       <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
       <PackageReference Include="Nito.AsyncEx" Version="5.1.2" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Enter.ENB.DependencyInjection\Enter.ENB.DependencyInjection.csproj" />
       <ProjectReference Include="..\Enter.ENB\Enter.ENB.csproj" />
     </ItemGroup>
 
