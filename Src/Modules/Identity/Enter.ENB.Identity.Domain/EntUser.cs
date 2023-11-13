@@ -1,7 +1,7 @@
 ﻿using Enter.ENB.Domain.Auditing;
-using Enter.ENB.Identity.Domain.Shared.Users;
+using Enter.ENB.Identity.Domain.Shared;
 
-namespace Enter.ENB.Identity.Domain.Users;
+namespace Enter.ENB.Identity.Domain;
 
 public class EntUser : FullAuditedAggregateRoot<Guid>
 {

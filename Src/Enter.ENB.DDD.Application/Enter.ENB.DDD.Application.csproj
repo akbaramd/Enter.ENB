@@ -4,10 +4,16 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RootNamespace />
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Enter.ENB.DDD.Application.Contracts\Enter.ENB.DDD.Application.Contracts.csproj" />
       <ProjectReference Include="..\Enter.ENB.DDD.Domain\Enter.ENB.DDD.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Enter\ENB\Ddd" />
     </ItemGroup>
 
 </Project>

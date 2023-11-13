@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Src\Enter.ENB.Core\Enter.ENB.Core.csproj" />
+      <ProjectReference Include="..\..\Src\Enter.ENB.EntityFrameworkCore.SqlServer\Enter.ENB.EntityFrameworkCore.SqlServer.csproj" />
       <ProjectReference Include="..\..\Src\Modules\Identity\Enter.ENB.Identity.EntityFrameworkCore\Enter.ENB.Identity.EntityFrameworkCore.csproj" />
     </ItemGroup>
 

@@ -1,8 +1,8 @@
 ﻿using Enter.ENB.Domain.Repository;
 
-namespace Enter.ENB.Identity.Domain.Users;
+namespace Enter.ENB.Identity.Domain;
 
-public interface IEntUserRepository : IBasicRepository<EntUser,Guid>
+public interface IEntUserRepository : IRepository<EntUser,Guid>
 {
     
 }

@@ -1,4 +1,4 @@
-﻿namespace Enter.ENB.Identity.Domain.Shared.Users;
+﻿namespace Enter.ENB.Identity.Domain.Shared;
 
 public class EntUserConsts
 {

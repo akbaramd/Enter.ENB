@@ -1,5 +1,5 @@
 ﻿using Enter.ENB.Data;
-using Enter.ENB.Identity.Domain.Users;
+using Enter.ENB.Identity.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Newtonsoft.Json;

@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\..\Enter.ENB.DDD.Application.Contracts\Enter.ENB.DDD.Application.Contracts.csproj" />
       <ProjectReference Include="..\..\..\Enter.ENB.DDD.Application\Enter.ENB.DDD.Application.csproj" />
       <ProjectReference Include="..\Enter.ENB.Identity.Domain\Enter.ENB.Identity.Domain.csproj" />
     </ItemGroup>

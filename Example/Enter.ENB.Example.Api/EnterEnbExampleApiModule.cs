@@ -1,5 +1,6 @@
 using Enter.ENB.Example.Application;
 using Enter.ENB.Example.Domain;
+using Enter.ENB.Example.EntityFrameworkCore;
 using Enter.ENB.Modularity;
 
 namespace Enter.ENB.Example.Api;

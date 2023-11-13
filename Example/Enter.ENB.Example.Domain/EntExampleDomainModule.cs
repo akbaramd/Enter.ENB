@@ -1,5 +1,5 @@
 using Enter.ENB.Domain;
-using Enter.ENB.Identity.Domain.Users;
+using Enter.ENB.Identity.Domain;
 using Enter.ENB.Modularity;
 using Microsoft.Extensions.DependencyInjection;
 

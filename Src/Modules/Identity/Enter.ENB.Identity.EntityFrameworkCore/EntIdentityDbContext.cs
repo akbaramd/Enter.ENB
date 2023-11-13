@@ -1,10 +1,10 @@
-﻿using Enter.ENB.Example.EntityFrameworkCore;
-using Enter.ENB.Identity.Domain.Users;
+﻿using Enter.ENB.EntityFrameworkCore;
+using Enter.ENB.Identity.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Enter.ENB.Identity.EntityFrameworkCore;
 
-public class EntIdentityDbContext : EntDbContext
+public class EntIdentityDbContext : EntDbContext<EntIdentityDbContext> , IEntIdentityDbContext
 {
     public EntIdentityDbContext(DbContextOptions options): base(options)
     {

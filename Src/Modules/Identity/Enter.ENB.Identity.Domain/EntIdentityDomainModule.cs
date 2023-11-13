@@ -1,6 +1,7 @@
-﻿using Enter.ENB.Modularity;
+﻿using Enter.ENB.Identity.Domain.Shared;
+using Enter.ENB.Modularity;
 
-namespace Enter.ENB.Identity.Domain.Users;
+namespace Enter.ENB.Identity.Domain;
 
 
 [DependsOnModules(typeof(EntIdentityDomainSharedModule))]

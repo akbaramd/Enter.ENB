@@ -1,4 +1,4 @@
-using Enter.ENB.DDD.Application;
+using Enter.ENB.Ddd.Application;
 using Enter.ENB.Example.Domain;
 using Enter.ENB.Modularity;
 using Microsoft.Extensions.DependencyInjection;
@@ -7,7 +7,7 @@ namespace Enter.ENB.Example.Application;
 
 [DependsOnModules(
     typeof(EntExampleDomainModule),
-    typeof(EnterEnbDddApplicationModule)
+    typeof(EntDddApplicationModule)
     )]
 public class EntExampleApplicationModule :EntModule 
 {

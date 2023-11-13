@@ -1,9 +1,9 @@
-﻿using Enter.ENB.DDD.Application.Services;
-using Enter.ENB.Identity.Domain.Users;
+﻿using Enter.ENB.Ddd.Application.Services;
+using Enter.ENB.Identity.Domain;
 
 namespace Enter.ENB.Identity.Application.Contracts.Users;
 
-public interface IUserAppService : ICrudAppService<EntUser,Guid> , IIdentityAppService
+public interface IUserAppService : ICrudAppService<EntUser,Guid> 
 {
     
 }

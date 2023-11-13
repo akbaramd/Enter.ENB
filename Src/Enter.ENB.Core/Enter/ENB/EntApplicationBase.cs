@@ -105,6 +105,7 @@ public class EntApplicationBase : IEntApplication
         //ConfigureServices
         foreach (var module in Modules)
         {
+            
             if (module.Instance is EntModule abpModule)
             {
                 // if (!abpModule.SkipAutoServiceRegistration)
