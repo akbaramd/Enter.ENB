@@ -1,11 +1,14 @@
 using Enter.ENB.Ddd.Application;
 using Enter.ENB.Example.Domain;
+using Enter.ENB.Identity.Application;
+using Enter.ENB.Identity.Domain;
 using Enter.ENB.Modularity;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Enter.ENB.Example.Application;
 
 [DependsOnModules(
+    typeof(EntIdentityApplicationModule),
     typeof(EntExampleDomainModule),
     typeof(EntDddApplicationModule)
     )]

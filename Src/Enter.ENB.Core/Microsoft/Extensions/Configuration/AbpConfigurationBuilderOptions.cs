@@ -2,7 +2,7 @@ using System.Reflection;
 
 namespace Microsoft.Extensions.Configuration;
 
-public class AbpConfigurationBuilderOptions
+public class EntConfigurationBuilderOptions
 {
     /// <summary>
     /// Used to set assembly which is used to get the user secret id for the application.

@@ -1,4 +1,3 @@
-using Enter.ENB.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Enter.ENB.DependencyInjection;

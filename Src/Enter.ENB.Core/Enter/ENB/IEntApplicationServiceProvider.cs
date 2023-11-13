@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-
-namespace Enter.ENB;
+﻿namespace Enter.ENB;
 
 public interface IEntApplicationServiceProvider : IEntApplication
 {

@@ -10,13 +10,12 @@ namespace Enter.ENB.Identity.EntityFrameworkCore;
 [DependsOnModules(typeof(EntEntityFrameworkCoreModule))]
 public class EntIdentityEntityFrameworkCoreModule : EntModule
 {
-    public override void PreConfigureServices(ServiceConfigurationContext context)
+    public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        context.Services.AddConventionalRegistrar(new EntIdentityEntityFrameworkConventionalRegistrar());
-
-        context.Services.AddEntDbContext<EntIdentityDbContext>();
         
+        
+        
+        context.Services.AddConventionalRegistrar(new EntIdentityEntityFrameworkConventionalRegistrar());
         context.Services.AddTransient<IEntUserRepository, EntUserRepository>();
-        base.PreConfigureServices(context);
     }
 }

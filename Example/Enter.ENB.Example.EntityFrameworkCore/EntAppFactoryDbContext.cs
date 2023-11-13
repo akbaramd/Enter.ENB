@@ -1,7 +1,5 @@
-﻿using Enter.ENB.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.Extensions.Configuration;
 
 namespace Enter.ENB.Example.EntityFrameworkCore;
 

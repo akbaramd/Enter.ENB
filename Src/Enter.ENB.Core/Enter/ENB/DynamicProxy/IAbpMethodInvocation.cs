@@ -2,7 +2,7 @@ using System.Reflection;
 
 namespace Enter.ENB.DynamicProxy;
 
-public interface IAbpMethodInvocation
+public interface IEntMethodInvocation
 {
     object[] Arguments { get; }
 

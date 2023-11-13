@@ -1,6 +1,5 @@
 using System.Reflection;
 using Enter.ENB.DependencyInjection;
-using Enter.ENB.Extensions;
 
 namespace Microsoft.Extensions.DependencyInjection;
 

@@ -1,11 +1,11 @@
-using System.Data.Common;
+﻿using System.Data.Common;
 using System.Diagnostics.CodeAnalysis;
 using Enter.ENB.Modularity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace Enter.ENB.EntityFrameworkCore;
+namespace Enter.ENB.EntityFrameworkCore.DependencyInjection;
 
 public class EntDbContextConfigurationContext : IServiceProviderAccessor
 {
@@ -39,7 +39,8 @@ public class EntDbContextConfigurationContext : IServiceProviderAccessor
 public class EntDbContextConfigurationContext<TDbContext> : EntDbContextConfigurationContext
     where TDbContext : EntDbContext<TDbContext>
 {
-    public new DbContextOptionsBuilder<TDbContext> DbContextOptions => (DbContextOptionsBuilder<TDbContext>)base.DbContextOptions;
+    public new DbContextOptionsBuilder<TDbContext> DbContextOptions =>
+        (DbContextOptionsBuilder<TDbContext>)base.DbContextOptions;
 
     public EntDbContextConfigurationContext(
         string connectionString,
@@ -54,6 +55,7 @@ public class EntDbContextConfigurationContext<TDbContext> : EntDbContextConfigur
     {
         base.DbContextOptions = new DbContextOptionsBuilder<TDbContext>()
             .UseLoggerFactory(serviceProvider.GetRequiredService<ILoggerFactory>())
-            .UseApplicationServiceProvider(serviceProvider); ;
+            .UseApplicationServiceProvider(serviceProvider);
+        ;
     }
 }

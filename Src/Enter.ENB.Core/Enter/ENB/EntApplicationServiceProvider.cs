@@ -1,6 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
 using Enter.ENB.Exceptions;
-using Enter.ENB.Extensions;
 using Enter.ENB.Statics;
 using Microsoft.Extensions.DependencyInjection;
 

@@ -10,6 +10,7 @@
     <ItemGroup>
       <ProjectReference Include="..\Enter.ENB.DDD.Application.Contracts\Enter.ENB.DDD.Application.Contracts.csproj" />
       <ProjectReference Include="..\Enter.ENB.DDD.Domain\Enter.ENB.DDD.Domain.csproj" />
+      <ProjectReference Include="..\Enter.ENB.ObjectMapping\Enter.ENB.ObjectMapping.csproj" />
     </ItemGroup>
 
     <ItemGroup>

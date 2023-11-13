@@ -1,6 +1,6 @@
 namespace Enter.ENB.DynamicProxy;
 
-public interface IAbpInterceptor
+public interface IEntInterceptor
 {
-    Task InterceptAsync(IAbpMethodInvocation invocation);
+    Task InterceptAsync(IEntMethodInvocation invocation);
 }

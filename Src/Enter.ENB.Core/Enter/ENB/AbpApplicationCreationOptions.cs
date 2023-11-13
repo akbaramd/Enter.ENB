@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Enter.ENB;
 
-public class AbpApplicationCreationOptions
+public class EntApplicationCreationOptions
 {
     public IServiceCollection Services { get; }
 
@@ -14,7 +14,7 @@ public class AbpApplicationCreationOptions
     /// <summary>
     /// The options in this property only take effect when IConfiguration not registered.
     /// </summary>
-    public AbpConfigurationBuilderOptions Configuration { get; }
+    public EntConfigurationBuilderOptions Configuration { get; }
 
     public bool SkipConfigureServices { get; set; }
 
@@ -22,10 +22,10 @@ public class AbpApplicationCreationOptions
 
     public string? Environment { get; set; }
 
-    public AbpApplicationCreationOptions([NotNull] IServiceCollection services)
+    public EntApplicationCreationOptions([NotNull] IServiceCollection services)
     {
         Services = EntCheck.NotNull(services, nameof(services));
         // PlugInSources = new PlugInSourceList();
-        Configuration = new AbpConfigurationBuilderOptions();
+        Configuration = new EntConfigurationBuilderOptions();
     }
 }

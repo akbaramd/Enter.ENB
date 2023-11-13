@@ -1,5 +1,4 @@
 using Enter.ENB;
-using Enter.ENB.Extensions;
 using Enter.ENB.Modularity;
 
 namespace Microsoft.Extensions.DependencyInjection;

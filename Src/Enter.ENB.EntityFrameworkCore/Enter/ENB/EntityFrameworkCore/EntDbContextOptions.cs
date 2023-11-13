@@ -1,12 +1,15 @@
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
+using Enter.ENB.Domain;
+using Enter.ENB.EntityFrameworkCore.DependencyInjection;
+using Enter.ENB.Exceptions;
 using Enter.ENB.Extensions;
+using Enter.ENB.MultiTenancy;
 using Enter.ENB.Statics;
 
 namespace Enter.ENB.EntityFrameworkCore;
 
 public class EntDbContextOptions
 {
-    
     internal List<Action<EntDbContextConfigurationContext>> DefaultPreConfigureActions { get; }
 
     internal Action<EntDbContextConfigurationContext>? DefaultConfigureAction { get; set; }
@@ -15,14 +18,17 @@ public class EntDbContextOptions
 
     internal Dictionary<Type, object> ConfigureActions { get; }
 
+    internal Dictionary<MultiTenantDbContextType, Type> DbContextReplacements { get; }
+
     public EntDbContextOptions()
     {
         DefaultPreConfigureActions = new List<Action<EntDbContextConfigurationContext>>();
         PreConfigureActions = new Dictionary<Type, List<object>>();
         ConfigureActions = new Dictionary<Type, object>();
+        DbContextReplacements = new Dictionary<MultiTenantDbContextType, Type>();
     }
-    
-     public void PreConfigure(Action<EntDbContextConfigurationContext> action)
+
+    public void PreConfigure([NotNull] Action<EntDbContextConfigurationContext> action)
     {
         EntCheck.NotNull(action, nameof(action));
 
@@ -73,5 +79,27 @@ public class EntDbContextOptions
         return ConfigureActions.ContainsKey(dbContextType);
     }
 
- 
+    internal Type GetReplacedTypeOrSelf(Type dbContextType, MultiTenancySides multiTenancySides = MultiTenancySides.Both)
+    {
+        var replacementType = dbContextType;
+        while (true)
+        {
+            var foundType = DbContextReplacements.LastOrDefault(x => x.Key.Type == replacementType && x.Key.MultiTenancySide.HasFlag(multiTenancySides));
+            if (!foundType.Equals(default(KeyValuePair<MultiTenantDbContextType, Type>)))
+            {
+                if (foundType.Value == dbContextType)
+                {
+                    throw new EntException(
+                        "Circular DbContext replacement found for " +
+                        dbContextType.AssemblyQualifiedName
+                    );
+                }
+                replacementType = foundType.Value;
+            }
+            else
+            {
+                return replacementType;
+            }
+        }
+    }
 }

@@ -1,7 +1,6 @@
 using Enter.ENB.Domain;
 using Enter.ENB.Identity.Domain;
 using Enter.ENB.Modularity;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Enter.ENB.Example.Domain;
 

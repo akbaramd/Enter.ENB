@@ -11,6 +11,9 @@ public abstract class EntModule : IEntModule, IOnPreApplicationInitialization,
     IPreConfigureServices,
     IPostConfigureServices
 {
+
+    
+    
     internal static void CheckEntModuleType(Type moduleType)
     {
         if (!IsEntModule(moduleType))
@@ -29,7 +32,7 @@ public abstract class EntModule : IEntModule, IOnPreApplicationInitialization,
             !typeInfo.IsGenericType &&
             typeof(IEntModule).GetTypeInfo().IsAssignableFrom(type);
     }
-
+    public IConfiguration Configuration { get; set; }
     public ServiceConfigurationContext ServiceConfigurationContext { get; set; }
    
 

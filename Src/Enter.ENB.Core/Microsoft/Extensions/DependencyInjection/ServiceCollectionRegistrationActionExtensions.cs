@@ -1,5 +1,4 @@
 using Enter.ENB.DependencyInjection;
-using Enter.ENB.Extensions;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
@@ -29,12 +28,12 @@ public static class ServiceCollectionRegistrationActionExtensions
         return actionList;
     }
 
-    public static void DisableAbpClassInterceptors(this IServiceCollection services)
+    public static void DisableEntClassInterceptors(this IServiceCollection services)
     {
         GetOrCreateRegistrationActionList(services).IsClassInterceptorsDisabled = true;
     }
 
-    public static bool IsAbpClassInterceptorsDisabled(this IServiceCollection services)
+    public static bool IsEntClassInterceptorsDisabled(this IServiceCollection services)
     {
         return GetOrCreateRegistrationActionList(services).IsClassInterceptorsDisabled;
     }

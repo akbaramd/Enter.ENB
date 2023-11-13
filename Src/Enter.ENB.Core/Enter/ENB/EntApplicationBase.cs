@@ -1,9 +1,9 @@
 ﻿using System.Reflection;
 using Enter.ENB.Exceptions;
-using Enter.ENB.Extensions;
 using Enter.ENB.Modularity;
 using Enter.ENB.Reflection;
 using Enter.ENB.Statics;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -13,7 +13,7 @@ public class EntApplicationBase : IEntApplication
 {
     private bool _configuredServices;
 
-
+    public IConfiguration Configuration { get; set; }
     internal EntApplicationBase(
         Type startupModuleType,
         IServiceCollection services)
@@ -23,10 +23,10 @@ public class EntApplicationBase : IEntApplication
 
         StartupModuleType = startupModuleType;
         Services = services;
-
+        Configuration = services.BuildServiceProvider().CreateScope().ServiceProvider.GetRequiredService<IConfiguration>();
         services.TryAddObjectAccessor<IServiceProvider>();
 
-        // var options = new AbpApplicationCreationOptions(services);
+        // var options = new EntApplicationCreationOptions(services);
         // optionsAction?.Invoke(options);
         
         ApplicationName = GetApplicationName();
@@ -80,12 +80,17 @@ public class EntApplicationBase : IEntApplication
     {
         CheckMultipleConfigureServices();
 
+        
+        
         var context = new ServiceConfigurationContext(Services);
         Services.AddSingleton(context);
 
         foreach (var module in Modules)
             if (module.Instance is EntModule entModule)
+            {
                 entModule.ServiceConfigurationContext = context;
+                entModule.Configuration = Configuration;
+            }
 
         //PreConfigureServices
         foreach (var module in Modules.Where(m => m.Instance is IPreConfigureServices))
@@ -106,9 +111,9 @@ public class EntApplicationBase : IEntApplication
         foreach (var module in Modules)
         {
             
-            if (module.Instance is EntModule abpModule)
+            if (module.Instance is EntModule EntModule)
             {
-                // if (!abpModule.SkipAutoServiceRegistration)
+                // if (!EntModule.SkipAutoServiceRegistration)
                 // {
                     foreach (var assembly in module.AllAssemblies)
                     {
@@ -163,7 +168,10 @@ public class EntApplicationBase : IEntApplication
 
         foreach (var module in Modules)
             if (module.Instance is EntModule entModule)
+            {
                 entModule.ServiceConfigurationContext = context;
+                entModule.Configuration = Configuration;
+            }
 
         //PreConfigureServices
         foreach (var module in Modules.Where(m => m.Instance is IPreConfigureServices))
@@ -245,10 +253,11 @@ public class EntApplicationBase : IEntApplication
         var assemblyFinder = new AssemblyFinder(entApplication);
         var typeFinder = new TypeFinder(assemblyFinder);
 
-
+        
         services.TryAddSingleton<IModuleLoader>(moduleLoader);
         services.TryAddSingleton<IAssemblyFinder>(assemblyFinder);
         services.TryAddSingleton<ITypeFinder>(typeFinder);
+        
 
         services.AddAssemblyOf<IEntApplication>();
         

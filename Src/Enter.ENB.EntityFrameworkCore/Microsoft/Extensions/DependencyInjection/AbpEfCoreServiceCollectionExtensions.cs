@@ -1,9 +1,6 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
+﻿using System.Reflection;
 using Enter.ENB.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 
 
 namespace Microsoft.Extensions.DependencyInjection;
@@ -15,7 +12,23 @@ public static class EntEfCoreServiceCollectionExtensions
         Action<DbContextOptionsBuilder> configure)
         where TDbContext : EntDbContext<TDbContext>
     {
-        services.AddDbContext<TDbContext>(configure);
+
+        
+        services.AddDbContext<EntDbContext<TDbContext>>(configure);
+        
+        
+        var replacedMultiTenantDbContextTypes = typeof(TDbContext).GetCustomAttributes<AlternativeDbContextAttribute>(true)
+            .Select(x => x.ReplacedDbContextTypes).ToList();
+        
+        foreach (var dbContextType in replacedMultiTenantDbContextTypes)
+        {
+            services.AddTransient(dbContextType, sp =>
+            {
+                var res = sp.GetRequiredService<TDbContext>();
+                return res ;
+            });
+        }
+        
         return services;
     }
 }

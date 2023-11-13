@@ -1,4 +1,5 @@
 using Enter.ENB.Example.Api;
+using Enter.ENB.Identity.Application.Contracts.Users;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,10 @@ await builder.AddApplicationAsync<EnterEnbExampleApiModule>();
 var app = builder.Build();
 
 await app.InitializeApplicationAsync();
+
+
+var userService = app.Services.CreateScope().ServiceProvider.GetRequiredService<IUserAppService>();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

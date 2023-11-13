@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Enter.ENB.EntityFrameworkCore.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace Enter.ENB.EntityFrameworkCore;
 
-public static class AbpDbContextConfigurationContextSqlServerExtensions
+public static class EntDbContextConfigurationContextSqlServerExtensions
 {
     public static DbContextOptionsBuilder UseSqlServer(
         this EntDbContextConfigurationContext context,

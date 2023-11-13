@@ -5,7 +5,7 @@ namespace Enter.ENB.DependencyInjection;
 
 public interface IOnServiceRegistredContext
 {
-    ITypeList<IAbpInterceptor> Interceptors { get; }
+    ITypeList<IEntInterceptor> Interceptors { get; }
 
     Type ImplementationType { get; }
 }
