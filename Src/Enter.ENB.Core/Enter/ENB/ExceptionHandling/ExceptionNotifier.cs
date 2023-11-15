@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using Enter.ENB.DependencyInjection;
+﻿using Enter.ENB.DependencyInjection;
 using Enter.ENB.Statics;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Enter.ENB.Example.Domain.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e10516a6a3abc0c49acfc8f2a2ea06109e24a19c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Enter.ENB.Example.Domain.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Enter.ENB.Example.Domain.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

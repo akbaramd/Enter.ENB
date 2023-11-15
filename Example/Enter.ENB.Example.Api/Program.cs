@@ -1,7 +1,6 @@
 using Enter.ENB.Domain.Repository;
 using Enter.ENB.Example.Api;
 using Enter.ENB.Identity.Application.Contracts.Users;
-using Enter.ENB.Identity.Application.Contracts.Users.Dtos;
 using Enter.ENB.Identity.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,17 +18,9 @@ var app = builder.Build();
 
 await app.InitializeApplicationAsync();
 
-var service = app.Services.CreateScope().ServiceProvider.GetRequiredService<IUserAppService>();
-var genericRepository = app.Services.CreateScope().ServiceProvider.GetRequiredService<IRepository<EntUser,Guid>>();
-var repository = app.Services.CreateScope().ServiceProvider.GetRequiredService<IEntUserRepository>();
-
-var res = await service.CreateAsync(new CreateUpdateUserDto()
-{
-UserName = "akbar",
-Password = "ahmadi",
-FirstName = "asdasd",
-LastName = "sdads"
-});
+var service =  await app.Services.CreateScope().ServiceProvider.GetRequiredService<IUserAppService>().GetByUsernameAsync("akbar");
+var genericRepository = await app.Services.CreateScope().ServiceProvider.GetRequiredService<IRepository<EntUser,Guid>>().FindAsync(x=>x.UserName == "akbar");
+var repository =await app.Services.CreateScope().ServiceProvider.GetRequiredService<IEntUserRepository>().FindAsync(x=>x.UserName == "akbar");;
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

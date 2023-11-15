@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using Enter.ENB.Domain.Entities;
+﻿using Enter.ENB.Domain.Entities;
 using Enter.ENB.Extensions;
 using Enter.ENB.Statics;
 
@@ -28,7 +27,7 @@ public class AbpEntityOptions
         return _options.GetOrDefault(typeof(TEntity)) as AbpEntityOptions<TEntity>;
     }
 
-    public void Entity<TEntity>([NotNull] Action<AbpEntityOptions<TEntity>> optionsAction)
+    public void Entity<TEntity>(Action<AbpEntityOptions<TEntity>> optionsAction)
         where TEntity : IEntEntity
     {
         EntCheck.NotNull(optionsAction, nameof(optionsAction));

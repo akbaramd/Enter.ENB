@@ -1,4 +1,4 @@
-namespace Enter.ENB.Ddd.Application.Services;
+﻿namespace Enter.ENB.Application.Services;
 
 public interface IUpdateAppService<TEntityDto, in TKey>
     : IUpdateAppService<TEntityDto, TKey, TEntityDto>

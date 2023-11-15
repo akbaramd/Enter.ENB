@@ -1,6 +1,5 @@
 ﻿using Enter.ENB.DependencyInjection;
 using Enter.ENB.Domain.Entities;
-using Enter.ENB.MultiTenancy;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Enter.ENB.EntityFrameworkCore.DependencyInjection;

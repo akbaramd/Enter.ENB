@@ -1,7 +1,6 @@
 
 using Enter.ENB.Modularity;
 using Enter.ENB.Threading;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace Enter.ENB.EntityFrameworkCore;
 

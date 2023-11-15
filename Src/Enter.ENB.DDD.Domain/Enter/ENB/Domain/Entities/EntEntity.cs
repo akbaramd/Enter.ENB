@@ -17,24 +17,8 @@ public abstract class EntEntity : IEntEntity
 
     public bool EntityEquals(IEntEntity other)
     {
-        //Same instances must be considered as equal
-        if (ReferenceEquals(this, other))
-        {
-            return true;
-        }
-
-        //Must have a IS-A relation of types or must be same type
-        var typeOfEntity1 = this.GetType();
-        var typeOfEntity2 = other.GetType();
-        if (!typeOfEntity1.IsAssignableFrom(typeOfEntity2) && !typeOfEntity2.IsAssignableFrom(typeOfEntity1))
-        {
-            return false;
-        }
-
-        return true;
+        return EntityHelper.EntityEquals(this, other);
     }
-    
-    
     
 }
 
@@ -47,7 +31,7 @@ public abstract class EntEntity<TKey> : EntEntity, IEntEntity<TKey>
 
     protected EntEntity()
     {
-
+        EntityHelper.TrySetTenantId(this);
     }
 
     protected EntEntity(TKey id)

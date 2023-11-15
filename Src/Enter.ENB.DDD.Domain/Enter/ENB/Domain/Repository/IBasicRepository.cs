@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using Enter.ENB.Domain.Entities;
+﻿using Enter.ENB.Domain.Entities;
 
 namespace Enter.ENB.Domain.Repository;
 

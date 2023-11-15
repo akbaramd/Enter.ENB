@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using Enter.ENB.DependencyInjection;
 using Enter.ENB.Domain.Entities;
 using Enter.ENB.Linq;

@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 using Enter.ENB.Statics;
 
 namespace System.Linq;
@@ -9,9 +8,6 @@ namespace System.Linq;
 /// </summary>
 public static class AbpQueryableExtensions
 {
-    /// <summary>
-    /// Used for paging. Can be used as an alternative to Skip(...).Take(...) chaining.
-    /// </summary>
     public static IQueryable<T> PageBy<T>(this IQueryable<T> query, int skipCount, int maxResultCount)
     {
         EntCheck.NotNull(query, nameof(query));

@@ -10,7 +10,7 @@ public interface IRepository
 }
 
 
-public interface IRepository<TEntity> : IReadOnlyRepository<TEntity>
+public interface IRepository<TEntity> : IReadOnlyRepository<TEntity>, IBasicRepository<TEntity>
     where TEntity : class, IEntEntity
 {
     Task<TEntity?> FindAsync(

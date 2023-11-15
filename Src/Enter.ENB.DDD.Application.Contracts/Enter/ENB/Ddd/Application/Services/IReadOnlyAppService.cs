@@ -1,6 +1,6 @@
-using Enter.ENB.Ddd.Application.Dtos;
+﻿using Enter.ENB.Ddd.Application.Dtos;
 
-namespace Enter.ENB.Ddd.Application.Services;
+namespace Enter.ENB.Application.Services;
 
 public interface IReadOnlyAppService<TEntityDto, in TKey>
     : IReadOnlyAppService<TEntityDto, TEntityDto, TKey, PagedAndSortedResultRequestDto>

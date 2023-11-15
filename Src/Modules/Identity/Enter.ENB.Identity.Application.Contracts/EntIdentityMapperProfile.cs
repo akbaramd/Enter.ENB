@@ -9,7 +9,5 @@ public class EntIdentityMapperProfile : Profile
     public EntIdentityMapperProfile()
     {
         CreateMap<EntUser, UserDto>();
-        CreateMap<CreateUpdateUserDto, EntUser>();
-        CreateMap<UserDto, EntUser>();
     }
 }

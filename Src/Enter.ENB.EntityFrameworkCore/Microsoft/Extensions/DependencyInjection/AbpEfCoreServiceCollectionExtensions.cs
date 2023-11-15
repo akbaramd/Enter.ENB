@@ -1,8 +1,6 @@
 ﻿using Enter.ENB.EntityFrameworkCore;
 using Enter.ENB.EntityFrameworkCore.DependencyInjection;
-using Enter.ENB.Exceptions;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 namespace Microsoft.Extensions.DependencyInjection;
 

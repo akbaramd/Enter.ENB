@@ -1,12 +1,12 @@
-namespace Enter.ENB.Ddd.Application.Services;
+﻿namespace Enter.ENB.Application.Services;
 
-public interface ICreateApplicationService<TEntityDto>
-    : ICreateApplicationService<TEntityDto, TEntityDto>
+public interface ICreateAppService<TEntityDto>
+    : ICreateAppService<TEntityDto, TEntityDto>
 {
 
 }
 
-public interface ICreateApplicationService<TGetOutputDto, in TCreateInput>
+public interface ICreateAppService<TGetOutputDto, in TCreateInput>
     : IApplicationService
 {
     Task<TGetOutputDto> CreateAsync(TCreateInput input);
