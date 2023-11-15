@@ -1,15 +1,17 @@
 using Enter.ENB.DependencyInjection;
 using Enter.ENB.Domain;
+using Enter.ENB.Domain.Repository;
 using Enter.ENB.Identity.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace Enter.ENB.Identity.EntityFrameworkCore.Repositories;
 
 
-public class EntUserRepository<TDbContent> :EfCoreRepository<TDbContent,EntUser,Guid>, IEntUserRepository where TDbContent : DbContext 
+[ExposeServices(
+    typeof(IEntUserRepository) )]
+public class EntUserRepository :EfCoreRepository<EntIdentityDbContext,EntUser,Guid>, IEntUserRepository ,ITransientDependency  
 {
-    public EntUserRepository(TDbContent dbContext) : base(dbContext)
+    public EntUserRepository(EntIdentityDbContext dbContext) : base(dbContext)
     {
-        Console.WriteLine("ss");
     }
 }

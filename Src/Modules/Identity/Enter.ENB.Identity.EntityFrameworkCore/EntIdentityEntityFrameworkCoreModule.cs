@@ -9,17 +9,17 @@ namespace Enter.ENB.Identity.EntityFrameworkCore;
 
 
 [DependsOnModules(typeof(EntEntityFrameworkCoreModule))]
-public class EntIdentityEntityFrameworkCoreModule<TDbContext> : EntModule where TDbContext : DbContext
+public class EntIdentityEntityFrameworkCoreModule : EntModule 
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {
-        context.Services.AddConventionalRegistrar(new EntIdentityEntityFrameworkConventionalRegistrar());
+       // context.Services.AddConventionalRegistrar(new EntIdentityEntityFrameworkConventionalRegistrar());
 
         base.PreConfigureServices(context);
     }
 
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        context.Services.AddRepository<TDbContext, EntUser, Guid>();
+        context.Services.AddEntDbContext<EntIdentityDbContext>();
     }
 }

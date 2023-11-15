@@ -20,8 +20,7 @@ public class EntUserConfiguration : IEntityTypeConfiguration<EntUser>
     {
         builder.ToTable("Users");
         builder.HasKey(x => x.Id);
-        builder.HasIndex(x => x.UserName);
-        
+        builder.HasIndex(x => x.UserName).IsUnique();
         
         builder
             .Property(b => b.EntExtraProperties)

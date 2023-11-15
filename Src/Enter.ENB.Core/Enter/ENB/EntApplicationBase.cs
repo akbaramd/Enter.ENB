@@ -6,24 +6,32 @@ using Enter.ENB.Statics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.Extensions.Logging;
 
 namespace Enter.ENB;
 
-public class EntApplicationBase : IEntApplication
+public class EntApplication : IEntApplication
 {
     private bool _configuredServices;
 
     public IConfiguration Configuration { get; set; }
-    internal EntApplicationBase(
+    internal EntApplication(
         Type startupModuleType,
         IServiceCollection services)
     {
+        
+        
+        
         EntCheck.NotNull(startupModuleType, nameof(startupModuleType));
         EntCheck.NotNull(services, nameof(services));
 
+        ServiceProvider = services.BuildServiceProvider();
+        
         StartupModuleType = startupModuleType;
         Services = services;
-        Configuration = services.BuildServiceProvider().CreateScope().ServiceProvider.GetRequiredService<IConfiguration>();
+        
+        Configuration = ServiceProvider.GetRequiredService<IConfiguration>();
+        Logger = ServiceProvider.GetRequiredService<ILogger<EntApplication>>();
         services.TryAddObjectAccessor<IServiceProvider>();
 
         // var options = new EntApplicationCreationOptions(services);
@@ -46,7 +54,7 @@ public class EntApplicationBase : IEntApplication
 
     public IServiceCollection Services { get; } = default!;
     public IServiceProvider ServiceProvider { get; set; } = default!;
-
+    public ILogger<EntApplication> Logger { get; set; }
     public IReadOnlyCollection<IEntModuleDescriptor> Modules { get; } = default!;
     public string? ApplicationName { get; }
     public string InstanceId { get; } = default!;
@@ -78,9 +86,9 @@ public class EntApplicationBase : IEntApplication
 
     public virtual async Task ConfigureServicesAsync()
     {
-        CheckMultipleConfigureServices();
-
+        Logger.LogInformation("Start ConfigureAsync All Module");
         
+        CheckMultipleConfigureServices();
         
         var context = new ServiceConfigurationContext(Services);
         Services.AddSingleton(context);
@@ -156,11 +164,16 @@ public class EntApplicationBase : IEntApplication
         _configuredServices = true;
 
         // TryToSetEnvironment(Services);
+        
+        Logger.LogInformation("All Ent Modules Service ConfiguredAsync");
     }
 
     //TODO: We can extract a new class for this
     public virtual void ConfigureServices()
     {
+        
+        Logger.LogInformation("Start ConfiguredAsync All Module");
+        
         CheckMultipleConfigureServices();
 
         var context = new ServiceConfigurationContext(Services);
@@ -237,6 +250,8 @@ public class EntApplicationBase : IEntApplication
         _configuredServices = true;
 
         //TryToSetEnvironment(Services);
+        
+        Logger.LogInformation("All Ent Modules Service Configured. \n");
     }
 
     internal static void AddCoreServices(IServiceCollection services)

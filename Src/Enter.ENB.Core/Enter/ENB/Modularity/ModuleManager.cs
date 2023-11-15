@@ -29,6 +29,7 @@ public class ModuleManager : IModuleManager
 
     public virtual async Task InitializeModulesAsync(ApplicationInitializationContext context)
     {
+        _logger.LogInformation("Start InitializeAsync All Ent Modules");
         foreach (var contributor in _lifecycleContributors)
         {
             foreach (var module in _moduleContainer.Modules)
@@ -44,11 +45,12 @@ public class ModuleManager : IModuleManager
             }
         }
 
-        _logger.LogInformation("Initialized all Ent modules.");
+        _logger.LogInformation("All Ent Modules InitializeAsync ");
     }
 
     public void InitializeModules(ApplicationInitializationContext context)
     {
+        _logger.LogInformation("Start Initialize All Ent Modules");
         foreach (var contributor in _lifecycleContributors)
         {
             foreach (var module in _moduleContainer.Modules)
@@ -64,7 +66,7 @@ public class ModuleManager : IModuleManager
             }
         }
 
-        _logger.LogInformation("Initialized all Ent modules.");
+        _logger.LogInformation("All Ent Modules Initlized ");
     }
 
     public virtual async Task ShutdownModulesAsync(ApplicationShutdownContext context)

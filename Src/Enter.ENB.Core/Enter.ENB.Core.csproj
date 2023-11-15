@@ -18,7 +18,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Enter.ENB.MultiTenancy\Enter.ENB.MultiTenancy.csproj" />
       <ProjectReference Include="..\Enter.ENB\Enter.ENB.csproj" />
+      <ProjectReference Include="..\Enter.ENB\Enter.ENB.DDD.Domain.csproj" />
     </ItemGroup>
 
 </Project>

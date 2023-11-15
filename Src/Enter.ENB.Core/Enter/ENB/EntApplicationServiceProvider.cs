@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Enter.ENB;
 
-internal class EntApplicationServiceProvider : EntApplicationBase, IEntApplicationServiceProvider
+internal class EntApplicationServiceProvider : EntApplication, IEntApplicationServiceProvider
 {
     private IEntApplicationServiceProvider _entApplicationServiceProviderImplementation;
 

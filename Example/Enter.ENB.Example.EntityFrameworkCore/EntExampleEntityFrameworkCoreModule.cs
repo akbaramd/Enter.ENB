@@ -8,24 +8,21 @@ using Microsoft.Extensions.DependencyInjection;
 namespace Enter.ENB.Example.EntityFrameworkCore;
 
 [DependsOnModules(
-    typeof(EntIdentityEntityFrameworkCoreModule<EntAppDbContext>)
+    typeof(EntIdentityEntityFrameworkCoreModule)
 )]
 public class EntExampleEntityFrameworkCoreModule : EntModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {
-
-      
+        context.Services.AddEntDbContextConfigure(c =>
+        {
+            c.UseSqlServer(Configuration.GetConnectionString("Default"));
+        });
     }
 
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
         
-        context.Services.AddEntDbContext<EntAppDbContext>(c =>
-        {
-            c.UseSqlServer(Configuration.GetConnectionString("Default"));
-        });
-        
-        
+        context.Services.AddEntDbContext<EntAppDbContext>();
     }
 }

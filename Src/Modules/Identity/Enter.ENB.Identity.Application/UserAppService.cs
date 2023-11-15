@@ -11,7 +11,7 @@ namespace Enter.ENB.Identity.Application;
 
 public class UserAppService :ApplicationService, IUserAppService
 {
-    private readonly IRepository<EntUser,Guid> _repository;
+    private readonly IEntUserRepository _repository;
     
     public async Task<UserDto> GetAsync(Guid id)
     {
@@ -45,7 +45,7 @@ public class UserAppService :ApplicationService, IUserAppService
         throw new NotImplementedException();
     }
 
-    public UserAppService(IEntLazyServiceProvider lazyServiceProvider, IRepository<EntUser,Guid> repository) : base(lazyServiceProvider)
+    public UserAppService(IEntLazyServiceProvider lazyServiceProvider, IEntUserRepository repository) : base(lazyServiceProvider)
     {
         _repository = repository;
     }

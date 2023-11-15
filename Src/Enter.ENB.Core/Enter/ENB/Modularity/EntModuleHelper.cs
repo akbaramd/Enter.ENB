@@ -7,8 +7,10 @@ internal static class EntModuleHelper
     public static List<Type> FindAllModuleTypes(Type startupModuleType)
     {
         var moduleTypes = new List<Type>();
-        Console.WriteLine("Loaded Enter.ENB modules:");
+        Console.WriteLine("----------------------------- Start Load Enter.ENB Modules --------------------------------\n");
         AddModuleAndDependenciesRecursively(moduleTypes, startupModuleType);
+        
+        Console.WriteLine("\n----------------------------- All Enter.ENB Modules Loaded --------------------------------\n");
         return moduleTypes;
     }
 

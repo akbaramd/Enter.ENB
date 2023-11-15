@@ -6,7 +6,7 @@ namespace Enter.ENB.Identity.EntityFrameworkCore;
 
 public class EntIdentityDbContext : EntDbContext , IEntIdentityDbContext
 {
-    public EntIdentityDbContext(DbContextOptions options): base(options)
+    public EntIdentityDbContext(DbContextOptions<EntDbContext> options): base(options)
     {
         
     }
