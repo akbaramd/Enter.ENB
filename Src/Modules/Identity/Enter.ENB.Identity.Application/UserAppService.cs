@@ -1,7 +1,6 @@
 ﻿using Enter.ENB.Ddd.Application.Dtos;
 using Enter.ENB.Ddd.Application.Services;
 using Enter.ENB.DependencyInjection;
-using Enter.ENB.Domain.Repository;
 using Enter.ENB.Identity.Application.Contracts.Users;
 using Enter.ENB.Identity.Application.Contracts.Users.Dtos;
 using Enter.ENB.Identity.Domain;
@@ -15,7 +14,7 @@ public class UserAppService :ApplicationService, IUserAppService
     
     public async Task<UserDto> GetAsync(Guid id)
     {
-        var res = await _repository.Find(id);
+        var res = await _repository.GetAsync(id);
         return ObjectMapper.Map<EntUser,UserDto>(res);
     }
 
@@ -36,7 +35,7 @@ public class UserAppService :ApplicationService, IUserAppService
         var user = new EntUser(input.UserName);
         user.SetName(input.FirstName,input.LastName);
         user.SetPassword(input.Password);
-        await _repository.InsertAsync(user);
+        await _repository.InsertAsync(user,true);
         return new UserDto();
     }
 

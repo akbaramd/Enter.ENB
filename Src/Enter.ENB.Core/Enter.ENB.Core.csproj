@@ -8,19 +8,33 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.13" />
-      <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
-      <PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
-      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-      <PackageReference Include="Nito.AsyncEx" Version="5.1.2" />
+        <PackageReference Include="System.Collections.Immutable" Version="7.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.14"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection"  Version="7.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables"  Version="7.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets"  Version="7.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine"  Version="7.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Options"  Version="7.0.1"/>
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Logging"  Version="7.0.0"/>
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions"  Version="7.0.1"/>
+        <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions"  Version="7.0.0"/> 
+        <PackageReference Include="System.Text.Encodings.Web" Version="7.0.0"/>
+        <PackageReference Include="System.Runtime.Loader" Version="4.3.0"/>
+        <PackageReference Include="System.Linq.Dynamic.Core" Version="1.3.5"/>
+        <PackageReference Include="System.Linq.Queryable" Version="4.3.0"/>
+        <PackageReference Include="Nito.AsyncEx.Coordination" Version="5.1.2"/>
+        <PackageReference Include="Nito.AsyncEx.Context" Version="5.1.2"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
     </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\Enter.ENB.MultiTenancy\Enter.ENB.MultiTenancy.csproj" />
-      <ProjectReference Include="..\Enter.ENB\Enter.ENB.csproj" />
-      <ProjectReference Include="..\Enter.ENB\Enter.ENB.DDD.Domain.csproj" />
+    <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETStandard' And $([MSBuild]::VersionGreaterThanOrEquals($(TargetFrameworkVersion), '2.1')) ">
+        <PackageReference Include="System.ComponentModel.Annotations" />
+    </ItemGroup>
+    <ItemGroup Condition=" '$(TargetFrameworkIdentifier)' == '.NETStandard' And $([MSBuild]::VersionGreaterThanOrEquals($(TargetFrameworkVersion), '2.0')) ">
+        <PackageReference Include="Nullable">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
 
 </Project>

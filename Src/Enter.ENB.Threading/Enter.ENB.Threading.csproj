@@ -4,6 +4,12 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RootNamespace />
     </PropertyGroup>
+
+
+    <ItemGroup>
+        <ProjectReference Include="..\Enter.ENB.Core\Enter.ENB.Core.csproj" />
+    </ItemGroup>
 
 </Project>

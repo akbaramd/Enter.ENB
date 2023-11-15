@@ -1,4 +1,4 @@
-namespace Enter.ENB.ExceptionHandling;
+﻿namespace Enter.ENB.ExceptionHandling;
 
 public interface IHasErrorCode
 {

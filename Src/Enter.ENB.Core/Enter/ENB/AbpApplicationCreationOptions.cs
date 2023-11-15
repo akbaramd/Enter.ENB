@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using Enter.ENB.Statics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,7 +21,7 @@ public class EntApplicationCreationOptions
 
     public string? Environment { get; set; }
 
-    public EntApplicationCreationOptions([NotNull] IServiceCollection services)
+    public EntApplicationCreationOptions(IServiceCollection services)
     {
         Services = EntCheck.NotNull(services, nameof(services));
         // PlugInSources = new PlugInSourceList();

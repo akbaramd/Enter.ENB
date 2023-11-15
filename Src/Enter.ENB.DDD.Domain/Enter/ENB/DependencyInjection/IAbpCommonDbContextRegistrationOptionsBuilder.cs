@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using Enter.ENB.MultiTenancy;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -66,7 +65,7 @@ public interface IAbpCommonDbContextRegistrationOptionsBuilder
     /// <param name="repositoryImplementationType">Repository implementation type</param>
     /// <param name="repositoryImplementationTypeWithoutKey">Repository implementation type (without primary key)</param>
     /// <returns></returns>
-    IAbpCommonDbContextRegistrationOptionsBuilder SetDefaultRepositoryClasses([NotNull] Type repositoryImplementationType, [NotNull] Type repositoryImplementationTypeWithoutKey);
+    IAbpCommonDbContextRegistrationOptionsBuilder SetDefaultRepositoryClasses(Type repositoryImplementationType, Type repositoryImplementationTypeWithoutKey);
 
     /// <summary>
     /// Replaces given DbContext type with this DbContext type.

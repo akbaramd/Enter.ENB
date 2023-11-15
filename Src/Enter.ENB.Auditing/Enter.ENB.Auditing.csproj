@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Enter.ENB.Core\Enter.ENB.Core.csproj" />
+      <ProjectReference Include="..\Enter.ENB.Threading\Enter.ENB.Threading.csproj" />
       <ProjectReference Include="..\Enter.ENB\Enter.ENB.csproj" />
     </ItemGroup>
 

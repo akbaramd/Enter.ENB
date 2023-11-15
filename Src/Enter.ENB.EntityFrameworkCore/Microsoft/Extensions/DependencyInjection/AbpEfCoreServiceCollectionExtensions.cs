@@ -1,7 +1,5 @@
-﻿using Enter.ENB.Domain;
-using Enter.ENB.Domain.Entities;
-using Enter.ENB.Domain.Repository;
-using Enter.ENB.EntityFrameworkCore;
+﻿using Enter.ENB.EntityFrameworkCore;
+using Enter.ENB.EntityFrameworkCore.DependencyInjection;
 using Enter.ENB.Exceptions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -11,16 +9,18 @@ namespace Microsoft.Extensions.DependencyInjection;
 public static class EntEfCoreServiceCollectionExtensions
 {
     public static IServiceCollection AddEntDbContext<TDbContext>(
-        this IServiceCollection services)
+        this IServiceCollection services,
+        Action<AbpDbContextRegistrationOptions>? action = null)
         where TDbContext : DbContext
     {
         
-        var option = services.BuildServiceProvider().CreateScope().ServiceProvider.GetService<IOptions<DbContextOptionsBuilder<EntDbContext>>>();
-        if (option == null)
-        {
-            throw new EntException("DbContextOptionsBuilder is null . please use AddEntDbContextConfigure<TDbContext> in Module PreConfigureServices Method");
-        }
+        var registrationOptions = new AbpDbContextRegistrationOptions(typeof(TDbContext), services);
+        
+        action?.Invoke(registrationOptions);
+        
         services.AddDbContext<TDbContext>();
+        
+        new EfCoreRepositoryRegistrar(registrationOptions).AddRepositories();
         return services;
     }
     

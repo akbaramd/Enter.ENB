@@ -1,5 +1,4 @@
 ﻿using Enter.ENB.EntityFrameworkCore;
-using Enter.ENB.Identity.Domain;
 using Enter.ENB.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

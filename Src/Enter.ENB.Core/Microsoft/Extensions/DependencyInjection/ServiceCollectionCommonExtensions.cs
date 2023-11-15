@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using Enter.ENB;
 using Enter.ENB.Exceptions;
@@ -42,7 +41,7 @@ public static class ServiceCollectionCommonExtensions
         return service;
     }
 
-    public static IServiceProvider BuildServiceProviderFromFactory([NotNull] this IServiceCollection services)
+    public static IServiceProvider BuildServiceProviderFromFactory(this IServiceCollection services)
     {
         EntCheck.NotNull(services, nameof(services));
 
@@ -71,7 +70,7 @@ public static class ServiceCollectionCommonExtensions
         return services.BuildServiceProvider();
     }
 
-    public static IServiceProvider BuildServiceProviderFromFactory<TContainerBuilder>([NotNull] this IServiceCollection services, Action<TContainerBuilder>? builderAction = null) where TContainerBuilder : notnull
+    public static IServiceProvider BuildServiceProviderFromFactory<TContainerBuilder>(this IServiceCollection services, Action<TContainerBuilder>? builderAction = null) where TContainerBuilder : notnull
     {
         EntCheck.NotNull(services, nameof(services));
 

@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 using Enter.ENB;
 using Enter.ENB.Statics;
@@ -32,7 +31,7 @@ public static class EntApplicationBuilderExtensions
         await application.InitializeAsync(app.ApplicationServices);
     }
 
-    public static void InitializeApplication([NotNull] this IApplicationBuilder app)
+    public static void InitializeApplication(this IApplicationBuilder app)
     {
         EntCheck.NotNull(app, nameof(app));
 

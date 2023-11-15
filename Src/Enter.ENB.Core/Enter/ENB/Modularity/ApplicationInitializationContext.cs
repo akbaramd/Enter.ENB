@@ -1,6 +1,4 @@
 ﻿using Enter.ENB.Statics;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace Enter.ENB.Modularity;
 

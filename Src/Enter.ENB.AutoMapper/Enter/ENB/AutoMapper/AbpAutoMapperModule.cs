@@ -1,16 +1,17 @@
 ﻿using AutoMapper;
 using AutoMapper.Internal;
+using Enter.ENB.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Enter.ENB.Modularity;
 using Enter.ENB.ObjectMapping;
-using Microsoft.Extensions.Configuration;
 using IConfigurationProvider = AutoMapper.IConfigurationProvider;
 
 namespace Enter.ENB.AutoMapper;
 
 [DependsOnModules(
-    typeof(EntObjectMappingModule)
+    typeof(EntObjectMappingModule),
+    typeof(EntAuditingModule)
 )]
 public class EntAutoMapperModule : EntModule
 {

@@ -20,7 +20,8 @@ var app = builder.Build();
 await app.InitializeApplicationAsync();
 
 var service = app.Services.CreateScope().ServiceProvider.GetRequiredService<IUserAppService>();
-var repository = app.Services.CreateScope().ServiceProvider.GetRequiredService<IRepository<EntUser,Guid>>();
+var genericRepository = app.Services.CreateScope().ServiceProvider.GetRequiredService<IRepository<EntUser,Guid>>();
+var repository = app.Services.CreateScope().ServiceProvider.GetRequiredService<IEntUserRepository>();
 
 var res = await service.CreateAsync(new CreateUpdateUserDto()
 {

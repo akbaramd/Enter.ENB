@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using Enter.ENB.Extensions;
+﻿using Enter.ENB.Extensions;
 using Enter.ENB.Statics;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -25,7 +24,7 @@ public class ServiceConfigurationContext
         set => Items[key] = value;
     }
 
-    public ServiceConfigurationContext([NotNull] IServiceCollection services)
+    public ServiceConfigurationContext(IServiceCollection services)
     {
         Services = EntCheck.NotNull(services, nameof(services));
         Items = new Dictionary<string, object?>();

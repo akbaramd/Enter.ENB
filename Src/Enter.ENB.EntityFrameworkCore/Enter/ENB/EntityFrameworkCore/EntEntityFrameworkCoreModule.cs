@@ -9,7 +9,7 @@ public class EntEntityFrameworkCoreModule : EntModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        context.Services.AddTransient(typeof(IRepository<,>), typeof(EfCoreRepository<,,>));
-        context.Services.AddTransient(typeof(IEfCoreRepository<,>), typeof(EfCoreRepository<,,>));
+        context.Services.AddTransient(typeof(IRepository<,>), typeof(EfCoreRepository<,>));
+        context.Services.AddTransient(typeof(IEfCoreRepository<,>), typeof(EfCoreRepository<,>));
     }
 }

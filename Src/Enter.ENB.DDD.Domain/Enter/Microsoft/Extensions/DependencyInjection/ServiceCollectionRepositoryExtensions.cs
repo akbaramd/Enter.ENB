@@ -1,7 +1,9 @@
+using Enter.ENB;
 using Enter.ENB.Domain.Repository;
 using Enter.ENB.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Enter.ENB.Domain.Entities;
 
 namespace Enter.Microsoft.Extensions.DependencyInjection;
 

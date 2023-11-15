@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using Enter.ENB.Exceptions;
 using Enter.ENB.Statics;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,8 +9,8 @@ internal class EntApplicationServiceProvider : EntApplication, IEntApplicationSe
     private IEntApplicationServiceProvider _entApplicationServiceProviderImplementation;
 
     public EntApplicationServiceProvider(
-        [NotNull] Type startupModuleType,
-        [NotNull] IServiceCollection services
+        Type startupModuleType,
+        IServiceCollection services
         
     ) : base(
         startupModuleType,
@@ -20,7 +19,7 @@ internal class EntApplicationServiceProvider : EntApplication, IEntApplicationSe
         services.AddSingleton<IEntApplicationServiceProvider>(this);
     }
 
-    void IEntApplicationServiceProvider.SetServiceProvider([NotNull] IServiceProvider serviceProvider)
+    void IEntApplicationServiceProvider.SetServiceProvider(IServiceProvider serviceProvider)
     {
         EntCheck.NotNull(serviceProvider, nameof(serviceProvider));
 
@@ -47,7 +46,7 @@ internal class EntApplicationServiceProvider : EntApplication, IEntApplicationSe
         await InitializeModulesAsync();
     }
 
-    public void Initialize([NotNull] IServiceProvider serviceProvider)
+    public void Initialize(IServiceProvider serviceProvider)
     {
         EntCheck.NotNull(serviceProvider, nameof(serviceProvider));
 

@@ -1,5 +1,4 @@
 using Enter.ENB.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace Enter.ENB.Ddd.Application.Services;
 

@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.ComponentModel;
-using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Reflection;
 using Enter.ENB.Extensions;
@@ -200,7 +199,7 @@ public static class TypeHelper
         return type.FullName ?? type.Name;
     }
 
-    public static string GetSimplifiedName([NotNull] Type type)
+    public static string GetSimplifiedName(Type type)
     {
         EntCheck.NotNull(type, nameof(type));
 

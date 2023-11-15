@@ -1,4 +1,3 @@
-using Enter.ENB.EntityFrameworkCore;
 using Enter.ENB.Identity.EntityFrameworkCore;
 using Enter.ENB.Modularity;
 using Microsoft.EntityFrameworkCore;

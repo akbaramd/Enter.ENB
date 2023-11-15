@@ -6,9 +6,6 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <ItemGroup>
-      <Folder Include="Enter\ENB\" />
-    </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Enter.ENB.Core\Enter.ENB.Core.csproj" />

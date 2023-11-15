@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using Enter.ENB.Statics;
 
@@ -18,7 +17,7 @@ public static class CultureHelper
         );
     }
 
-    public static IDisposable Use([NotNull] CultureInfo culture, CultureInfo? uiCulture = null)
+    public static IDisposable Use(CultureInfo culture, CultureInfo? uiCulture = null)
     {
         EntCheck.NotNull(culture, nameof(culture));
 

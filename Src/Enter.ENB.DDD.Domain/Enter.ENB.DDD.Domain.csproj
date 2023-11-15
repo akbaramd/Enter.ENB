@@ -11,6 +11,8 @@
       <ProjectReference Include="..\Enter.ENB.Auditing\Enter.ENB.Auditing.csproj" />
       <ProjectReference Include="..\Enter.ENB.Data\Enter.ENB.Data.csproj" />
       <ProjectReference Include="..\Enter.ENB.MultiTenancy\Enter.ENB.MultiTenancy.csproj" />
+      <ProjectReference Include="..\Enter.ENB.Threading\Enter.ENB.Threading.csproj" />
     </ItemGroup>
+
 
 </Project>

@@ -1,4 +1,3 @@
-using Enter.ENB.Domain;
 using Enter.ENB.Identity.Application.Contracts.Users;
 using Enter.ENB.Modularity;
 using Microsoft.Extensions.DependencyInjection;

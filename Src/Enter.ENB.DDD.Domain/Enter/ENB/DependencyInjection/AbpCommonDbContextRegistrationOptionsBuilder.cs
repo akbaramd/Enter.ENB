@@ -95,7 +95,7 @@ public abstract class AbpCommonDbContextRegistrationOptions : IAbpCommonDbContex
 
     public IAbpCommonDbContextRegistrationOptionsBuilder AddDefaultRepository(Type entityType)
     {
-        // EntityHelper.CheckEntity(entityType);
+        EntityHelper.CheckEntity(entityType);
 
         SpecifiedDefaultRepositories.AddIfNotContains(entityType);
 
@@ -130,10 +130,10 @@ public abstract class AbpCommonDbContextRegistrationOptions : IAbpCommonDbContex
             throw new EntException($"Given entityType is not an entity: {entityType.AssemblyQualifiedName}. It must implement {typeof(IEntEntity<>).AssemblyQualifiedName}.");
         }
 
-        // if (!typeof(IRepository<,>).IsAssignableFrom(repositoryType))
-        // {
-        //     throw new EntException($"Given repositoryType is not a repository: {entityType.AssemblyQualifiedName}. It must implement {typeof(IBasicRepository<>).AssemblyQualifiedName}.");
-        // }
+        if (!typeof(IRepository).IsAssignableFrom(repositoryType))
+        {
+            throw new EntException($"Given repositoryType is not a repository: {entityType.AssemblyQualifiedName}. It must implement {typeof(IBasicRepository<>).AssemblyQualifiedName}.");
+        }
 
         CustomRepositories[entityType] = repositoryType;
     }

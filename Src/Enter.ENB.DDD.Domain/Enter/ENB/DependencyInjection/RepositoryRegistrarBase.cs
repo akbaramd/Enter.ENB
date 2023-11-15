@@ -1,4 +1,5 @@
 using Enter.ENB.Domain.Entities;
+using Enter.Microsoft.Extensions.DependencyInjection;
 
 namespace Enter.ENB.DependencyInjection;
 

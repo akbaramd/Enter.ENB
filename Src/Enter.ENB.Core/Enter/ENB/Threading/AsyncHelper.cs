@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using Enter.ENB.Statics;
 using Nito.AsyncEx;
@@ -18,12 +17,12 @@ public static class AsyncHelper
         return method.ReturnType.IsTaskOrTaskOfT();
     }
 
-    public static bool IsTaskOrTaskOfT([NotNull] this Type type)
+    public static bool IsTaskOrTaskOfT(this Type type)
     {
         return type == typeof(Task) || (type.GetTypeInfo().IsGenericType && type.GetGenericTypeDefinition() == typeof(Task<>));
     }
 
-    public static bool IsTaskOfT([NotNull] this Type type)
+    public static bool IsTaskOfT(this Type type)
     {
         return type.GetTypeInfo().IsGenericType && type.GetGenericTypeDefinition() == typeof(Task<>);
     }
@@ -33,7 +32,7 @@ public static class AsyncHelper
     /// Return T, if given type is Task{T}.
     /// Returns given type otherwise.
     /// </summary>
-    public static Type UnwrapTask([NotNull] Type type)
+    public static Type UnwrapTask(Type type)
     {
         EntCheck.NotNull(type, nameof(type));
 

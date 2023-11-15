@@ -2,7 +2,6 @@
 using Enter.ENB.Identity.Domain;
 using Enter.ENB.Identity.EntityFrameworkCore.Repositories;
 using Enter.ENB.Modularity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Enter.ENB.Identity.EntityFrameworkCore;
@@ -20,6 +19,9 @@ public class EntIdentityEntityFrameworkCoreModule : EntModule
 
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        context.Services.AddEntDbContext<EntIdentityDbContext>();
+        context.Services.AddEntDbContext<EntIdentityDbContext>(c =>
+        {
+            c.AddRepository<EntUser, EntUserRepository>();
+        });
     }
 }
