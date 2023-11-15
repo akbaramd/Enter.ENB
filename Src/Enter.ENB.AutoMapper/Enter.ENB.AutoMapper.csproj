@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace />
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Enter.ENB.DDD.Application.Contracts\Enter.ENB.DDD.Application.Contracts.csproj" />
+      <ProjectReference Include="..\Enter.ENB.DDD.Domain\Enter.ENB.DDD.Domain.csproj" />
+      <ProjectReference Include="..\Enter.ENB.ObjectMapping\Enter.ENB.ObjectMapping.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Enter\ENB\Ddd" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="12.0.1" />
+    </ItemGroup>
+
+</Project>

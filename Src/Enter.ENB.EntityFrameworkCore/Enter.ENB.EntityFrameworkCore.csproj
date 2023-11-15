@@ -23,4 +23,8 @@
       <ProjectReference Include="..\Enter.ENB.DDD.Domain\Enter.ENB.DDD.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Enter\ENB\EntityFrameworkCore\DependencyInjection" />
+    </ItemGroup>
+
 </Project>

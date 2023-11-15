@@ -8,12 +8,11 @@ using Enter.ENB.Identity.Domain;
 
 namespace Enter.ENB.Identity.Application;
 
+
 public class UserAppService :ApplicationService, IUserAppService
 {
-    private readonly IEntUserRepository _repository;
+    private readonly IRepository<EntUser,Guid> _repository;
     
-    
-
     public async Task<UserDto> GetAsync(Guid id)
     {
         var res = await _repository.Find(id);
@@ -25,24 +24,20 @@ public class UserAppService :ApplicationService, IUserAppService
         throw new NotImplementedException();
     }
 
-    public Task<UserDto> CreateAsync(UserDto input)
-    {
-        throw new NotImplementedException();
-    }
 
-    public Task<UserDto> UpdateAsync(Guid id, UserDto input)
-    {
-        throw new NotImplementedException();
-    }
 
     public Task DeleteAsync(Guid id)
     {
         throw new NotImplementedException();
     }
 
-    public Task<UserDto> CreateAsync(CreateUpdateUserDto input)
+    public async Task<UserDto> CreateAsync(CreateUpdateUserDto input)
     {
-        throw new NotImplementedException();
+        var user = new EntUser(input.UserName);
+        user.SetName(input.FirstName,input.LastName);
+        user.SetPassword(input.Password);
+        await _repository.InsertAsync(user);
+        return new UserDto();
     }
 
     public Task<UserDto> UpdateAsync(Guid id, CreateUpdateUserDto input)
@@ -50,7 +45,7 @@ public class UserAppService :ApplicationService, IUserAppService
         throw new NotImplementedException();
     }
 
-    public UserAppService(IEntLazyServiceProvider lazyServiceProvider, IEntUserRepository repository) : base(lazyServiceProvider)
+    public UserAppService(IEntLazyServiceProvider lazyServiceProvider, IRepository<EntUser,Guid> repository) : base(lazyServiceProvider)
     {
         _repository = repository;
     }

@@ -1,20 +1,22 @@
-﻿using Enter.ENB.Domain.Entities;
+﻿using Enter.ENB.DependencyInjection;
+using Enter.ENB.Domain.Entities;
 using Enter.ENB.Domain.Repository;
 using Enter.ENB.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Enter.ENB.Domain;
 
+[ExposeServices()]
 public class EfCoreRepository<TDbContext, TEntity, TKey> :
     IRepository<TEntity,TKey>,
     IEfCoreRepository<TEntity, TKey>
-    where TDbContext : EntDbContext<TDbContext>
+    where TDbContext : DbContext
     where TEntity : class, IEntEntity<TKey>
 {
-    private readonly EntDbContext<TDbContext> _dbContext;
+    private readonly TDbContext _dbContext;
 
 
-    public EfCoreRepository(EntDbContext<TDbContext> dbContext)
+    public EfCoreRepository(TDbContext dbContext)
     {
         _dbContext = dbContext;
     }
@@ -23,6 +25,7 @@ public class EfCoreRepository<TDbContext, TEntity, TKey> :
     {
         var dbSet = await GetDbSetAsync();
         await dbSet.AddAsync(entity);
+        await _dbContext.SaveChangesAsync();
     }
 
     public async Task UpdateAsync(TEntity entity)

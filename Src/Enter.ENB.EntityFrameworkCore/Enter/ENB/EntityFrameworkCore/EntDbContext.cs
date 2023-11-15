@@ -2,7 +2,7 @@
 
 namespace Enter.ENB.EntityFrameworkCore;
 
-public class EntDbContext<TDbContext> : DbContext , IEntDbContext  where TDbContext : EntDbContext<TDbContext>
+public class EntDbContext : DbContext, IEntDbContext  
 {
     public EntDbContext(DbContextOptions options) : base(options)
     {

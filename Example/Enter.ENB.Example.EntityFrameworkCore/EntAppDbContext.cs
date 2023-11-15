@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Enter.ENB.Example.EntityFrameworkCore;
 
 [AlternativeDbContext(typeof(EntIdentityDbContext))]
-public class EntAppDbContext : EntDbContext<EntAppDbContext> , IEntIdentityDbContext
+public class EntAppDbContext : EntIdentityDbContext , IEntIdentityDbContext
 {
     public EntAppDbContext(DbContextOptions<EntAppDbContext> options) : base(options)
     {

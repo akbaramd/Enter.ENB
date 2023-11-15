@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Enter.ENB.Identity.EntityFrameworkCore;
 
-public class EntIdentityDbContext : EntDbContext<EntIdentityDbContext> , IEntIdentityDbContext
+public class EntIdentityDbContext : EntDbContext , IEntIdentityDbContext
 {
     public EntIdentityDbContext(DbContextOptions options): base(options)
     {

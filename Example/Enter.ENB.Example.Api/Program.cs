@@ -1,5 +1,6 @@
 using Enter.ENB.Example.Api;
 using Enter.ENB.Identity.Application.Contracts.Users;
+using Enter.ENB.Identity.Application.Contracts.Users.Dtos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,9 +17,15 @@ var app = builder.Build();
 
 await app.InitializeApplicationAsync();
 
+var service = app.Services.CreateScope().ServiceProvider.GetRequiredService<IUserAppService>();
 
-var userService = app.Services.CreateScope().ServiceProvider.GetRequiredService<IUserAppService>();
-
+var res = await service.CreateAsync(new CreateUpdateUserDto()
+{
+UserName = "akbar",
+Password = "ahmadi",
+FirstName = "asdasd",
+LastName = "sdads"
+});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

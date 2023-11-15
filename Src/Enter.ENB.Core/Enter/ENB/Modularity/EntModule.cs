@@ -29,7 +29,7 @@ public abstract class EntModule : IEntModule, IOnPreApplicationInitialization,
         return
             typeInfo.IsClass &&
             !typeInfo.IsAbstract &&
-            !typeInfo.IsGenericType &&
+       
             typeof(IEntModule).GetTypeInfo().IsAssignableFrom(type);
     }
     public IConfiguration Configuration { get; set; }
