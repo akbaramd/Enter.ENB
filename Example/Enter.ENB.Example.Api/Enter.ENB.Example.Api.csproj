@@ -20,7 +20,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Src\Enter.ENB.AspNetCore\Enter.ENB.AspNetCore.csproj" />
-      <ProjectReference Include="..\..\Src\Modules\Identity\Enter.ENB.Identity.Application.Contracts\Enter.ENB.Identity.Application.Contracts.csproj" />
+      <ProjectReference Include="..\..\Modules\Identity\Enter.ENB.Identity.Application.Contracts\Enter.ENB.Identity.Application.Contracts.csproj" />
       <ProjectReference Include="..\Enter.ENB.Example.Application\Enter.ENB.Example.Application.csproj" />
       <ProjectReference Include="..\Enter.ENB.Example.EntityFrameworkCore\Enter.ENB.Example.EntityFrameworkCore.csproj" />
     </ItemGroup>

@@ -30,17 +30,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{5B66
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{2BC9CB04-160A-48EA-8D0A-E0B71D4219F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter.ENB.Identity.Domain", "Src\Modules\Identity\Enter.ENB.Identity.Domain\Enter.ENB.Identity.Domain.csproj", "{7B179E92-2F69-4A4A-9038-6D6E475523E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter.ENB.Identity.Domain", "Modules\Identity\Enter.ENB.Identity.Domain\Enter.ENB.Identity.Domain.csproj", "{7B179E92-2F69-4A4A-9038-6D6E475523E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter.ENB.Identity.Domain.Shared", "Src\Modules\Identity\Enter.ENB.Identity.Domain.Shared\Enter.ENB.Identity.Domain.Shared.csproj", "{10D529DE-18F1-4956-A28A-6BD50F6B183B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter.ENB.Identity.Domain.Shared", "Modules\Identity\Enter.ENB.Identity.Domain.Shared\Enter.ENB.Identity.Domain.Shared.csproj", "{10D529DE-18F1-4956-A28A-6BD50F6B183B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter.ENB.Identity.Application", "Src\Modules\Identity\Enter.ENB.Identity.Application\Enter.ENB.Identity.Application.csproj", "{62C119C4-3548-4D95-BE57-46C311AA2B9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter.ENB.Identity.Application", "Modules\Identity\Enter.ENB.Identity.Application\Enter.ENB.Identity.Application.csproj", "{62C119C4-3548-4D95-BE57-46C311AA2B9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter.ENB.Identity.Application.Contracts", "Src\Modules\Identity\Enter.ENB.Identity.Application.Contracts\Enter.ENB.Identity.Application.Contracts.csproj", "{0FC401C8-DAF6-410F-A825-985E9F81943C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter.ENB.Identity.Application.Contracts", "Modules\Identity\Enter.ENB.Identity.Application.Contracts\Enter.ENB.Identity.Application.Contracts.csproj", "{0FC401C8-DAF6-410F-A825-985E9F81943C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter.ENB.AspNetCore", "Src\Enter.ENB.AspNetCore\Enter.ENB.AspNetCore.csproj", "{A9C20DC1-DB8B-4D61-9C6D-3A3106EB3BB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter.ENB.Identity.EntityFrameworkCore", "Src\Modules\Identity\Enter.ENB.Identity.EntityFrameworkCore\Enter.ENB.Identity.EntityFrameworkCore.csproj", "{B67E908F-ACF1-4936-BA59-91CE142A70C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter.ENB.Identity.EntityFrameworkCore", "Modules\Identity\Enter.ENB.Identity.EntityFrameworkCore\Enter.ENB.Identity.EntityFrameworkCore.csproj", "{B67E908F-ACF1-4936-BA59-91CE142A70C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enter.ENB.Example.EntityFrameworkCore", "Example\Enter.ENB.Example.EntityFrameworkCore\Enter.ENB.Example.EntityFrameworkCore.csproj", "{62B0A46B-201E-43C5-869F-85BE416CDA41}"
 EndProject
@@ -191,7 +191,6 @@ Global
 		{8F130793-A3EF-45EF-868D-C13E17894EB6} = {D6306A2D-EE69-4CAC-AD29-8E100629C8C2}
 		{E40320D2-2A94-42A3-A119-B1DE5E222B34} = {D6306A2D-EE69-4CAC-AD29-8E100629C8C2}
 		{570C094C-E805-434F-ADC9-335FFC03C43A} = {A583C082-0FFC-42C8-8796-2F21FF03534C}
-		{5B66FBA4-74E2-4FBE-B340-FF026E81EB23} = {D6306A2D-EE69-4CAC-AD29-8E100629C8C2}
 		{2BC9CB04-160A-48EA-8D0A-E0B71D4219F0} = {5B66FBA4-74E2-4FBE-B340-FF026E81EB23}
 		{7B179E92-2F69-4A4A-9038-6D6E475523E9} = {2BC9CB04-160A-48EA-8D0A-E0B71D4219F0}
 		{10D529DE-18F1-4956-A28A-6BD50F6B183B} = {2BC9CB04-160A-48EA-8D0A-E0B71D4219F0}

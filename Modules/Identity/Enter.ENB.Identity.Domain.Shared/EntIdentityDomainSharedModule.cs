@@ -1,4 +1,5 @@
-﻿using Enter.ENB.Modularity;
+﻿
+using Enter.ENB.Modularity;
 
 namespace Enter.ENB.Identity.Domain.Shared;
 

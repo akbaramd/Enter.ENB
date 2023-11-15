@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Src\Enter.ENB.Core\Enter.ENB.Core.csproj" />
+      <ProjectReference Include="..\..\..\Src\Enter.ENB.DDD.Application.Contracts\Enter.ENB.DDD.Application.Contracts.csproj" />
+      <ProjectReference Include="..\..\..\Src\Enter.ENB.DDD.Application\Enter.ENB.DDD.Application.csproj" />
+      <ProjectReference Include="..\..\..\Src\Enter.ENB.DDD.Domain\Enter.ENB.DDD.Domain.csproj" />
+      <ProjectReference Include="..\..\..\Src\Enter.ENB.ObjectMapping\Enter.ENB.ObjectMapping.csproj" />
+      <ProjectReference Include="..\Enter.ENB.Identity.Application.Contracts\Enter.ENB.Identity.Application.Contracts.csproj" />
+    </ItemGroup>
+
+</Project>
