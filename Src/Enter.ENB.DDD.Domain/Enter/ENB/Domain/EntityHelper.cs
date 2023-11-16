@@ -1,12 +1,13 @@
 using System.Linq.Expressions;
 using System.Reflection;
+using Enter.ENB.Domain.Entities;
 using Enter.ENB.Domain.Values;
 using Enter.ENB.Exceptions;
 using Enter.ENB.MultiTenancy;
 using Enter.ENB.Reflection;
 using Enter.ENB.Statics;
 
-namespace Enter.ENB.Domain.Entities;
+namespace Enter.ENB.Domain;
 
 /// <summary>
 /// Some helper methods for entities.

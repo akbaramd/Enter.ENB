@@ -1,4 +1,4 @@
-﻿namespace Enter.ENB.Application.Services;
+﻿namespace Enter.ENB.Ddd.Application.Services;
 
 /// <summary>
 /// This interface must be implemented by all application services to register and identify them by convention.

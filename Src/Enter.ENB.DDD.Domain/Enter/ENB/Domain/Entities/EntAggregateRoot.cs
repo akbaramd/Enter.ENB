@@ -5,10 +5,9 @@ namespace Enter.ENB.Domain.Entities;
 
 [Serializable]
 public abstract class AggregateRoot : BasicAggregateRoot,
-    IHasExtraProperties,
     IHasConcurrencyStamp
 {
-    public virtual EntExtraPropertyDictionary EntExtraProperties { get; protected set; }
+     public virtual EntExtraPropertyDictionary EntExtraProperties { get; protected set; }
 
     [DisableAuditing]
     public virtual string ConcurrencyStamp { get; set; }
@@ -16,7 +15,7 @@ public abstract class AggregateRoot : BasicAggregateRoot,
     protected AggregateRoot()
     {
         ConcurrencyStamp = Guid.NewGuid().ToString("N");
-        EntExtraProperties = new EntExtraPropertyDictionary();
+        // EntExtraProperties = new EntExtraPropertyDictionary();
         // this.SetDefaultsForExtraProperties();
     }
 
@@ -31,7 +30,7 @@ public abstract class AggregateRoot : BasicAggregateRoot,
 
 [Serializable]
 public abstract class AggregateRoot<TKey> : BasicAggregateRoot<TKey>,
-    IHasExtraProperties,
+     IHasExtraProperties,
     IHasConcurrencyStamp
 {
     public virtual EntExtraPropertyDictionary EntExtraProperties { get; protected set; }
@@ -42,16 +41,16 @@ public abstract class AggregateRoot<TKey> : BasicAggregateRoot<TKey>,
     protected AggregateRoot()
     {
         ConcurrencyStamp = Guid.NewGuid().ToString("N");
-        EntExtraProperties = new EntExtraPropertyDictionary();
-        // this.SetDefaultsForExtraProperties();
+         EntExtraProperties = new EntExtraPropertyDictionary();
+         //this.SetDefaultsForExtraProperties();
     }
 
     protected AggregateRoot(TKey id)
         : base(id)
     {
         ConcurrencyStamp = Guid.NewGuid().ToString("N");
-        EntExtraProperties = new EntExtraPropertyDictionary();
-        // this.SetDefaultsForExtraProperties();
+         EntExtraProperties = new EntExtraPropertyDictionary();
+         //this.SetDefaultsForExtraProperties();
     }
 
     // public virtual IEnumerable<ValidationResult> Validate(ValidationContext validationContext)

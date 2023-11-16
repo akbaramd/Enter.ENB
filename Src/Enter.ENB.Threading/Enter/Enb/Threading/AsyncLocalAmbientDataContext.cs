@@ -1,7 +1,7 @@
 ﻿using System.Collections.Concurrent;
 using Enter.ENB.DependencyInjection;
 
-namespace Enter.ENB.Threading;
+namespace Enter.Enb.Threading;
 
 public class AsyncLocalAmbientDataContext : IAmbientDataContext, ISingletonDependency
 {

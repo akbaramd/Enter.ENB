@@ -2,7 +2,7 @@
 using AutoMapper;
 using Enter.ENB.Auditing;
 
-namespace Enter.ENB.AutoMapper;
+namespace Enter.ENB.AutoMapper.Enter.ENB.AutoMapper;
 
 public static class AutoMapperExpressionExtensions
 {

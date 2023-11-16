@@ -1,5 +1,4 @@
 ﻿using System.Linq.Dynamic.Core;
-using Enter.ENB.Application.Services;
 using Enter.ENB.Auditing;
 using Enter.ENB.Ddd.Application.Dtos;
 using Enter.ENB.DependencyInjection;
@@ -7,9 +6,9 @@ using Enter.ENB.Domain.Entities;
 using Enter.ENB.Domain.Repository;
 using Enter.ENB.Exceptions;
 using Enter.ENB.Extensions;
-using Enter.ENB.ObjectMapping;
+using Enter.ENB.ObjectMapping.Enter.ENB.ObjectMapping;
 
-namespace Volo.Abp.Application.Services;
+namespace Enter.ENB.Ddd.Application.Services;
 
 public abstract class AbstractKeyReadOnlyAppService<TEntity, TEntityDto, TKey>
     : AbstractKeyReadOnlyAppService<TEntity, TEntityDto, TEntityDto, TKey, PagedAndSortedResultRequestDto>

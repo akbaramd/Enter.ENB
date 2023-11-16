@@ -4,7 +4,7 @@ using Enter.ENB.Exceptions;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 
-namespace Enter.ENB.Threading;
+namespace Enter.Enb.Threading;
 
 /// <summary>
 /// A robust timer implementation that ensures no overlapping occurs. It waits exactly specified <see cref="Period"/> between ticks.

@@ -1,4 +1,4 @@
-﻿namespace Enter.ENB.ObjectMapping;
+﻿namespace Enter.ENB.ObjectMapping.Enter.ENB.ObjectMapping;
 
 /// <summary>
 /// Defines a simple interface to automatically map objects.

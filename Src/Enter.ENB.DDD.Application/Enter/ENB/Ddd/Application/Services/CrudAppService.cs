@@ -5,7 +5,7 @@ using Enter.ENB.Domain.Entities;
 using Enter.ENB.Domain.Repository;
 using Enter.ENB.Extensions;
 
-namespace Volo.Abp.Application.Services;
+namespace Enter.ENB.Ddd.Application.Services;
 
 public abstract class CrudAppService<TEntity, TEntityDto, TKey>
     : CrudAppService<TEntity, TEntityDto, TKey, PagedAndSortedResultRequestDto>

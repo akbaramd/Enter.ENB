@@ -1,6 +1,6 @@
-﻿using Enter.ENB.ObjectMapping;
+﻿using Enter.ENB.ObjectMapping.Enter.ENB.ObjectMapping;
 
-namespace Enter.ENB.AutoMapper;
+namespace Enter.ENB.AutoMapper.Enter.ENB.AutoMapper;
 
 public class AutoMapperAutoObjectMappingProvider<TContext> : AutoMapperAutoObjectMappingProvider, IAutoObjectMappingProvider<TContext>
 {

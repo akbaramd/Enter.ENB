@@ -4,6 +4,8 @@
 **/bin
 **/obj
 
+**/migrations
+
 **/node_modules
 
 

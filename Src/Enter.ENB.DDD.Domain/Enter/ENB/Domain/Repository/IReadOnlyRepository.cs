@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
 using Enter.ENB.Domain.Entities;
-using Enter.ENB.Linq;
+using Enter.Enb.Linq;
 
 namespace Enter.ENB.Domain.Repository;
 

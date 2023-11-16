@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Enter.ENB.Modularity;
+﻿using Enter.ENB.Modularity;
 using Enter.ENB.Reflection;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Enter.ENB.ObjectMapping;
+namespace Enter.ENB.ObjectMapping.Enter.ENB.ObjectMapping;
 
 public class EntObjectMappingModule : EntModule
 {

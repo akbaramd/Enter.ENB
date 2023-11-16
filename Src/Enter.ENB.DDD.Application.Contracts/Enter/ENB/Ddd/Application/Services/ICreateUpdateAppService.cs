@@ -1,4 +1,4 @@
-﻿namespace Enter.ENB.Application.Services;
+﻿namespace Enter.ENB.Ddd.Application.Services;
 
 public interface ICreateUpdateAppService<TEntityDto, in TKey>
     : ICreateUpdateAppService<TEntityDto, TKey, TEntityDto, TEntityDto>

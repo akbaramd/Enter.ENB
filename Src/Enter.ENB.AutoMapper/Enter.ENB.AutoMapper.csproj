@@ -16,8 +16,4 @@
       <ProjectReference Include="..\Enter.ENB.ObjectMapping\Enter.ENB.ObjectMapping.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="AutoMapper\" />
-    </ItemGroup>
-
 </Project>

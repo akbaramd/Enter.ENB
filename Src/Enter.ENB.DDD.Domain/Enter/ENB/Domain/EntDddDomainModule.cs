@@ -1,4 +1,4 @@
-using Enter.ENB.EntityFrameworkCore;
+using Enter.ENB.Auditing;
 using Enter.ENB.Modularity;
 
 namespace Enter.ENB.Domain;

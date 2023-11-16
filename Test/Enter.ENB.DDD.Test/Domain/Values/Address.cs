@@ -1,6 +1,6 @@
 ﻿using Enter.ENB.Domain.Values;
 
-namespace Volo.Abp.Domain.Values;
+namespace Domain.Values;
 
 public class Address : EntValueObject
 {

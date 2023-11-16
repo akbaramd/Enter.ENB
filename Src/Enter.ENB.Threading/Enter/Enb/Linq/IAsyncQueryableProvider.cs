@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Enter.ENB.Linq;
+namespace Enter.Enb.Linq;
 
 public interface IAsyncQueryableProvider
 {

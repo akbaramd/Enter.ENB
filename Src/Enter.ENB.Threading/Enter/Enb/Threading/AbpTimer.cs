@@ -1,10 +1,11 @@
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
 using Enter.ENB.DependencyInjection;
 using Enter.ENB.ExceptionHandling;
 using Enter.ENB.Exceptions;
+using Enter.ENB.Threading;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 
-namespace Enter.ENB.Threading;
+namespace Enter.Enb.Threading;
 
 /// <summary>
 /// A robust timer implementation that ensures no overlapping occurs. It waits exactly specified <see cref="Period"/> between ticks.

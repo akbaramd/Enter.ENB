@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
-using Enter.ENB.AutoMapper;
+using Enter.ENB.AutoMapper.Enter.ENB.AutoMapper;
 using Enter.ENB.Exceptions;
+using Enter.ENB.ObjectMapping.Enter.ENB.ObjectMapping;
 
-namespace Enter.ENB.ObjectMapping;
+namespace Enter.ENB.AutoMapper.Enter.ENB.ObjectMapping;
 
 public static class EntAutoMapperObjectMapperExtensions
 {

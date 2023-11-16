@@ -1,8 +1,8 @@
-﻿using Enter.ENB.Domain.Entities;
+﻿using Enter.ENB.Domain;
+using Enter.ENB.Domain.Entities;
 using Shouldly;
-using Xunit;
 
-namespace Volo.Abp.Domain.Entities;
+namespace Domain.Entities;
 
 public class EntityHelper_Tests
 {

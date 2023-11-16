@@ -1,11 +1,12 @@
 ﻿using System.Collections.Concurrent;
+using Enter.ENB;
 using Enter.ENB.Exceptions;
 using Enter.ENB.Extensions;
 using Enter.ENB.Statics;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 
-namespace Enter.ENB.Threading;
+namespace Enter.Enb.Threading;
 
 public class AmbientDataContextAmbientScopeProvider<T> : IAmbientScopeProvider<T>
 {

@@ -1,12 +1,12 @@
-using Microsoft.Extensions.DependencyInjection;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.ObjectModel;
 using System.Reflection;
 using Enter.ENB.DependencyInjection;
 using Enter.ENB.Extensions;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Enter.ENB.ObjectMapping;
+namespace Enter.ENB.ObjectMapping.Enter.ENB.ObjectMapping;
 
 public class DefaultObjectMapper<TContext> : DefaultObjectMapper, IObjectMapper<TContext>
 {

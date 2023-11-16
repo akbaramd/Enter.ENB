@@ -1,8 +1,7 @@
-
 using Enter.ENB.Modularity;
-using Enter.ENB.Threading;
+using Enter.Enb.Threading;
 
-namespace Enter.ENB.EntityFrameworkCore;
+namespace Enter.ENB.Auditing;
 
 [DependsOnModules(typeof(EntThreadingModule))]
 public class EntAuditingModule : EntModule

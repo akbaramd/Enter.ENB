@@ -1,31 +1,18 @@
-﻿using Enter.ENB.Data;
-using Enter.ENB.Identity.Domain;
+﻿using Enter.ENB.Identity.Domain;
+using Enter.ENB.Identity.EntityFrameworkCore.Configurations;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Newtonsoft.Json;
 
 namespace Enter.ENB.Identity.EntityFrameworkCore;
 
 public static class EfCoreModelBuilderExtensions
 {
-    public static void ConfigureEntUser(this ModelBuilder builder)
+    public static void ConfigureEntIdentityUser(this ModelBuilder builder)
     {
-        builder.ApplyConfiguration<EntUser>(new EntUserConfiguration());
+        builder.ApplyConfiguration(new EntIdentityUserConfiguration());
     }
-}
-
-public class EntUserConfiguration : IEntityTypeConfiguration<EntUser>
-{
-    public void Configure(EntityTypeBuilder<EntUser> builder)
+    
+    public static void ConfigureEntIdentityRole(this ModelBuilder builder)
     {
-        builder.ToTable("Users");
-        builder.HasKey(x => x.Id);
-        builder.HasIndex(x => x.UserName).IsUnique();
-        
-        builder
-            .Property(b => b.EntExtraProperties)
-            .HasConversion(
-                v => JsonConvert.SerializeObject(v),
-                v => JsonConvert.DeserializeObject<EntExtraPropertyDictionary>(v) ?? new EntExtraPropertyDictionary());
+        builder.ApplyConfiguration(new EntIdentityRoleConfiguration());
     }
 }

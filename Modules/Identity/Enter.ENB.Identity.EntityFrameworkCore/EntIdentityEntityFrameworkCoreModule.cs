@@ -21,7 +21,8 @@ public class EntIdentityEntityFrameworkCoreModule : EntModule
     {
         context.Services.AddEntDbContext<EntIdentityDbContext>(c =>
         {
-            c.AddRepository<EntUser, EntUserRepository>();
+            c.AddRepository<EntIdentityUser, EntUserRepository>();
+            c.AddRepository<EntIdentityRole, EntIdentityRoleRepository>();
         });
     }
 }

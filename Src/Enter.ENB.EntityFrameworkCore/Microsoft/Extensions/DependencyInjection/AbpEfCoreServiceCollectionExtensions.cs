@@ -23,7 +23,7 @@ public static class EntEfCoreServiceCollectionExtensions
     }
     
     public static IServiceCollection AddEntDbContextConfigure(
-        this IServiceCollection services, Action<DbContextOptionsBuilder> configure)
+        this IServiceCollection services, Action<DbContextOptionsBuilder<EntDbContext>> configure)
       
     {
         

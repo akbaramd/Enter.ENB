@@ -1,4 +1,4 @@
-﻿namespace Enter.ENB.Threading;
+﻿namespace Enter.Enb.Threading;
 
 public abstract class CancellationTokenProviderBase : ICancellationTokenProvider
 {

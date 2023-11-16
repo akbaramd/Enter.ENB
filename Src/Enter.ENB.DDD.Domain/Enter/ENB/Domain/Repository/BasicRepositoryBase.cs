@@ -1,8 +1,9 @@
 ﻿using System.Linq.Expressions;
 using Enter.ENB.DependencyInjection;
 using Enter.ENB.Domain.Entities;
-using Enter.ENB.Linq;
+using Enter.Enb.Linq;
 using Enter.ENB.Modularity;
+using Enter.Enb.Threading;
 using Enter.ENB.Threading;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;

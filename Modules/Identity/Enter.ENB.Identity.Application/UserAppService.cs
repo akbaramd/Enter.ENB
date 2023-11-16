@@ -4,6 +4,9 @@ using Enter.ENB.Domain.Entities;
 using Enter.ENB.Identity.Application.Contracts.Users;
 using Enter.ENB.Identity.Application.Contracts.Users.Dtos;
 using Enter.ENB.Identity.Domain;
+using Enter.ENB.Identity.Domain.Repositories;
+using Enter.ENB.ObjectMapping.Enter.ENB.ObjectMapping;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Enter.ENB.Identity.Application;
 
@@ -17,42 +20,59 @@ public class UserAppService :IdentityAppServiceBase, IUserAppService
         _lazyServiceProvider = lazyServiceProvider;
     }
 
-    public IEntUserRepository Repository => _lazyServiceProvider.LazyGetRequiredService<IEntUserRepository>();
+    public IEntUserRepository Repository => _lazyServiceProvider.GetRequiredService<IEntUserRepository>();
     
-    public Task<UserDto> GetAsync(Guid id)
+    public async Task<EntUserDto> GetAsync(Guid id)
     {
-        throw new NotImplementedException();
+        var user = await Repository.GetAsync(id);
+        return ObjectMapper.Map<EntIdentityUser,EntUserDto>(user);
     }
 
-    public Task<PagedResultDto<UserDto>> GetListAsync(PagedAndSortedResultRequestDto input)
+    public async Task<PagedResultDto<EntUserDto>> GetListAsync(PagedAndSortedResultRequestDto input)
     {
-        throw new NotImplementedException();
+        var list = await Repository.GetPagedListAsync(input.SkipCount,input.MaxResultCount,input.Sorting);
+        var totalCount = await Repository.GetCountAsync();
+
+        return new PagedResultDto<EntUserDto>(
+            totalCount,
+            ObjectMapper.Map<List<EntIdentityUser>, List<EntUserDto>>(list)
+        );
     }
 
-    public Task<UserDto> CreateAsync(CreateUpdateUserDto input)
+    public async Task<EntUserDto> CreateAsync(UserCreateDto input)
     {
-        throw new NotImplementedException();
+        var user = new EntIdentityUser(Guid.NewGuid(),input.UserName);
+        user.SetName(input.FirstName,input.LastName);
+        user.SetPassword(input.Password);
+        user.SetPhoneNumber(input.PhoneNumber);
+        await Repository.InsertAsync(user,true);
+        return ObjectMapper.Map<EntIdentityUser,EntUserDto>(user);
     }
 
-    public Task<UserDto> UpdateAsync(Guid id, CreateUpdateUserDto input)
+    public async Task<EntUserDto> UpdateAsync(Guid id, UserUpdateDto input)
     {
-        throw new NotImplementedException();
+        var user = await Repository.GetAsync(id);
+        user.SetName(input.FirstName,input.LastName);
+        user.SetPhoneNumber(input.PhoneNumber);
+        await Repository.UpdateAsync(user,true);
+        return ObjectMapper.Map<EntIdentityUser,EntUserDto>(user);
     }
 
-    public Task DeleteAsync(Guid id)
+    public async Task DeleteAsync(Guid id)
     {
-        throw new NotImplementedException();
+        var user = await Repository.GetAsync(id);
+        await Repository.DeleteAsync(user,true);
     }
 
-    public async Task<UserDto> GetByUsernameAsync(string userName)
+    public async Task<EntUserDto> GetByUsernameAsync(string userName)
     {
         var find = await Repository.FindAsync(x => x.UserName.Equals(userName));
 
         if (find == null)
         {
-            throw new EntityNotFoundException(typeof(EntUser), userName);
+            throw new EntityNotFoundException(typeof(EntIdentityUser), userName);
         }
 
-        return ObjectMapper.Map<EntUser, UserDto>(find);
+        return ObjectMapper.Map<EntIdentityUser, EntUserDto>(find);
     }
 }

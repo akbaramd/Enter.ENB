@@ -1,7 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Enter.ENB.Modularity;
+﻿using Enter.ENB.Modularity;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Enter.ENB.Threading;
+namespace Enter.Enb.Threading;
 
 public class EntThreadingModule : EntModule
 {

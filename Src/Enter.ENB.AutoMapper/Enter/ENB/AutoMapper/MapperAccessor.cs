@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace Enter.ENB.AutoMapper;
+namespace Enter.ENB.AutoMapper.Enter.ENB.AutoMapper;
 
 internal class MapperAccessor : IMapperAccessor
 {

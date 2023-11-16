@@ -1,12 +1,12 @@
-﻿using Enter.ENB.Application.Services;
-using Enter.ENB.Ddd.Application.Dtos;
+﻿using Enter.ENB.Ddd.Application.Dtos;
 using Enter.ENB.DependencyInjection;
+using Enter.ENB.Domain;
 using Enter.ENB.Domain.Entities;
 using Enter.ENB.Domain.Repository;
 using Enter.ENB.MultiTenancy;
-using Enter.ENB.ObjectMapping;
+using Enter.ENB.ObjectMapping.Enter.ENB.ObjectMapping;
 
-namespace Volo.Abp.Application.Services;
+namespace Enter.ENB.Ddd.Application.Services;
 
 public abstract class AbstractKeyCrudAppService<TEntity, TEntityDto, TKey>
     : AbstractKeyCrudAppService<TEntity, TEntityDto, TKey, PagedAndSortedResultRequestDto>

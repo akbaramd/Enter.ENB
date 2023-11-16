@@ -1,4 +1,6 @@
-﻿namespace Enter.ENB.Threading;
+﻿using Enter.ENB;
+
+namespace Enter.Enb.Threading;
 
 public static class AsyncLocalSimpleScopeExtensions
 {

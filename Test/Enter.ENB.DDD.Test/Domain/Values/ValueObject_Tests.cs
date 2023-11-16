@@ -1,6 +1,6 @@
 ﻿using Shouldly;
 
-namespace Volo.Abp.Domain.Values;
+namespace Domain.Values;
 
 public class ValueObject_Tests
 {

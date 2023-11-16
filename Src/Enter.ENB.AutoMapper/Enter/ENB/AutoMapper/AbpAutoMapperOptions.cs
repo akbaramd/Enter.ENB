@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Enter.ENB.Collections;
 
-namespace Enter.ENB.AutoMapper;
+namespace Enter.ENB.AutoMapper.Enter.ENB.AutoMapper;
 
 public class EntAutoMapperOptions
 {

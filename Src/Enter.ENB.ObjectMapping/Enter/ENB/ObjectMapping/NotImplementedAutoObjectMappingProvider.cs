@@ -1,6 +1,6 @@
 using Enter.ENB.DependencyInjection;
 
-namespace Enter.ENB.ObjectMapping;
+namespace Enter.ENB.ObjectMapping.Enter.ENB.ObjectMapping;
 
 public sealed class NotImplementedAutoObjectMappingProvider : IAutoObjectMappingProvider, ISingletonDependency
 {

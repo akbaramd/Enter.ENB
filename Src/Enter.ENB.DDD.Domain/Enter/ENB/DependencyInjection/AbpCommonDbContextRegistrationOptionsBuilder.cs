@@ -1,3 +1,4 @@
+using Enter.ENB.Domain;
 using Enter.ENB.Domain.Entities;
 using Enter.ENB.Domain.Repository;
 using Enter.ENB.Exceptions;

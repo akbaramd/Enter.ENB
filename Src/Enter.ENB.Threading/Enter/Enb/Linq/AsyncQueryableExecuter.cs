@@ -1,8 +1,7 @@
-
 using System.Linq.Expressions;
 using Enter.ENB.DependencyInjection;
 
-namespace Enter.ENB.Linq;
+namespace Enter.Enb.Linq;
 
 public class AsyncQueryableExecuter : IAsyncQueryableExecuter, ISingletonDependency
 {

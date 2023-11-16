@@ -1,4 +1,4 @@
-﻿namespace Enter.ENB.ObjectMapping;
+﻿namespace Enter.ENB.ObjectMapping.Enter.ENB.ObjectMapping;
 
 public interface IMapFrom<in TSource>
 {

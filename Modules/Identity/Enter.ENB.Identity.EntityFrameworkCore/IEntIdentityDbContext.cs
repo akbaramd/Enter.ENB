@@ -6,5 +6,6 @@ namespace Enter.ENB.Identity.EntityFrameworkCore;
 
 public interface IEntIdentityDbContext : IEntDbContext
 {
-    DbSet<EntUser> Users { get; }
+    DbSet<EntIdentityUser> Users { get; }
+    DbSet<EntIdentityRole> Roles { get; }
 }

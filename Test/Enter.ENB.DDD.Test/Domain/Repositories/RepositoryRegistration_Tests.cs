@@ -3,9 +3,8 @@ using Enter.ENB.DependencyInjection;
 using Enter.ENB.Domain.Entities;
 using Enter.ENB.Domain.Repository;
 using Microsoft.Extensions.DependencyInjection;
-using Xunit;
 
-namespace Volo.Abp.Domain.Repositories;
+namespace Domain.Repositories;
 
 public class RepositoryRegistration_Tests
 {

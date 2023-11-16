@@ -1,9 +1,8 @@
 ﻿using Enter.ENB.Domain.Entities;
 using Enter.ENB.MultiTenancy;
 using Shouldly;
-using Xunit;
 
-namespace Volo.Abp.Domain.Entities;
+namespace Domain.Entities;
 
 public class EntityTests
 {

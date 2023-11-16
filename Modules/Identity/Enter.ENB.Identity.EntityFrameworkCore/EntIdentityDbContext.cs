@@ -4,20 +4,23 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Enter.ENB.Identity.EntityFrameworkCore;
 
-public class EntIdentityDbContext : EntDbContext , IEntIdentityDbContext
+public class EntIdentityDbContext : EntDbContext ,IEntIdentityDbContext
 {
     public EntIdentityDbContext(DbContextOptions<EntDbContext> options): base(options)
     {
         
     }
 
-    public DbSet<EntUser> Users { get; set; }
-
+    public DbSet<EntIdentityUser> Users { get;  }
+    public DbSet<EntIdentityRole> Roles { get; }
+  
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ConfigureEntUser();
+        modelBuilder.ConfigureEntIdentityUser();
+       modelBuilder.ConfigureEntIdentityRole();
         
         base.OnModelCreating(modelBuilder);
         
     }
 }
+

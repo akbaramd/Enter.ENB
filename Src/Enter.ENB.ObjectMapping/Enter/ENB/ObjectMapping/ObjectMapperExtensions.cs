@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Enter.ENB.ObjectMapping;
+namespace Enter.ENB.ObjectMapping.Enter.ENB.ObjectMapping;
 
 public static class ObjectMapperExtensions
 {

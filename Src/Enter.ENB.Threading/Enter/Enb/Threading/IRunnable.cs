@@ -1,4 +1,4 @@
-﻿namespace Enter.ENB.Threading;
+﻿namespace Enter.Enb.Threading;
 
 /// <summary>
 /// Interface to start/stop self threaded services.

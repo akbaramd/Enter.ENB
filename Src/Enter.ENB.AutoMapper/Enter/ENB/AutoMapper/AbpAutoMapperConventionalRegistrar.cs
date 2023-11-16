@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Microsoft.Extensions.DependencyInjection;
 using Enter.ENB.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Enter.ENB.AutoMapper;
+namespace Enter.ENB.AutoMapper.Enter.ENB.AutoMapper;
 
 public class EntAutoMapperConventionalRegistrar : DefaultConventionalRegistrar
 {

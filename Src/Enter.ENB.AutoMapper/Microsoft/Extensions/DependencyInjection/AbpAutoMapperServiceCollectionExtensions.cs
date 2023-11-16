@@ -1,8 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection.Extensions;
-using Enter.ENB.AutoMapper;
-using Enter.ENB.ObjectMapping;
+﻿using Enter.ENB.AutoMapper.Enter.ENB.AutoMapper;
+using Enter.ENB.ObjectMapping.Enter.ENB.ObjectMapping;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace Microsoft.Extensions.DependencyInjection;
+namespace Enter.ENB.AutoMapper.Microsoft.Extensions.DependencyInjection;
 
 public static class EntAutoMapperServiceCollectionExtensions
 {
