@@ -13,11 +13,12 @@ public class EntIdentityDbContext : EntDbContext ,IEntIdentityDbContext
 
     public DbSet<EntIdentityUser> Users { get;  }
     public DbSet<EntIdentityRole> Roles { get; }
-  
+    public DbSet<EntIdentityClaim> Claims { get; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ConfigureEntIdentityUser();
-       modelBuilder.ConfigureEntIdentityRole();
+        modelBuilder.ConfigureEntIdentityRole();
         
         base.OnModelCreating(modelBuilder);
         

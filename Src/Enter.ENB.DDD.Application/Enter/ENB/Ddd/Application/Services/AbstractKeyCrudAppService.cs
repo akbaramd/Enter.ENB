@@ -12,8 +12,8 @@ public abstract class AbstractKeyCrudAppService<TEntity, TEntityDto, TKey>
     : AbstractKeyCrudAppService<TEntity, TEntityDto, TKey, PagedAndSortedResultRequestDto>
     where TEntity : class, IEntEntity
 {
-    protected AbstractKeyCrudAppService(IRepository<TEntity> repository,IEntLazyServiceProvider lazyServiceProvider)
-        : base(repository,lazyServiceProvider)
+    protected AbstractKeyCrudAppService(IRepository<TEntity> repository)
+        : base(repository)
     {
 
     }
@@ -23,8 +23,8 @@ public abstract class AbstractKeyCrudAppService<TEntity, TEntityDto, TKey, TGetL
     : AbstractKeyCrudAppService<TEntity, TEntityDto, TKey, TGetListInput, TEntityDto, TEntityDto>
     where TEntity : class, IEntEntity
 {
-    protected AbstractKeyCrudAppService(IRepository<TEntity> repository,IEntLazyServiceProvider lazyServiceProvider)
-        : base(repository,lazyServiceProvider)
+    protected AbstractKeyCrudAppService(IRepository<TEntity> repository)
+        : base(repository)
     {
 
     }
@@ -34,8 +34,8 @@ public abstract class AbstractKeyCrudAppService<TEntity, TEntityDto, TKey, TGetL
     : AbstractKeyCrudAppService<TEntity, TEntityDto, TKey, TGetListInput, TCreateInput, TCreateInput>
     where TEntity : class, IEntEntity
 {
-    protected AbstractKeyCrudAppService(IRepository<TEntity> repository,IEntLazyServiceProvider lazyServiceProvider)
-        : base(repository,lazyServiceProvider)
+    protected AbstractKeyCrudAppService(IRepository<TEntity> repository)
+        : base(repository)
     {
 
     }
@@ -45,8 +45,8 @@ public abstract class AbstractKeyCrudAppService<TEntity, TEntityDto, TKey, TGetL
     : AbstractKeyCrudAppService<TEntity, TEntityDto, TEntityDto, TKey, TGetListInput, TCreateInput, TUpdateInput>
     where TEntity : class, IEntEntity
 {
-    protected AbstractKeyCrudAppService(IRepository<TEntity> repository,IEntLazyServiceProvider lazyServiceProvider)
-        : base(repository,lazyServiceProvider)
+    protected AbstractKeyCrudAppService(IRepository<TEntity> repository)
+        : base(repository)
     {
 
     }
@@ -75,8 +75,8 @@ public abstract class AbstractKeyCrudAppService<TEntity, TGetOutputDto, TGetList
 
     protected virtual string? DeletePolicyName { get; set; }
 
-    protected AbstractKeyCrudAppService(IRepository<TEntity> repository,IEntLazyServiceProvider lazyServiceProvider)
-        : base(repository,lazyServiceProvider)
+    protected AbstractKeyCrudAppService(IRepository<TEntity> repository)
+        : base(repository)
     {
         Repository = repository;
     }
@@ -95,7 +95,7 @@ public abstract class AbstractKeyCrudAppService<TEntity, TGetOutputDto, TGetList
     public virtual async Task<TGetOutputDto> UpdateAsync(TKey id, TUpdateInput input)
     {
         var entity = await GetEntityByIdAsync(id);
-        //TODO: Check if input has id different than given id and normalize if it's default value, throw ex otherwise
+        //TODO: EntCheck if input has id different than given id and normalize if it's default value, throw ex otherwise
         await MapToEntityAsync(input, entity);
         await Repository.UpdateAsync(entity, autoSave: true);
 

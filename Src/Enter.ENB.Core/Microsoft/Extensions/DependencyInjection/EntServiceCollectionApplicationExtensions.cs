@@ -5,18 +5,20 @@ namespace Microsoft.Extensions.DependencyInjection;
 
 public static class EntServiceCollectionApplicationExtensions
 {
-    public static Task<IEntApplicationServiceProvider> AddApplicationAsync<TStartupModule>(
-        this IServiceCollection services)
+    public static Task<IEntApplicationWithExternalServiceProvider> AddApplicationAsync<TStartupModule>(
+        this IServiceCollection services,
+        Action<EntApplicationCreationOptions>? action = null)
         where TStartupModule : IEntModule
     {
-        return services.AddApplicationAsync(typeof(TStartupModule));
+        return services.AddApplicationAsync(typeof(TStartupModule),action);
     }
 
-    public static Task<IEntApplicationServiceProvider> AddApplicationAsync(
+    public static Task<IEntApplicationWithExternalServiceProvider> AddApplicationAsync(
         this IServiceCollection services,
-        Type startupModuleType)
+        Type startupModuleType,
+        Action<EntApplicationCreationOptions>? action = null)
     {
-        return EntApplicationFactory.CreateAsync(startupModuleType, services);
+        return EntApplicationFactory.CreateAsync(startupModuleType, services,action);
     }
 
 

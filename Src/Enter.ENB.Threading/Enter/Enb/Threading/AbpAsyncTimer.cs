@@ -9,12 +9,12 @@ namespace Enter.Enb.Threading;
 /// <summary>
 /// A robust timer implementation that ensures no overlapping occurs. It waits exactly specified <see cref="Period"/> between ticks.
 /// </summary>
-public class AbpAsyncTimer : ITransientDependency
+public class EntAsyncTimer : ITransientDependency
 {
     /// <summary>
     /// This func is raised periodically according to Period of Timer.
     /// </summary>
-    public Func<AbpAsyncTimer, Task> Elapsed = _ => Task.CompletedTask;
+    public Func<EntAsyncTimer, Task> Elapsed = _ => Task.CompletedTask;
 
     /// <summary>
     /// Task period of timer (as milliseconds).
@@ -27,7 +27,7 @@ public class AbpAsyncTimer : ITransientDependency
     /// </summary>
     public bool RunOnStart { get; set; }
 
-    public ILogger<AbpAsyncTimer> Logger { get; set; }
+    public ILogger<EntAsyncTimer> Logger { get; set; }
 
     public IExceptionNotifier ExceptionNotifier { get; set; }
 
@@ -35,10 +35,10 @@ public class AbpAsyncTimer : ITransientDependency
     private volatile bool _performingTasks;
     private volatile bool _isRunning;
 
-    public AbpAsyncTimer()
+    public EntAsyncTimer()
     {
         ExceptionNotifier = NullExceptionNotifier.Instance;
-        Logger = NullLogger<AbpAsyncTimer>.Instance;
+        Logger = NullLogger<EntAsyncTimer>.Instance;
 
         _taskTimer = new Timer(
             TimerCallBack!,

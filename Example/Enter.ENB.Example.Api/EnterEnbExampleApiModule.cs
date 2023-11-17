@@ -1,10 +1,12 @@
 using Enter.ENB.Example.Application;
 using Enter.ENB.Example.EntityFrameworkCore;
+using Enter.ENB.Identity.Application;
 using Enter.ENB.Modularity;
 
 namespace Enter.ENB.Example.Api;
 
 [DependsOnModules(
+    typeof(EntIdentityApiModule),
     typeof(EntExampleApplicationModule),
     typeof(EntExampleEntityFrameworkCoreModule)
 )]

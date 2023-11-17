@@ -5,7 +5,7 @@ using Enter.Microsoft.Extensions.DependencyInjection;
 namespace Enter.ENB.DependencyInjection;
 
 public abstract class RepositoryRegistrarBase<TOptions>
-    where TOptions : AbpCommonDbContextRegistrationOptions
+    where TOptions : EntCommonDbContextRegistrationOptions
 {
     public TOptions Options { get; }
 

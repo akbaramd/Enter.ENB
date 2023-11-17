@@ -14,8 +14,7 @@ public abstract class AbstractKeyReadOnlyAppService<TEntity, TEntityDto, TKey>
     : AbstractKeyReadOnlyAppService<TEntity, TEntityDto, TEntityDto, TKey, PagedAndSortedResultRequestDto>
     where TEntity : class, IEntEntity
 {
-    protected AbstractKeyReadOnlyAppService(IReadOnlyRepository<TEntity> repository , IEntLazyServiceProvider lazyServiceProvider)
-        : base(repository,lazyServiceProvider)
+    protected AbstractKeyReadOnlyAppService(IReadOnlyRepository<TEntity> repository ):base(repository)
     {
 
     }
@@ -25,8 +24,7 @@ public abstract class AbstractKeyReadOnlyAppService<TEntity, TEntityDto, TKey, T
     : AbstractKeyReadOnlyAppService<TEntity, TEntityDto, TEntityDto, TKey, TGetListInput>
     where TEntity : class, IEntEntity
 {
-    protected AbstractKeyReadOnlyAppService(IReadOnlyRepository<TEntity> repository,IEntLazyServiceProvider lazyServiceProvider)
-        : base(repository,lazyServiceProvider)
+    protected AbstractKeyReadOnlyAppService(IReadOnlyRepository<TEntity> repository) : base(repository)
     {
 
     }
@@ -43,7 +41,7 @@ public abstract class AbstractKeyReadOnlyAppService<TEntity, TGetOutputDto, TGet
 
     protected virtual string? GetListPolicyName { get; set; }
 
-    protected AbstractKeyReadOnlyAppService(IReadOnlyRepository<TEntity> repository,IEntLazyServiceProvider lazyServiceProvider) : base(lazyServiceProvider)
+    protected AbstractKeyReadOnlyAppService(IReadOnlyRepository<TEntity> repository) 
     {
         ReadOnlyRepository = repository;
     }

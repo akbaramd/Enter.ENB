@@ -5,20 +5,18 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Enter.ENB.AspNetCore.Mvc;
 
-public class EntReadOnlyControllerBase<TEntityDto,TKey> : EntControllerBase
+public class EntReadOnlyControllerBase<TEntityDto,TKey,TQuery> : EntControllerBase
 {
-
-    
     public EntReadOnlyControllerBase(IEntLazyServiceProvider lazyServiceProvider) : base(lazyServiceProvider)
     {
     }
 
-    public IReadOnlyAppService<TEntityDto, TKey> CrudService 
-        => LazyServiceProvider.GetRequiredService<IReadOnlyAppService<TEntityDto, TKey>>();
+    public IReadOnlyAppService<TEntityDto, TKey,TQuery> CrudService 
+        => LazyServiceProvider.GetRequiredService<IReadOnlyAppService<TEntityDto, TKey,TQuery>>();
 
 
     [HttpGet("Get")]
-    public async Task<PagedResultDto<TEntityDto>> GetListAsync([FromQuery] PagedAndSortedResultRequestDto input)
+    public async Task<PagedResultDto<TEntityDto>> GetListAsync([FromQuery] TQuery input)
     {
         return await CrudService.GetListAsync(input);
     }

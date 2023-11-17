@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="JetBrains.Annotations" Version="2023.3.0" />
         <PackageReference Include="System.Collections.Immutable" Version="7.0.0" />
         <PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.14" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />

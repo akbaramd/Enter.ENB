@@ -3,7 +3,7 @@
   &lt;Assembly Path="C:\Users\akbar\.nuget\packages\microsoft.netcore.app.ref\7.0.12\ref\net7.0\System.Linq.Expressions.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
 	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">C:\Program Files\dotnet\sdk\8.0.100-rc.2.23502.2\MSBuild.dll</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=800c5883_002Dbc6f_002D4556_002Db56b_002D85bbd6567be1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Entity_Tests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=800c5883_002Dbc6f_002D4556_002Db56b_002D85bbd6567be1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Or&gt;&#xD;
     &lt;TestAncestor&gt;&#xD;
       &lt;TestId&gt;xUnit::C21C4F2D-81DD-4E35-97EC-F83537B19388::net7.0::Enter.ENB.Test.UnitTest1&lt;/TestId&gt;&#xD;
@@ -12,10 +12,14 @@
       &lt;TestId&gt;xUnit::D5AE67B3-7C21-410F-A5AB-092D76845A7C::net7.0::Enter.ENB.DDD.Test.UnitTest1&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;xUnit::D5AE67B3-7C21-410F-A5AB-092D76845A7C::net7.0::Volo.Abp.Domain.Entities.EntityHelper_Tests.SetId_DerivedFromAggregateRoot&lt;/TestId&gt;&#xD;
       &lt;TestId&gt;xUnit::D5AE67B3-7C21-410F-A5AB-092D76845A7C::net7.0::Volo.Abp.Domain.Entities.EntityHelper_Tests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::2C596C14-899D-4843-8030-DDB910BBE74D::net7.0::Enter.ENB.Core.Test.EntApplication_Initialize_Tests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::2C596C14-899D-4843-8030-DDB910BBE74D::net7.0::Enter.ENB.DependencyInjection.EntLazyServiceProvider_Tests&lt;/TestId&gt;&#xD;
     &lt;/TestAncestor&gt;&#xD;
     &lt;Project Location="D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Test\Enter.ENB.DDD.Test" Presentation="&amp;lt;Tests&amp;gt;\&amp;lt;Enter.ENB.DDD.Test&amp;gt;" /&gt;&#xD;
+    &lt;Project Location="D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Test\Enter.ENB.Core.Test" Presentation="&amp;lt;Tests&amp;gt;\&amp;lt;Enter.ENB.Core.Test&amp;gt;" /&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	
 	
 	
 	

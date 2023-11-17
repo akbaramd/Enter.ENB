@@ -8,4 +8,5 @@ public interface IEntIdentityDbContext : IEntDbContext
 {
     DbSet<EntIdentityUser> Users { get; }
     DbSet<EntIdentityRole> Roles { get; }
+    DbSet<EntIdentityClaim> Claims { get; }
 }

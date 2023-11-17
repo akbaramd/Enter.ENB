@@ -2,7 +2,7 @@
 
 namespace Enter.ENB.Logging;
 
-public class AbpInitLogEntry
+public class EntInitLogEntry
 {
     public LogLevel LogLevel { get; set; }
 

@@ -15,4 +15,9 @@ public static class EfCoreModelBuilderExtensions
     {
         builder.ApplyConfiguration(new EntIdentityRoleConfiguration());
     }
+    
+    public static void ConfigureEntIdentityClaim(this ModelBuilder builder)
+    {
+        builder.ApplyConfiguration(new EntIdentityClaimsConfiguration());
+    }
 }

@@ -12,8 +12,8 @@ public abstract class ReadOnlyAppService<TEntity, TEntityDto, TKey>
     where TEntity : class, IEntEntity<TKey>
     where TEntityDto : IEntityDto<TKey>
 {
-    protected ReadOnlyAppService(IReadOnlyRepository<TEntity, TKey> repository,IEntLazyServiceProvider lazyServiceProvider)
-        : base(repository,lazyServiceProvider)
+    protected ReadOnlyAppService(IReadOnlyRepository<TEntity, TKey> repository)
+        : base(repository)
     {
 
     }
@@ -24,8 +24,8 @@ public abstract class ReadOnlyAppService<TEntity, TEntityDto, TKey, TGetListInpu
     where TEntity : class, IEntEntity<TKey>
     where TEntityDto : IEntityDto<TKey>
 {
-    protected ReadOnlyAppService(IReadOnlyRepository<TEntity, TKey> repository,IEntLazyServiceProvider lazyServiceProvider)
-        : base(repository,lazyServiceProvider)
+    protected ReadOnlyAppService(IReadOnlyRepository<TEntity, TKey> repository)
+        : base(repository)
     {
 
     }
@@ -39,8 +39,8 @@ public abstract class ReadOnlyAppService<TEntity, TGetOutputDto, TGetListOutputD
 {
     protected IReadOnlyRepository<TEntity, TKey> Repository { get; }
 
-    protected ReadOnlyAppService(IReadOnlyRepository<TEntity, TKey> repository,IEntLazyServiceProvider lazyServiceProvider)
-    : base(repository,lazyServiceProvider)
+    protected ReadOnlyAppService(IReadOnlyRepository<TEntity, TKey> repository)
+    : base(repository)
     {
         Repository = repository;
     }

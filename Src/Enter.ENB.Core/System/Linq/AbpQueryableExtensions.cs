@@ -6,7 +6,7 @@ namespace System.Linq;
 /// <summary>
 /// Some useful extension methods for <see cref="IQueryable{T}"/>.
 /// </summary>
-public static class AbpQueryableExtensions
+public static class EntQueryableExtensions
 {
     public static IQueryable<T> PageBy<T>(this IQueryable<T> query, int skipCount, int maxResultCount)
     {

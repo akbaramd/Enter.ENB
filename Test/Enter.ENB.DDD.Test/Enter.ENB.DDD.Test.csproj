@@ -27,6 +27,7 @@
         </PackageReference>
     </ItemGroup>
 
+
     <ItemGroup>
         <ProjectReference Include="..\..\Src\Enter.ENB.Core\Enter.ENB.Core.csproj" />
         <ProjectReference Include="..\..\Src\Enter.ENB.DDD.Domain\Enter.ENB.DDD.Domain.csproj" />

@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Enter.ENB.DependencyInjection;
 
-public abstract class AbpCommonDbContextRegistrationOptions : IAbpCommonDbContextRegistrationOptionsBuilder
+public abstract class EntCommonDbContextRegistrationOptions : IEntCommonDbContextRegistrationOptionsBuilder
 {
     public Type OriginalDbContextType { get; }
 
@@ -32,7 +32,7 @@ public abstract class AbpCommonDbContextRegistrationOptions : IAbpCommonDbContex
 
     public bool SpecifiedDefaultRepositoryTypes => DefaultRepositoryImplementationType != null && DefaultRepositoryImplementationTypeWithoutKey != null;
 
-    protected AbpCommonDbContextRegistrationOptions(Type originalDbContextType, IServiceCollection services)
+    protected EntCommonDbContextRegistrationOptions(Type originalDbContextType, IServiceCollection services)
     {
         OriginalDbContextType = originalDbContextType;
         Services = services;
@@ -42,17 +42,17 @@ public abstract class AbpCommonDbContextRegistrationOptions : IAbpCommonDbContex
         SpecifiedDefaultRepositories = new List<Type>();
     }
 
-    public IAbpCommonDbContextRegistrationOptionsBuilder ReplaceDbContext<TOtherDbContext>(MultiTenancySides multiTenancySides = MultiTenancySides.Both)
+    public IEntCommonDbContextRegistrationOptionsBuilder ReplaceDbContext<TOtherDbContext>(MultiTenancySides multiTenancySides = MultiTenancySides.Both)
     {
         return ReplaceDbContext(typeof(TOtherDbContext), multiTenancySides: multiTenancySides);
     }
 
-    public IAbpCommonDbContextRegistrationOptionsBuilder ReplaceDbContext<TOtherDbContext, TTargetDbContext>(MultiTenancySides multiTenancySides = MultiTenancySides.Both)
+    public IEntCommonDbContextRegistrationOptionsBuilder ReplaceDbContext<TOtherDbContext, TTargetDbContext>(MultiTenancySides multiTenancySides = MultiTenancySides.Both)
     {
         return ReplaceDbContext(typeof(TOtherDbContext), typeof(TTargetDbContext), multiTenancySides);
     }
 
-    public IAbpCommonDbContextRegistrationOptionsBuilder ReplaceDbContext(Type otherDbContextType, Type? targetDbContextType = null, MultiTenancySides multiTenancySides = MultiTenancySides.Both)
+    public IEntCommonDbContextRegistrationOptionsBuilder ReplaceDbContext(Type otherDbContextType, Type? targetDbContextType = null, MultiTenancySides multiTenancySides = MultiTenancySides.Both)
     {
         if (!otherDbContextType.IsAssignableFrom(OriginalDbContextType))
         {
@@ -64,7 +64,7 @@ public abstract class AbpCommonDbContextRegistrationOptions : IAbpCommonDbContex
         return this;
     }
 
-    public IAbpCommonDbContextRegistrationOptionsBuilder AddDefaultRepositories(bool includeAllEntities = false)
+    public IEntCommonDbContextRegistrationOptionsBuilder AddDefaultRepositories(bool includeAllEntities = false)
     {
         RegisterDefaultRepositories = true;
         IncludeAllEntitiesForDefaultRepositories = includeAllEntities;
@@ -72,7 +72,7 @@ public abstract class AbpCommonDbContextRegistrationOptions : IAbpCommonDbContex
         return this;
     }
 
-    public IAbpCommonDbContextRegistrationOptionsBuilder AddDefaultRepositories(Type defaultRepositoryDbContextType, bool includeAllEntities = false)
+    public IEntCommonDbContextRegistrationOptionsBuilder AddDefaultRepositories(Type defaultRepositoryDbContextType, bool includeAllEntities = false)
     {
         if (!defaultRepositoryDbContextType.IsAssignableFrom(OriginalDbContextType))
         {
@@ -84,17 +84,17 @@ public abstract class AbpCommonDbContextRegistrationOptions : IAbpCommonDbContex
         return AddDefaultRepositories(includeAllEntities);
     }
 
-    public IAbpCommonDbContextRegistrationOptionsBuilder AddDefaultRepositories<TDefaultRepositoryDbContext>(bool includeAllEntities = false)
+    public IEntCommonDbContextRegistrationOptionsBuilder AddDefaultRepositories<TDefaultRepositoryDbContext>(bool includeAllEntities = false)
     {
         return AddDefaultRepositories(typeof(TDefaultRepositoryDbContext), includeAllEntities);
     }
 
-    public IAbpCommonDbContextRegistrationOptionsBuilder AddDefaultRepository<TEntity>()
+    public IEntCommonDbContextRegistrationOptionsBuilder AddDefaultRepository<TEntity>()
     {
         return AddDefaultRepository(typeof(TEntity));
     }
 
-    public IAbpCommonDbContextRegistrationOptionsBuilder AddDefaultRepository(Type entityType)
+    public IEntCommonDbContextRegistrationOptionsBuilder AddDefaultRepository(Type entityType)
     {
         EntityHelper.CheckEntity(entityType);
 
@@ -103,14 +103,14 @@ public abstract class AbpCommonDbContextRegistrationOptions : IAbpCommonDbContex
         return this;
     }
 
-    public IAbpCommonDbContextRegistrationOptionsBuilder AddRepository<TEntity, TRepository>()
+    public IEntCommonDbContextRegistrationOptionsBuilder AddRepository<TEntity, TRepository>()
     {
         AddCustomRepository(typeof(TEntity), typeof(TRepository));
 
         return this;
     }
 
-    public IAbpCommonDbContextRegistrationOptionsBuilder SetDefaultRepositoryClasses(
+    public IEntCommonDbContextRegistrationOptionsBuilder SetDefaultRepositoryClasses(
         Type repositoryImplementationType,
         Type repositoryImplementationTypeWithoutKey
         )

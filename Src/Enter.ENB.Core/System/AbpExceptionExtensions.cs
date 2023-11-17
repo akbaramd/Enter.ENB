@@ -7,7 +7,7 @@ namespace System;
 /// <summary>
 /// Extension methods for <see cref="Exception"/> class.
 /// </summary>
-public static class AbpExceptionExtensions
+public static class EntExceptionExtensions
 {
     /// <summary>
     /// Uses <see cref="ExceptionDispatchInfo.Capture"/> method to re-throws exception

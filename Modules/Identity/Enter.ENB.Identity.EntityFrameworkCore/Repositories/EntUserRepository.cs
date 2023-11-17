@@ -8,12 +8,12 @@ namespace Enter.ENB.Identity.EntityFrameworkCore.Repositories;
 
 
 
-[ExposeServices(typeof(IEntUserRepository))]
-public class EntUserRepository :EfCoreRepository<EntIdentityDbContext,EntIdentityUser,Guid>, IEntUserRepository ,ITransientDependency
+[ExposeServices(typeof(IEntIdentityUserRepository))]
+public class EntIdentityUserRepository :EfCoreRepository<EntIdentityDbContext,EntIdentityUser,Guid>, IEntIdentityUserRepository ,ITransientDependency
 {
     private readonly EntIdentityDbContext _dbContext;
 
-    public EntUserRepository(EntIdentityDbContext dbContext,IEntLazyServiceProvider serviceProvider) : base(dbContext,serviceProvider)
+    public EntIdentityUserRepository(EntIdentityDbContext dbContext,IEntLazyServiceProvider serviceProvider) : base(dbContext,serviceProvider)
     {
         _dbContext = dbContext;
     }
@@ -22,4 +22,11 @@ public class EntUserRepository :EfCoreRepository<EntIdentityDbContext,EntIdentit
     {
         return _dbContext.Set<EntIdentityUser>().FirstOrDefaultAsync(x => x.PhoneNumber == phoneNumber);
     }
+    
+    public override async Task<IQueryable<EntIdentityUser>> WithDetailsAsync()
+    {
+        return (await GetQueryableAsync()).IncludeDetails();
+    }
+    
+    
 }

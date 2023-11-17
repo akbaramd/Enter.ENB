@@ -4,16 +4,16 @@ namespace Enter.ENB.Logging;
 
 public class DefaultInitLogger<T> : IInitLogger<T>
 {
-    public List<AbpInitLogEntry> Entries { get; }
+    public List<EntInitLogEntry> Entries { get; }
 
     public DefaultInitLogger()
     {
-        Entries = new List<AbpInitLogEntry>();
+        Entries = new List<EntInitLogEntry>();
     }
 
     public virtual void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
     {
-        Entries.Add(new AbpInitLogEntry
+        Entries.Add(new EntInitLogEntry
         {
             LogLevel = logLevel,
             EventId = eventId,

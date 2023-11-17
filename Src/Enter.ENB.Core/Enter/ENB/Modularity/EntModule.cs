@@ -1,4 +1,5 @@
 using System.Reflection;
+using Enter.ENB.Exceptions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -12,8 +13,21 @@ public abstract class EntModule : IEntModule, IOnPreApplicationInitialization,
     IPostConfigureServices
 {
 
+    protected internal bool SkipAutoServiceRegistration { get; protected set; }
     
+    protected internal ServiceConfigurationContext ServiceConfigurationContext {
+        get {
+            if (_serviceConfigurationContext == null)
+            {
+                throw new EntException($"{nameof(ServiceConfigurationContext)} is only available in the {nameof(ConfigureServices)}, {nameof(PreConfigureServices)} and {nameof(PostConfigureServices)} methods.");
+            }
+
+            return _serviceConfigurationContext;
+        }
+        internal set => _serviceConfigurationContext = value;
+    }
     
+    private ServiceConfigurationContext? _serviceConfigurationContext;
     internal static void CheckEntModuleType(Type moduleType)
     {
         if (!IsEntModule(moduleType))
@@ -32,9 +46,6 @@ public abstract class EntModule : IEntModule, IOnPreApplicationInitialization,
        
             typeof(IEntModule).GetTypeInfo().IsAssignableFrom(type);
     }
-    public IConfiguration Configuration { get; set; }
-    public ServiceConfigurationContext ServiceConfigurationContext { get; set; }
-   
 
     public virtual Task PreConfigureServicesAsync(ServiceConfigurationContext context)
     {
@@ -126,7 +137,7 @@ public abstract class EntModule : IEntModule, IOnPreApplicationInitialization,
     {
         try
         {
-            ServiceConfigurationContext.Services.Configure(name, configureOptions);
+           ServiceConfigurationContext.Services.Configure(name, configureOptions);
         }
         catch (Exception e)
         {

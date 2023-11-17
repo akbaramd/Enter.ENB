@@ -6,7 +6,7 @@ namespace Enter.ENB.Modularity;
 
 public class ServiceConfigurationContext
 {
-    public IServiceCollection Services { get; }
+    public  IServiceCollection Services { get; }
 
     public IDictionary<string, object?> Items { get; }
 

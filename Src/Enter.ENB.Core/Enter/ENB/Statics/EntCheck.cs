@@ -42,7 +42,7 @@ namespace Enter.ENB.Statics;
       int maxLength = 2147483647,
       int minLength = 0)
     {
-      if (StringExtensions.IsNullOrWhiteSpace(value))
+      if (EntStringExtensions.IsNullOrWhiteSpace(value))
         throw new ArgumentException(parameterName + " can not be null, empty or white space!", parameterName);
       if (value.Length > maxLength)
       {

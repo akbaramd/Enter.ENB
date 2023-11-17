@@ -8,9 +8,8 @@ public class EntAppFactoryDbContext : IDesignTimeDbContextFactory<EntAppDbContex
 {
     public EntAppDbContext CreateDbContext(string[] args)
     {
-        
         var builder = new DbContextOptionsBuilder<EntDbContext>()
-            .UseSqlServer("Server=FAVA-A;Database=EntExampleApi;Trusted_Connection=True;TrustServerCertificate=True");
+            .UseSqlServer("Server=DESKTOP-4GKO3R7;Database=EntExampleApi;Trusted_Connection=True;TrustServerCertificate=True");
         
         return new EntAppDbContext(builder.Options);
     }

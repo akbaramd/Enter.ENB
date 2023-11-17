@@ -21,6 +21,15 @@ public class EntIdentityUserConfiguration : IEntityTypeConfiguration<EntIdentity
         builder.Property(x => x.PhoneNumber).IsRequired(false);
         builder.Property(x => x.NormalizedPhoneNumber).IsRequired(false);
         
+        builder.
+            HasMany(x=>x.Roles)
+            .WithMany(x=>x.Users)
+            .UsingEntity(
+                "EntUserRoles",
+                l => l.HasOne(typeof(EntIdentityRole)).WithMany().HasForeignKey("RoleId").HasPrincipalKey(nameof(EntIdentityRole.Id)),
+                r => r.HasOne(typeof(EntIdentityUser)).WithMany().HasForeignKey("UserId").HasPrincipalKey(nameof(EntIdentityUser.Id)),
+                j => j.HasKey("UserId", "RoleId"));
+        
         builder
             .Property(b => b.EntExtraProperties)
             .HasConversion(

@@ -3,9 +3,9 @@ using Enter.ENB.Domain;
 
 namespace Enter.ENB.EntityFrameworkCore.DependencyInjection;
 
-public class EfCoreRepositoryRegistrar : RepositoryRegistrarBase<AbpDbContextRegistrationOptions>
+public class EfCoreRepositoryRegistrar : RepositoryRegistrarBase<EntDbContextRegistrationOptions>
 {
-    public EfCoreRepositoryRegistrar(AbpDbContextRegistrationOptions options)
+    public EfCoreRepositoryRegistrar(EntDbContextRegistrationOptions options)
         : base(options)
     {
 

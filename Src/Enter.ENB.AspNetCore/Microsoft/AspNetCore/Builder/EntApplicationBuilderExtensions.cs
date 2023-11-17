@@ -15,7 +15,7 @@ public static class EntApplicationBuilderExtensions
     {
         EntCheck.NotNull(app, nameof(app));
 
-        var application = app.ApplicationServices.GetRequiredService<IEntApplicationServiceProvider>();
+        var application = app.ApplicationServices.GetRequiredService<IEntApplicationWithExternalServiceProvider>();
         var applicationLifetime = app.ApplicationServices.GetRequiredService<IHostApplicationLifetime>();
 
         applicationLifetime.ApplicationStopping.Register(() =>
@@ -36,7 +36,7 @@ public static class EntApplicationBuilderExtensions
         EntCheck.NotNull(app, nameof(app));
 
         // app.ApplicationServices.GetRequiredService<ObjectAccessor<IApplicationBuilder>>().Value = app;
-        var application = app.ApplicationServices.GetRequiredService<IEntApplicationServiceProvider>();
+        var application = app.ApplicationServices.GetRequiredService<IEntApplicationWithExternalServiceProvider>();
         var applicationLifetime = app.ApplicationServices.GetRequiredService<IHostApplicationLifetime>();
 
         applicationLifetime.ApplicationStopping.Register(() =>

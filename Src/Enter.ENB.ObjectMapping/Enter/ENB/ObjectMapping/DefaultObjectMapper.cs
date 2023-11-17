@@ -69,8 +69,8 @@ public class DefaultObjectMapper : IObjectMapper, ITransientDependency
         {
             try
             {
-                //TODO: Check if TDestination has a proper constructor which takes TSource
-                //TODO: Check if TDestination has an empty constructor (in this case, use MapFrom)
+                //TODO: EntCheck if TDestination has a proper constructor which takes TSource
+                //TODO: EntCheck if TDestination has an empty constructor (in this case, use MapFrom)
 
                 return (TDestination)Activator.CreateInstance(typeof(TDestination), source)!;
             }

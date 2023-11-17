@@ -2,6 +2,7 @@
 using Enter.ENB.Identity.Domain;
 using Enter.ENB.Identity.EntityFrameworkCore.Repositories;
 using Enter.ENB.Modularity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Enter.ENB.Identity.EntityFrameworkCore;
@@ -21,8 +22,14 @@ public class EntIdentityEntityFrameworkCoreModule : EntModule
     {
         context.Services.AddEntDbContext<EntIdentityDbContext>(c =>
         {
-            c.AddRepository<EntIdentityUser, EntUserRepository>();
+            c.AddRepository<EntIdentityUser, EntIdentityUserRepository>();
             c.AddRepository<EntIdentityRole, EntIdentityRoleRepository>();
+            
+            
+            c.Entity<EntIdentityUser>(x =>
+            {
+                x.DefaultWithDetailsFunc = q => q.Include(x => x.Roles);
+            });
         });
     }
 }

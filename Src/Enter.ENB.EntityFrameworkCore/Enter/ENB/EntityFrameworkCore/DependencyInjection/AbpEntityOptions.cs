@@ -4,30 +4,30 @@ using Enter.ENB.Statics;
 
 namespace Enter.ENB.EntityFrameworkCore.DependencyInjection;
 
-public class AbpEntityOptions<TEntity>
+public class EntEntityOptions<TEntity>
     where TEntity : IEntEntity
 {
-    public static AbpEntityOptions<TEntity> Empty { get; } = new AbpEntityOptions<TEntity>();
+    public static EntEntityOptions<TEntity> Empty { get; } = new EntEntityOptions<TEntity>();
 
     public Func<IQueryable<TEntity>, IQueryable<TEntity>>? DefaultWithDetailsFunc { get; set; }
 }
 
-public class AbpEntityOptions
+public class EntEntityOptions
 {
     private readonly IDictionary<Type, object> _options;
 
-    public AbpEntityOptions()
+    public EntEntityOptions()
     {
         _options = new Dictionary<Type, object>();
     }
 
-    public AbpEntityOptions<TEntity>? GetOrNull<TEntity>()
+    public EntEntityOptions<TEntity>? GetOrNull<TEntity>()
         where TEntity : IEntEntity
     {
-        return _options.GetOrDefault(typeof(TEntity)) as AbpEntityOptions<TEntity>;
+        return _options.GetOrDefault(typeof(TEntity)) as EntEntityOptions<TEntity>;
     }
 
-    public void Entity<TEntity>(Action<AbpEntityOptions<TEntity>> optionsAction)
+    public void Entity<TEntity>(Action<EntEntityOptions<TEntity>> optionsAction)
         where TEntity : IEntEntity
     {
         EntCheck.NotNull(optionsAction, nameof(optionsAction));
@@ -35,8 +35,8 @@ public class AbpEntityOptions
         optionsAction(
             (_options.GetOrAdd(
                 typeof(TEntity),
-                () => new AbpEntityOptions<TEntity>()
-            ) as AbpEntityOptions<TEntity>)!
+                () => new EntEntityOptions<TEntity>()
+            ) as EntEntityOptions<TEntity>)!
         );
     }
 }

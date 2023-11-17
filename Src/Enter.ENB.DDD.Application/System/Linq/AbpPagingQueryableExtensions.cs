@@ -4,7 +4,7 @@ using Enter.ENB.Statics;
 
 namespace System.Linq;
 
-public static class AbpPagingQueryableExtensions
+public static class EntPagingQueryableExtensions
 {
     /// <summary>
     /// Used for paging with an <see cref="IPagedResultRequest"/> object.

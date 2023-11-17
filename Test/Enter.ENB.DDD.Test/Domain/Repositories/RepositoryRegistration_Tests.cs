@@ -14,9 +14,6 @@ public class RepositoryRegistration_Tests
         //Arrange
 
         var services = new ServiceCollection();
-
-        
-        
         var options = new TestDbContextRegistrationOptions(typeof(MyFakeDbContext), services);
         options.AddDefaultRepositories();
 
@@ -239,9 +236,9 @@ public class RepositoryRegistration_Tests
         services.ShouldContainTransient(typeof(IRepository<MyTestAggregateRootWithGuidPk, Guid>), typeof(MyTestAggregateRootWithDefaultPkCustomRepository));
     }
 
-    public class MyTestRepositoryRegistrar : RepositoryRegistrarBase<AbpCommonDbContextRegistrationOptions>
+    public class MyTestRepositoryRegistrar : RepositoryRegistrarBase<EntCommonDbContextRegistrationOptions>
     {
-        public MyTestRepositoryRegistrar(AbpCommonDbContextRegistrationOptions options)
+        public MyTestRepositoryRegistrar(EntCommonDbContextRegistrationOptions options)
             : base(options)
         {
         }
@@ -415,7 +412,7 @@ public class RepositoryRegistration_Tests
         public bool? IsChangeTrackingEnabled { get; set; }
     }
 
-    public class TestDbContextRegistrationOptions : AbpCommonDbContextRegistrationOptions
+    public class TestDbContextRegistrationOptions : EntCommonDbContextRegistrationOptions
     {
         public TestDbContextRegistrationOptions(Type originalDbContextType, IServiceCollection services)
             : base(originalDbContextType, services)

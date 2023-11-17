@@ -5,7 +5,7 @@ using Enter.ENB.Logging;
 
 namespace Microsoft.Extensions.Logging;
 
-public static class AbpLoggerExtensions
+public static class EntLoggerExtensions
 {
     public static void LogWithLevel(this ILogger logger, LogLevel logLevel, string message)
     {

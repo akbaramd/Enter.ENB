@@ -8,11 +8,11 @@ public static class EntEfCoreServiceCollectionExtensions
 {
     public static IServiceCollection AddEntDbContext<TDbContext>(
         this IServiceCollection services,
-        Action<AbpDbContextRegistrationOptions>? action = null)
+        Action<EntDbContextRegistrationOptions>? action = null)
         where TDbContext : DbContext
     {
         
-        var registrationOptions = new AbpDbContextRegistrationOptions(typeof(TDbContext), services);
+        var registrationOptions = new EntDbContextRegistrationOptions(typeof(TDbContext), services);
         
         action?.Invoke(registrationOptions);
         

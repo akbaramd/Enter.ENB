@@ -11,12 +11,7 @@ public abstract class ApplicationService :
     IApplicationService,
     ITransientDependency
 {
-    protected ApplicationService(IEntLazyServiceProvider lazyServiceProvider)
-    {
-        LazyServiceProvider = lazyServiceProvider;
-    }
-
-    public IEntLazyServiceProvider LazyServiceProvider { get; set; } 
+    public IEntLazyServiceProvider LazyServiceProvider { get; set; } = default!; 
 
     protected IAsyncQueryableExecuter AsyncExecuter => LazyServiceProvider.LazyGetRequiredService<IAsyncQueryableExecuter>();
 

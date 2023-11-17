@@ -10,7 +10,7 @@ namespace Enter.Enb.Threading;
 /// <summary>
 /// A robust timer implementation that ensures no overlapping occurs. It waits exactly specified <see cref="Period"/> between ticks.
 /// </summary>
-public class AbpTimer : ITransientDependency
+public class EntTimer : ITransientDependency
 {
     /// <summary>
     /// This event is raised periodically according to Period of Timer.
@@ -28,7 +28,7 @@ public class AbpTimer : ITransientDependency
     /// </summary>
     public bool RunOnStart { get; set; }
 
-    public ILogger<AbpTimer> Logger { get; set; }
+    public ILogger<EntTimer> Logger { get; set; }
 
     public IExceptionNotifier ExceptionNotifier { get; set; }
 
@@ -36,10 +36,10 @@ public class AbpTimer : ITransientDependency
     private volatile bool _performingTasks;
     private volatile bool _isRunning;
 
-    public AbpTimer()
+    public EntTimer()
     {
         ExceptionNotifier = NullExceptionNotifier.Instance;
-        Logger = NullLogger<AbpTimer>.Instance;
+        Logger = NullLogger<EntTimer>.Instance;
 
         _taskTimer = new Timer(
             TimerCallBack!,

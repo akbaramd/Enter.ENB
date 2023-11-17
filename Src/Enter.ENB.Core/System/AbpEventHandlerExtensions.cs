@@ -1,6 +1,6 @@
 ﻿namespace System;
 
-public static class AbpEventHandlerExtensions
+public static class EntEventHandlerExtensions
 {
     /// <summary>
     /// Raises given event safely with given arguments.

@@ -5,33 +5,87 @@ namespace Enter.ENB;
 
 public static class EntApplicationFactory
 {
-    public static  Task<IEntApplicationServiceProvider> CreateAsync<TStartupModule>(IServiceCollection services)
+    public static async Task<IEntApplicationWithInternalServiceProvider> CreateAsync<TStartupModule>(
+        Action<EntApplicationCreationOptions>? optionsAction = null)
         where TStartupModule : IEntModule
     {
-      return CreateAsync(typeof(TStartupModule),services);
-    }
-
-    public static async Task<IEntApplicationServiceProvider> CreateAsync(
-        Type startupModuleType,IServiceCollection serviceCollection)
-    {
-        var app = new EntApplicationServiceProvider(startupModuleType, serviceCollection);
+        var app = Create(typeof(TStartupModule), options =>
+        {
+            options.SkipConfigureServices = true;
+            optionsAction?.Invoke(options);
+        });
         await app.ConfigureServicesAsync();
         return app;
     }
 
-
-    public static IEntApplicationServiceProvider Create<TStartupModule>(IServiceCollection services)
-        where TStartupModule : IEntModule
+    public static async Task<IEntApplicationWithInternalServiceProvider> CreateAsync(
+        Type startupModuleType,
+        Action<EntApplicationCreationOptions>? optionsAction = null)
     {
-        return Create(typeof(TStartupModule),services);
-    }
-
-    public static IEntApplicationServiceProvider Create(Type startupModuleType,
-        IServiceCollection serviceCollection)
-    {
-        var app = new EntApplicationServiceProvider(startupModuleType, serviceCollection);
-        app.ConfigureServices();
+        var app = new EntApplicationWithInternalServiceProvider(startupModuleType, options =>
+        {
+            options.SkipConfigureServices = true;
+            optionsAction?.Invoke(options);
+        });
+        await app.ConfigureServicesAsync();
         return app;
     }
 
+    public static async Task<IEntApplicationWithExternalServiceProvider> CreateAsync<TStartupModule>(
+        IServiceCollection services,
+        Action<EntApplicationCreationOptions>? optionsAction = null)
+        where TStartupModule : IEntModule
+    {
+        var app = Create(typeof(TStartupModule), services, options =>
+        {
+            options.SkipConfigureServices = true;
+            optionsAction?.Invoke(options);
+        });
+        await app.ConfigureServicesAsync();
+        return app;
+    }
+
+    public static async Task<IEntApplicationWithExternalServiceProvider> CreateAsync(
+        Type startupModuleType,
+        IServiceCollection services,
+        Action<EntApplicationCreationOptions>? optionsAction = null)
+    {
+        var app = new EntApplicationWithExternalServiceProvider(startupModuleType, services, options =>
+        {
+            options.SkipConfigureServices = true;
+            optionsAction?.Invoke(options);
+        });
+        await app.ConfigureServicesAsync();
+        return app;
+    }
+
+    public static IEntApplicationWithInternalServiceProvider Create<TStartupModule>(
+        Action<EntApplicationCreationOptions>? optionsAction = null)
+        where TStartupModule : IEntModule
+    {
+        return Create(typeof(TStartupModule), optionsAction);
+    }
+
+    public static IEntApplicationWithInternalServiceProvider Create(
+        Type startupModuleType,
+        Action<EntApplicationCreationOptions>? optionsAction = null)
+    {
+        return new EntApplicationWithInternalServiceProvider(startupModuleType, optionsAction);
+    }
+
+    public static IEntApplicationWithExternalServiceProvider Create<TStartupModule>(
+        IServiceCollection services,
+        Action<EntApplicationCreationOptions>? optionsAction = null)
+        where TStartupModule : IEntModule
+    {
+        return Create(typeof(TStartupModule), services, optionsAction);
+    }
+
+    public static IEntApplicationWithExternalServiceProvider Create(
+        Type startupModuleType,
+        IServiceCollection services,
+        Action<EntApplicationCreationOptions>? optionsAction = null)
+    {
+        return new EntApplicationWithExternalServiceProvider(startupModuleType, services, optionsAction);
+    }
 }

@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Enter.ENB.DependencyInjection;
 
-public interface IAbpCommonDbContextRegistrationOptionsBuilder
+public interface IEntCommonDbContextRegistrationOptionsBuilder
 {
     IServiceCollection Services { get; }
 
@@ -14,7 +14,7 @@ public interface IAbpCommonDbContextRegistrationOptionsBuilder
     /// Registers repositories only for aggregate root entities by default.
     /// Set <paramref name="includeAllEntities"/> to true to include all entities.
     /// </param>
-    IAbpCommonDbContextRegistrationOptionsBuilder AddDefaultRepositories(bool includeAllEntities = false);
+    IEntCommonDbContextRegistrationOptionsBuilder AddDefaultRepositories(bool includeAllEntities = false);
 
     /// <summary>
     /// Registers default repositories for all the entities in this DbContext.
@@ -25,7 +25,7 @@ public interface IAbpCommonDbContextRegistrationOptionsBuilder
     /// Registers repositories only for aggregate root entities by default.
     /// Set <see cref="includeAllEntities"/> to true to include all entities.
     /// </param>
-    IAbpCommonDbContextRegistrationOptionsBuilder AddDefaultRepositories<TDefaultRepositoryDbContext>(bool includeAllEntities = false);
+    IEntCommonDbContextRegistrationOptionsBuilder AddDefaultRepositories<TDefaultRepositoryDbContext>(bool includeAllEntities = false);
 
     /// <summary>
     /// Registers default repositories for all the entities in this DbContext.
@@ -36,20 +36,20 @@ public interface IAbpCommonDbContextRegistrationOptionsBuilder
     /// Registers repositories only for aggregate root entities by default.
     /// Set <see cref="includeAllEntities"/> to true to include all entities.
     /// </param>
-    IAbpCommonDbContextRegistrationOptionsBuilder AddDefaultRepositories(Type defaultRepositoryDbContextType, bool includeAllEntities = false);
+    IEntCommonDbContextRegistrationOptionsBuilder AddDefaultRepositories(Type defaultRepositoryDbContextType, bool includeAllEntities = false);
 
     /// <summary>
     /// Registers default repository for a specific entity.
     /// </summary>
     /// <typeparam name="TEntity">Entity type</typeparam>
-    IAbpCommonDbContextRegistrationOptionsBuilder AddDefaultRepository<TEntity>();
+    IEntCommonDbContextRegistrationOptionsBuilder AddDefaultRepository<TEntity>();
 
     /// <summary>
     /// Registers default repository for a specific entity.
     /// </summary>
     /// <param name="entityType"></param>
     /// <returns></returns>
-    IAbpCommonDbContextRegistrationOptionsBuilder AddDefaultRepository(Type entityType);
+    IEntCommonDbContextRegistrationOptionsBuilder AddDefaultRepository(Type entityType);
 
     /// <summary>
     /// Registers custom repository for a specific entity.
@@ -57,7 +57,7 @@ public interface IAbpCommonDbContextRegistrationOptionsBuilder
     /// </summary>
     /// <typeparam name="TEntity">Entity type</typeparam>
     /// <typeparam name="TRepository">Repository type</typeparam>
-    IAbpCommonDbContextRegistrationOptionsBuilder AddRepository<TEntity, TRepository>();
+    IEntCommonDbContextRegistrationOptionsBuilder AddRepository<TEntity, TRepository>();
 
     /// <summary>
     /// Uses given class(es) for default repositories.
@@ -65,14 +65,14 @@ public interface IAbpCommonDbContextRegistrationOptionsBuilder
     /// <param name="repositoryImplementationType">Repository implementation type</param>
     /// <param name="repositoryImplementationTypeWithoutKey">Repository implementation type (without primary key)</param>
     /// <returns></returns>
-    IAbpCommonDbContextRegistrationOptionsBuilder SetDefaultRepositoryClasses(Type repositoryImplementationType, Type repositoryImplementationTypeWithoutKey);
+    IEntCommonDbContextRegistrationOptionsBuilder SetDefaultRepositoryClasses(Type repositoryImplementationType, Type repositoryImplementationTypeWithoutKey);
 
     /// <summary>
     /// Replaces given DbContext type with this DbContext type.
     /// </summary>
     /// <typeparam name="TOtherDbContext">The DbContext type to be replaced</typeparam>
     /// <param name="multiTenancySides">MultiTenancy side</param>
-    IAbpCommonDbContextRegistrationOptionsBuilder ReplaceDbContext<TOtherDbContext>(MultiTenancySides multiTenancySides = MultiTenancySides.Both);
+    IEntCommonDbContextRegistrationOptionsBuilder ReplaceDbContext<TOtherDbContext>(MultiTenancySides multiTenancySides = MultiTenancySides.Both);
 
     /// <summary>
     /// Replaces given DbContext type with the target DbContext type.
@@ -80,7 +80,7 @@ public interface IAbpCommonDbContextRegistrationOptionsBuilder
     /// <typeparam name="TOtherDbContext">The DbContext type to be replaced</typeparam>
     /// <typeparam name="TTargetDbContext">The target DbContext type</typeparam>
     /// <param name="multiTenancySides">MultiTenancy side</param>
-    IAbpCommonDbContextRegistrationOptionsBuilder ReplaceDbContext<TOtherDbContext, TTargetDbContext>(MultiTenancySides multiTenancySides = MultiTenancySides.Both);
+    IEntCommonDbContextRegistrationOptionsBuilder ReplaceDbContext<TOtherDbContext, TTargetDbContext>(MultiTenancySides multiTenancySides = MultiTenancySides.Both);
 
     /// <summary>
     /// Replaces given DbContext type with the given or this DbContext type.
@@ -88,5 +88,5 @@ public interface IAbpCommonDbContextRegistrationOptionsBuilder
     /// <param name="otherDbContextType">The DbContext type to be replaced</param>
     /// <param name="targetDbContextType">The target DbContext type (optional, used this DbContext type if not provided)</param>
     /// <param name="multiTenancySides">MultiTenancy side</param>
-    IAbpCommonDbContextRegistrationOptionsBuilder ReplaceDbContext(Type otherDbContextType, Type? targetDbContextType = null, MultiTenancySides multiTenancySides = MultiTenancySides.Both);
+    IEntCommonDbContextRegistrationOptionsBuilder ReplaceDbContext(Type otherDbContextType, Type? targetDbContextType = null, MultiTenancySides multiTenancySides = MultiTenancySides.Both);
 }

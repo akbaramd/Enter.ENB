@@ -12,8 +12,8 @@ public abstract class CrudAppService<TEntity, TEntityDto, TKey>
     where TEntity : class, IEntEntity<TKey>
     where TEntityDto : IEntityDto<TKey>
 {
-    protected CrudAppService(IRepository<TEntity, TKey> repository,IEntLazyServiceProvider lazyServiceProvider)
-        : base(repository,lazyServiceProvider)
+    protected CrudAppService(IRepository<TEntity, TKey> repository)
+        : base(repository)
     {
 
     }
@@ -24,8 +24,8 @@ public abstract class CrudAppService<TEntity, TEntityDto, TKey, TGetListInput>
     where TEntity : class, IEntEntity<TKey>
     where TEntityDto : IEntityDto<TKey>
 {
-    protected CrudAppService(IRepository<TEntity, TKey> repository,IEntLazyServiceProvider lazyServiceProvider)
-        : base(repository,lazyServiceProvider)
+    protected CrudAppService(IRepository<TEntity, TKey> repository)
+        : base(repository)
     {
 
     }
@@ -36,8 +36,8 @@ public abstract class CrudAppService<TEntity, TEntityDto, TKey, TGetListInput, T
     where TEntity : class, IEntEntity<TKey>
     where TEntityDto : IEntityDto<TKey>
 {
-    protected CrudAppService(IRepository<TEntity, TKey> repository,IEntLazyServiceProvider lazyServiceProvider)
-        : base(repository,lazyServiceProvider)
+    protected CrudAppService(IRepository<TEntity, TKey> repository)
+        : base(repository)
     {
 
     }
@@ -48,8 +48,8 @@ public abstract class CrudAppService<TEntity, TEntityDto, TKey, TGetListInput, T
     where TEntity : class, IEntEntity<TKey>
     where TEntityDto : IEntityDto<TKey>
 {
-    protected CrudAppService(IRepository<TEntity, TKey> repository,IEntLazyServiceProvider lazyServiceProvider)
-        : base(repository,lazyServiceProvider)
+    protected CrudAppService(IRepository<TEntity, TKey> repository)
+        : base(repository)
     {
 
     }
@@ -73,8 +73,8 @@ public abstract class CrudAppService<TEntity, TGetOutputDto, TGetListOutputDto, 
 {
     protected new IRepository<TEntity, TKey> Repository { get; }
 
-    protected CrudAppService(IRepository<TEntity, TKey> repository,IEntLazyServiceProvider lazyServiceProvider)
-        : base(repository,lazyServiceProvider)
+    protected CrudAppService(IRepository<TEntity, TKey> repository)
+        : base(repository)
     {
         Repository = repository;
     }

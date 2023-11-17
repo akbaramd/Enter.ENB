@@ -37,7 +37,7 @@ public static class EntObjectExtensions
     }
 
     /// <summary>
-    /// Check if an item is in a list.
+    /// EntCheck if an item is in a list.
     /// </summary>
     /// <param name="item">Item to check</param>
     /// <param name="list">List of items</param>
@@ -48,7 +48,7 @@ public static class EntObjectExtensions
     }
 
     /// <summary>
-    /// Check if an item is in the given enumerable.
+    /// EntCheck if an item is in the given enumerable.
     /// </summary>
     /// <param name="item">Item to check</param>
     /// <param name="items">Items</param>

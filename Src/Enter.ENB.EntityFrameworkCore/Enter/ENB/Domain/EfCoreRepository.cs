@@ -2,7 +2,10 @@
 using Enter.ENB.DependencyInjection;
 using Enter.ENB.Domain.Entities;
 using Enter.ENB.Domain.Repository;
+using Enter.ENB.EntityFrameworkCore.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 namespace Enter.ENB.Domain;
 
@@ -16,11 +19,20 @@ public class EfCoreRepository<TDbContext, TEntity> :RepositoryBase<TEntity>,
 
     private readonly TDbContext _dbContext;
 
+
+    private readonly Lazy<EntEntityOptions<TEntity>> _entityOptionsLazy;
     public IEfCoreBulkOperationProvider? BulkOperationProvider => LazyServiceProvider.LazyGetService<IEfCoreBulkOperationProvider>();
     
     public EfCoreRepository(TDbContext dbContext,IEntLazyServiceProvider serviceProvider) : base(serviceProvider)
     {
         _dbContext = dbContext;
+        
+        _entityOptionsLazy = new Lazy<EntEntityOptions<TEntity>>(
+            () => serviceProvider
+                .GetRequiredService<IOptions<EntEntityOptions>>()
+                .Value
+                .GetOrNull<TEntity>() ?? EntEntityOptions<TEntity>.Empty
+        );
         
     }
 
@@ -270,8 +282,14 @@ public class EfCoreRepository<TDbContext, TEntity> :RepositoryBase<TEntity>,
 
     public async override Task<IQueryable<TEntity>> WithDetailsAsync()
     {
+        if (_entityOptionsLazy.Value.DefaultWithDetailsFunc == null)
+        {
             return await base.WithDetailsAsync();
+        }
+
+        return _entityOptionsLazy.Value.DefaultWithDetailsFunc(await GetQueryableAsync());
     }
+
 
     public async override Task<IQueryable<TEntity>> WithDetailsAsync(params Expression<Func<TEntity, object>>[] propertySelectors)
     {

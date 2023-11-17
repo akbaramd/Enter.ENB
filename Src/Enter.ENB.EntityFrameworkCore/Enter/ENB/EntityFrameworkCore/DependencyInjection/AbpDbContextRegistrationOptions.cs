@@ -4,19 +4,19 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Enter.ENB.EntityFrameworkCore.DependencyInjection;
 
-public class AbpDbContextRegistrationOptions : AbpCommonDbContextRegistrationOptions, IAbpDbContextRegistrationOptionsBuilder
+public class EntDbContextRegistrationOptions : EntCommonDbContextRegistrationOptions, IEntDbContextRegistrationOptionsBuilder
 {
-    public Dictionary<Type, object> AbpEntityOptions { get; }
+    public Dictionary<Type, object> EntEntityOptions { get; }
 
-    public AbpDbContextRegistrationOptions(Type originalDbContextType, IServiceCollection services)
+    public EntDbContextRegistrationOptions(Type originalDbContextType, IServiceCollection services)
         : base(originalDbContextType, services)
     {
-        AbpEntityOptions = new Dictionary<Type, object>();
+        EntEntityOptions = new Dictionary<Type, object>();
     }
 
-    public void Entity<TEntity>(Action<AbpEntityOptions<TEntity>> optionsAction) where TEntity : IEntEntity
+    public void Entity<TEntity>(Action<EntEntityOptions<TEntity>> optionsAction) where TEntity : IEntEntity
     {
-        Services.Configure<AbpEntityOptions>(options =>
+        Services.Configure<EntEntityOptions>(options =>
         {
             options.Entity(optionsAction);
         });

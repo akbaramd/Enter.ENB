@@ -14,7 +14,7 @@ public class EntIdentityApplicationModule : EntModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        context.Services.AddTransient<ICrudAppService<EntUserDto,Guid,PagedAndSortedResultRequestDto,UserCreateDto,UserUpdateDto> , UserAppService>();
-        context.Services.AddTransient<IReadOnlyAppService<EntRoleDto,Guid>,RoleAppService>();
+        // context.Services.AddTransient<ICrudAppService<EntUserDto,Guid,PagedAndSortedResultRequestDto,UserCreateDto,UserUpdateDto> , UserAppService>();
+        // context.Services.AddTransient<IReadOnlyAppService<EntRoleDto,Guid>,RoleAppService>();
     }
 }

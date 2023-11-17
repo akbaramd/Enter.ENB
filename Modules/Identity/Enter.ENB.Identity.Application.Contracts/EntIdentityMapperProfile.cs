@@ -9,7 +9,7 @@ public class EntIdentityMapperProfile : Profile
 {
     public EntIdentityMapperProfile()
     {
-        CreateMap<EntIdentityUser, EntUserDto>();
+        CreateMap<EntIdentityUser, EntIdentityUserDto>();
         CreateMap<EntIdentityRole, EntRoleDto>();
     }
 }

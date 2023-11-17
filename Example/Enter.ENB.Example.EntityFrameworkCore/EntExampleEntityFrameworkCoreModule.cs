@@ -15,7 +15,7 @@ public class EntExampleEntityFrameworkCoreModule : EntModule
     {
         context.Services.AddEntDbContextConfigure(c =>
         {
-            c.UseSqlServer(Configuration.GetConnectionString("Default"));
+            c.UseSqlServer(context.Services.GetConfiguration().GetConnectionString("Default"));
         });
     }
 
