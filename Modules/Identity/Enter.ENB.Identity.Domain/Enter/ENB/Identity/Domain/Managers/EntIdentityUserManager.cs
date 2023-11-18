@@ -1,12 +1,10 @@
 ﻿using Enter.ENB.DependencyInjection;
 using Enter.ENB.Domain.Services;
-using Enter.ENB.Exceptions;
-using Enter.ENB.Identity.Domain;
 using Enter.ENB.Identity.Domain.Repositories;
 using Enter.ENB.Statics;
 using Enter.Enb.Threading;
 
-namespace Enter.ENB.Identity;
+namespace Enter.ENB.Identity.Domain.Managers;
 
 public class IdentityUserManager : IEntDomainService
 {

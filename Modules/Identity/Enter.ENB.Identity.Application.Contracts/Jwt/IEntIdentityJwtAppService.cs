@@ -1,10 +1,7 @@
-using Enter.ENB.Ddd.Application.Dtos;
 using Enter.ENB.Ddd.Application.Services;
-using Enter.ENB.DependencyInjection;
-using Enter.ENB.Identity.Application.Contracts.Roles.Dtos;
-using Enter.ENB.Identity.Application.Contracts.Users.Dtos;
+using Enter.ENB.Identity.Application.Contracts.Jwt.Dtos;
 
-namespace Enter.ENB.Identity.Application.Contracts.Roles;
+namespace Enter.ENB.Identity.Application.Contracts.Jwt;
 
 public interface IEntIdentityJwtAppService: IApplicationService
 {

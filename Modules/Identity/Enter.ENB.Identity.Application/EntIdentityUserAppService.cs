@@ -5,6 +5,7 @@ using Enter.ENB.Domain.Entities;
 using Enter.ENB.Identity.Application.Contracts.Users;
 using Enter.ENB.Identity.Application.Contracts.Users.Dtos;
 using Enter.ENB.Identity.Domain;
+using Enter.ENB.Identity.Domain.Managers;
 using Enter.ENB.Identity.Domain.Repositories;
 using Enter.ENB.ObjectMapping.Enter.ENB.ObjectMapping;
 using Enter.ENB.Statics;

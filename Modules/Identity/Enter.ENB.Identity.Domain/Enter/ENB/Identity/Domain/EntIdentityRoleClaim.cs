@@ -1,8 +1,7 @@
-using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Security.Claims;
 
-namespace Enter.ENB.Identity;
+namespace Enter.ENB.Identity.Domain;
 
 /// <summary>
 /// Represents a claim that is granted to all users within a role.

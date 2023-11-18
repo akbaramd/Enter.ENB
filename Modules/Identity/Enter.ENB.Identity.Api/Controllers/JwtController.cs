@@ -1,13 +1,10 @@
 using Enter.ENB.AspNetCore.Mvc;
-using Enter.ENB.Ddd.Application.Dtos;
 using Enter.ENB.DependencyInjection;
-using Enter.ENB.Identity.Application.Contracts.Roles;
-using Enter.ENB.Identity.Application.Contracts.Roles.Dtos;
-using Enter.ENB.Identity.Application.Contracts.Users;
-using Enter.ENB.Identity.Application.Contracts.Users.Dtos;
+using Enter.ENB.Identity.Application.Contracts.Jwt;
+using Enter.ENB.Identity.Application.Contracts.Jwt.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Enter.ENB.Example.Api.Controllers;
+namespace Enter.ENB.Identity.Api.Controllers;
 
 [Route("api/jwt")]
 public class JwtController : EntControllerBase

@@ -1,11 +1,9 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using Enter.ENB.Domain.Entities;
 using Enter.ENB.MultiTenancy;
 using Enter.ENB.Statics;
 
-namespace Enter.ENB.Identity;
+namespace Enter.ENB.Identity.Domain;
 
 public abstract class EntIdentityClaim : EntEntity<Guid>, IMultiTenant
 {

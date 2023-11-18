@@ -1,11 +1,10 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using Enter.ENB;
+using Enter.ENB.DependencyInjection;
+using Enter.ENB.Modularity;
 using Microsoft.Extensions.DependencyInjection;
 using Shouldly;
-using Enter.ENB.Modularity;
-using Xunit;
 
-namespace Enter.ENB.DependencyInjection;
+namespace DependencyInjection;
 
 public class AutoServiceRegistration_Tests
 {

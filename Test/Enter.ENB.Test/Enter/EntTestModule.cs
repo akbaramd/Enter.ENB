@@ -1,7 +1,6 @@
 ﻿using Enter.ENB.Modularity;
-using Enter.ENB.Modularity;
 
-namespace Enter.ENB.Test;
+namespace Enter;
 
 public class EntTestModule : EntModule
 {

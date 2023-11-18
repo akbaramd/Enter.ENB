@@ -1,7 +1,7 @@
-﻿using Shouldly;
-using Xunit;
+﻿using Enter.ENB.DependencyInjection;
+using Shouldly;
 
-namespace Enter.ENB.DependencyInjection;
+namespace DependencyInjection;
 
 public class AutoRegistrationHelper_Tests
 {

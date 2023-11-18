@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Enter.ENB.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Enter.ENB.DependencyInjection;
+namespace DependencyInjection;
 
 public class ConventionalRegistrar_Tests
 {

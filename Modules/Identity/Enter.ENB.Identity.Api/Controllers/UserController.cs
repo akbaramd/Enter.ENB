@@ -5,7 +5,7 @@ using Enter.ENB.Identity.Application.Contracts.Users;
 using Enter.ENB.Identity.Application.Contracts.Users.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Enter.ENB.Example.Api.Controllers;
+namespace Enter.ENB.Identity.Api.Controllers;
 
 [Route("Api/Users")]
 public class UserController : EntControllerBase
