@@ -32,8 +32,11 @@ public class EntIdentityUser : FullAuditedAggregateRoot<Guid>
     public string? LastName { get; private set; }
 
     public EntUserStatus Status { get; private set; }
+    
+    public Guid RefreshToken { get; private set; }
 
     public virtual ICollection<EntIdentityRole> Roles { get; }
+    
 
     public void Activate()
     {
@@ -64,6 +67,11 @@ public class EntIdentityUser : FullAuditedAggregateRoot<Guid>
         Password = password;
     }
 
+    public void NewRefreshToken()
+    {
+        RefreshToken = Guid.NewGuid();
+    }
+    
     public bool CheckRole(EntIdentityRole role)
     {
         return Roles.Any(x => x.Name.Equals(role.Name));

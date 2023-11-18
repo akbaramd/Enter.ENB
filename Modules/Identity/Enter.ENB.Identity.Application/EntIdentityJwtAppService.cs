@@ -46,8 +46,18 @@ public class EntIdentityJwtAppService :EntIdentityAppServiceBase, IEntIdentityJw
 
     }
 
-    public Task<EntJwtResultDto> RefreshTokenAsync(EntJwtRefreshTokenDto input)
+    public async Task<EntJwtResultDto> RefreshTokenAsync(EntJwtRefreshTokenDto input)
     {
-        throw new NotImplementedException();
+        var user = await UserManager.GetByRefreshTokenAsync(input.RefreshToken);
+        
+        user.NewRefreshToken();
+        
+        return new EntJwtResultDto()
+        {
+            AccessToken = user.Id.ToString(),
+            RefreshToken = user.UserName,
+            ExpireAt = DateTime.Now,
+            ExpireAtUtc = DateTime.UtcNow
+        };
     }
 }

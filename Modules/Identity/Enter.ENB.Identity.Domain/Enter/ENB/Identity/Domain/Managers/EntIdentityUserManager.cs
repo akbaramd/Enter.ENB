@@ -28,6 +28,19 @@ public class IdentityUserManager : IEntDomainService
 
     private CancellationToken CancellationToken => CancellationTokenProvider.Token;
 
+    public virtual async Task<EntIdentityUser> GetByRefreshTokenAsync(string refreshToken)
+    {
+        var user = await FindByRefreshTokenAsync(refreshToken);
+        EntCheck.NotNull(user,nameof(user));
+        return user!;
+    }
+    
+    public virtual async Task<EntIdentityUser?> FindByRefreshTokenAsync(string refreshToken)
+    {
+        EntCheck.NotNullOrWhiteSpace(refreshToken,nameof(refreshToken));
+        return await UserRepository.FindAsync(x => x.RefreshToken.Equals(refreshToken),includeDetails:true, cancellationToken: CancellationToken);
+    }
+
     public virtual async Task<EntIdentityUser?> FindByIdAsync(Guid id)
     {
         EntCheck.NotNull(id,nameof(id));
@@ -73,6 +86,8 @@ public class IdentityUserManager : IEntDomainService
         return Task.CompletedTask;
     }
 
+    
+    
     public virtual Task<bool> ComparePasswordHashAsync(EntIdentityUser user, string rawPassword)
     {
          return Task.FromResult(user.ComparePassword(rawPassword));
