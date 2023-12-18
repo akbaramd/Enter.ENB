@@ -1,0 +1,13 @@
+<Project>
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <IsPackable>true</IsPackable>
+    <Version>1.0.03</Version>
+    <Authors>Akbar Ahmadi</Authors>
+    <Company>akbar-ahmadi.ir</Company>
+    <PackageProjectUrl>https://github.com/akbaramd/Enter.ENB</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/akbaramd/Enter.ENB</RepositoryUrl>
+  </PropertyGroup>
+</Project>

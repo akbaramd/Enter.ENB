@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Enter.ENB.Domain.Values;
 
 namespace Enter.ENB.Example.Domain.Shared.Products;
