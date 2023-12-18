@@ -1,9 +1,12 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Shouldly;
+﻿using Enter;
+using Enter.ENB;
+using Enter.ENB.DependencyInjection;
 using Enter.ENB.Modularity;
 using Enter.ENB.Test;
+using Microsoft.Extensions.DependencyInjection;
+using Shouldly;
 
-namespace Enter.ENB.DependencyInjection;
+namespace DependencyInjection;
 
 public class EntLazyServiceProvider_Tests
 {

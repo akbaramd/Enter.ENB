@@ -1,6 +1,7 @@
-﻿using Enter.ENB.Test;
+﻿using Enter;
+using Enter.ENB.Modularity;
 
-namespace Enter.ENB.Modularity;
+namespace Modularity;
 
 public class IndependentEmptyPlugInModule : EntTestModule
 {

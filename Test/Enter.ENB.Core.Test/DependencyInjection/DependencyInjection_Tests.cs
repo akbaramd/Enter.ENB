@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Shouldly;
-using Xunit;
 
-namespace Enter.ENB.DependencyInjection;
+namespace DependencyInjection;
 
 public class DependencyInjection_Tests
 {

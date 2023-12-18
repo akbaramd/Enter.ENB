@@ -1,5 +1,6 @@
 using Enter.ENB.Example.Application;
 using Enter.ENB.Example.EntityFrameworkCore;
+using Enter.ENB.Identity.Api;
 using Enter.ENB.Identity.Application;
 using Enter.ENB.Modularity;
 

@@ -1,12 +1,11 @@
 ﻿using System.Reflection;
+using Enter.ENB;
 using Enter.ENB.DependencyInjection;
-using Enter.ENB.Modularity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Modularity;
 using Shouldly;
-
-namespace Enter.ENB.Core.Test;
 
 public class EntApplication_Initialize_Tests
 {

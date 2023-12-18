@@ -1,4 +1,4 @@
-﻿namespace Enter.ENB.Identity.Application.Contracts.Roles.Dtos;
+﻿namespace Enter.ENB.Identity.Application.Contracts.Jwt.Dtos;
 
 public class EntJwtResultDto
 {

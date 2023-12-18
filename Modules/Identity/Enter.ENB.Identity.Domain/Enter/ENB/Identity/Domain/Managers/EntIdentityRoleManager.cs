@@ -6,7 +6,6 @@ using Enter.Enb.Threading;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Logging;
-using Enter.ENB.Identity.Localization;
 
 namespace Enter.ENB.Identity.Domain.Managers;
 
