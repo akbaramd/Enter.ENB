@@ -1,12 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace />
+        <PackageId>Enter.ENB.DDD.Application</PackageId>
     </PropertyGroup>
-
+    <Import Project="..\..\package.props" />
     <ItemGroup>
       <ProjectReference Include="..\Enter.ENB.DDD.Application.Contracts\Enter.ENB.DDD.Application.Contracts.csproj" />
       <ProjectReference Include="..\Enter.ENB.DDD.Domain\Enter.ENB.DDD.Domain.csproj" />

@@ -1,19 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
+    <Import Project="..\..\package.props" />
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <WarningsAsErrors>Nullable</WarningsAsErrors>
-        <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
-        <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-        <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-        <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-        <IsPackable>true</IsPackable>
-        <OutputType>Library</OutputType>
-        <OutputType>Library</OutputType>
-        <NoDefaultLaunchSettingsFile>true</NoDefaultLaunchSettingsFile>
         <RootNamespace />
+        <PackageId>Enter.ENB.AspNetCore</PackageId>
     </PropertyGroup>
+
 
     <ItemGroup>
       <ProjectReference Include="..\Enter.ENB.Core\Enter.ENB.Core.csproj" />

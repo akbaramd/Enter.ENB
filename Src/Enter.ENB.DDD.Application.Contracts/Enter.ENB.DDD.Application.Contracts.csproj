@@ -1,11 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace />
+        <PackageId>Enter.ENB.DDD.Application.Contracts</PackageId>
     </PropertyGroup>
+    <Import Project="..\..\package.props" />
 
     <ItemGroup>
       <ProjectReference Include="..\Enter.ENB.Auditing\Enter.ENB.Auditing.csproj" />

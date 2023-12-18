@@ -1,4 +1,8 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=69BAFB02_002D39E2_002D4F95_002DBC7D_002DFC6234A09B2D_002Ff_003AEnterEnbExampleApiModule_002Ecs/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=69BAFB02_002D39E2_002D4F95_002DBC7D_002DFC6234A09B2D_002Ff_003AProgram_002Ecs/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=8C5A08C6_002D57A8_002D4E61_002DB91A_002D52F6F3D03538_002Ff_003AEntExampleApplicationModule_002Ecs/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=A6B8B43A_002D817A_002D4EC4_002D809B_002D6318FC3B57C2_002Fd_003AEnter_002Fd_003AENB_002Fd_003AAspNetCore_002Fd_003AMvc_002Ff_003AEntControllerBase_002Ecs/@EntryIndexedValue">ExplicitlyExcluded</s:String>
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;&#xD;
   &lt;Assembly Path="C:\Users\akbar\.nuget\packages\microsoft.netcore.app.ref\7.0.12\ref\net7.0\System.Linq.Expressions.dll" /&gt;&#xD;
 &lt;/AssemblyExplorer&gt;</s:String>
@@ -19,6 +23,100 @@
     &lt;Project Location="D:\Projects\Company\AkbarAhmadiSaray\Enter.Modularity\Test\Enter.ENB.Core.Test" Presentation="&amp;lt;Tests&amp;gt;\&amp;lt;Enter.ENB.Core.Test&amp;gt;" /&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
